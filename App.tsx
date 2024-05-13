@@ -28,27 +28,27 @@ const DashboardStack = () => {
           title: 'Home',
           drawerActiveTintColor: '#000000',
           drawerActiveBackgroundColor: '#f2f2f2',
-          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'home'} color={focused ? '#5783B9' : '#000000'} />)
+          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'home-variant-outline'} color={focused ? '#5783B9' : '#000000'} />)
         }}
       />
       <Drawer.Screen
         name="Survey"
         component={SurveyOptionScreen}
         options={{
-          title: 'Survey options',
+          title: 'Survey',
           drawerActiveTintColor: '#000000',
           drawerActiveBackgroundColor: '#f2f2f2',
-          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'notebook-edit'} color={focused ? '#5783B9' : '#000000'} />)
+          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'notebook-edit-outline'} color={focused ? '#5783B9' : '#000000'} />)
         }}
       />
       <Drawer.Screen
         name="Opinion"
         component={OpinionPollOptionScreen}
         options={{
-          title: 'Opinion poll options',
+          title: 'Opinion poll',
           drawerActiveTintColor: '#000000',
           drawerActiveBackgroundColor: '#f2f2f2',
-          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'chart-bar'} color={focused ? '#5783B9' : '#000000'}/>)
+          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'chart-donut'} color={focused ? '#5783B9' : '#000000'}/>)
         }}
       />
     </Drawer.Navigator>

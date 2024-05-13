@@ -8,7 +8,7 @@ const WelcomeScreen = () => {
     const navigation = useNavigation();
 
     return (
-        <SafeAreaView className='h-screen flex-1'>
+        <SafeAreaView className='bg-white h-screen flex-1'>
             <View className='h-1/2 m-auto flex items-center justify-around'>
                 <Image
                     source={require('../assets/digital-neta-logo.png')}
@@ -20,8 +20,7 @@ const WelcomeScreen = () => {
                     icon='arrow-right'
                     compact={true}
                     onPress={() => navigation.replace('Login')}
-                >
-                </Button>
+                ></Button>
             </View>
         </SafeAreaView>
     );

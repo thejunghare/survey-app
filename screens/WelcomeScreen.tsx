@@ -19,7 +19,7 @@ const WelcomeScreen = () => {
                     buttonColor='#5783B9'
                     icon='arrow-right'
                     compact={true}
-                    onPress={() => navigation.navigate('Login')}
+                    onPress={() => navigation.replace('Login')}
                 >
                 </Button>
             </View>

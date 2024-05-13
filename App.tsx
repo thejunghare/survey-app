@@ -9,7 +9,7 @@ import LoginScreen from './screens/LoginScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import SurveyOptionScreen from './screens/SurveyOptionScreen';
 import OpinionPollOptionScreen from './screens/OpinionPollOptionScreen';
-// import CustomDrawer from './CustomDrawer';
+import CustomDrawer from './CustomDrawer';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -18,8 +18,7 @@ const DashboardStack = () => {
   return (
     <Drawer.Navigator
       initialRouteName='Dashboard'
-      // drawerContent={props => <CustomDrawer />}
-
+      drawerContent={(props) => <CustomDrawer {...props} />}
     >
       <Drawer.Screen
         name="Dashboard"
@@ -48,7 +47,7 @@ const DashboardStack = () => {
           title: 'Opinion poll',
           drawerActiveTintColor: '#000000',
           drawerActiveBackgroundColor: '#f2f2f2',
-          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'chart-donut'} color={focused ? '#5783B9' : '#000000'}/>)
+          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'chart-donut'} color={focused ? '#5783B9' : '#000000'} />)
         }}
       />
     </Drawer.Navigator>

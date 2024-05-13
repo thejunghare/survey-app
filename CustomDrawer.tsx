@@ -1,34 +1,66 @@
-import * as React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Image, StyleSheet } from 'react-native';
-import { Divider } from 'react-native-paper';
+import {
+    View,
+    Image,
+    StyleSheet,
+
+} from "react-native";
+import {
+    Divider,
+    List,
+    TouchableRipple
+} from 'react-native-paper'
 import {
     DrawerContentScrollView,
     DrawerItemList,
-    DrawerItem,
-} from '@react-navigation/drawer';
+} from "@react-navigation/drawer";
 
-const CustomDrawer = () => {
+
+const CustomDrawer = (props) => {
     return (
-        <SafeAreaView className='flex-1'>
-            <Image
-                style={style.image}
-                source={require('./assets/digital-neta-logo.png')}
-            />
+        <View style={{ flex: 1 }}>
+            <DrawerContentScrollView
+                {...props}
+                contentContainerStyle={{
+                    marginTop: -50,
+                    zIndex: 10,
+                }}
+            >
 
-            <Divider />
+                <Image
+                    alt="Not find"
+                    source={require("./assets/digital-neta-logo.png")}
+                    style={styles.image}
+                />
 
-        </SafeAreaView>
+                <Divider />
+
+                <View style={{ flex: 1, backgroundColor: "#fff", paddingTop: 10 }}>
+                    <DrawerItemList {...props} />
+                </View>
+            </DrawerContentScrollView>
+            <View >
+                <Divider />
+                <TouchableRipple
+                    onPress={() => console.log('Pressed')}
+                    rippleColor="rgba(0, 0, 0, .32)">
+
+                    <List.Item
+                        title="Logout"
+                        left={props => <List.Icon {...props} icon="logout-variant" />}
+                    />
+                </TouchableRipple>
+            </View>
+        </View>
     );
 };
 
-const style = StyleSheet.create({
-
-    image: {
-        width: 275,
-        height: 60,
-        margin: 5
-    }
-})
-
 export default CustomDrawer;
+
+const styles = StyleSheet.create({
+    image: {
+        width: 280,
+        height: 68,
+        marginBottom: 10,
+        marginTop: 40,
+    }
+});

@@ -1,11 +1,20 @@
 import * as React from 'react';
 import { SafeAreaView } from 'react-native';
-import { Text } from 'react-native-paper';
+import { Text, List } from 'react-native-paper';
 
 const OpinionPollOptionScreen = () => {
     return (
-        <SafeAreaView>
-            <Text>Opinion poll option screen</Text>
+        <SafeAreaView className='mx-2'>
+            <List.Item
+                title="Poll one"
+                left={props => <List.Icon {...props} icon="account-group-outline" />}
+                right={props => <List.Icon {...props} icon="chevron-right" />}
+            />
+            <List.Item
+                title="Poll two"
+                left={props => <List.Icon {...props} icon="shopping-outline" />}
+                right={props => <List.Icon {...props} icon="chevron-right" />}
+            />
         </SafeAreaView>
     );
 };

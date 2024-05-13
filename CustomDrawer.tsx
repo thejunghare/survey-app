@@ -59,8 +59,7 @@ export default CustomDrawer;
 const styles = StyleSheet.create({
     image: {
         width: 280,
-        height: 68,
-        marginBottom: 10,
+        height: 50,
         marginTop: 40,
     }
 });

@@ -11,7 +11,7 @@ const WelcomeScreen = () => {
             <Button
                 mode='outlined'
                 icon='arrow-right'
-                onPress={() => navigation.navigate('Login')}
+                onPress={() => navigation.replace('Login')}
             >
                 Next
             </Button>

@@ -1,8 +1,8 @@
+import * as React from 'react';
 import {
     View,
     Image,
     StyleSheet,
-
 } from "react-native";
 import {
     Divider,
@@ -13,9 +13,25 @@ import {
     DrawerContentScrollView,
     DrawerItemList,
 } from "@react-navigation/drawer";
+import {
+    firebase,
+    auth
+} from './firebase';
+import { useNavigation } from "@react-navigation/native";
 
 
 const CustomDrawer = (props) => {
+    const navigation = useNavigation();
+
+    const handleLogout = () => {
+        auth
+        .signOut()
+        .then(()=>{
+            navigation.replace('Login')
+            console.info('Logout');
+        })
+        .catch((error)=>alert(error.message))
+    }
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView
@@ -41,7 +57,7 @@ const CustomDrawer = (props) => {
             <View >
                 <Divider />
                 <TouchableRipple
-                    onPress={() => console.log('Pressed')}
+                    onPress={handleLogout}
                     rippleColor="rgba(0, 0, 0, .32)">
 
                     <List.Item

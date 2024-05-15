@@ -12,6 +12,7 @@ import OpinionPollOptionScreen from './screens/OpinionPollOptionScreen';
 import CustomDrawer from './CustomDrawer';
 import ShopSurveyScreen from './screens/ShopSurveyScreen';
 import PeopleSurveyScreen from './screens/PeopleSurveyScreen';
+import VoterSearch from './screens/VoterSearch';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -40,6 +41,16 @@ const DashboardStack = () => {
           drawerActiveTintColor: '#000000',
           drawerActiveBackgroundColor: '#f2f2f2',
           drawerIcon: ({ focused, size }) => (<Icon size={size} source={'notebook-edit-outline'} color={focused ? '#5783B9' : '#000000'} />)
+        }}
+      />
+      <Drawer.Screen
+        name="Voter"
+        component={VoterSearch}
+        options={{
+          title: 'Voter Search',
+          drawerActiveTintColor: '#000000',
+          drawerActiveBackgroundColor: '#f2f2f2',
+          drawerIcon: ({ focused, size }) => (<Icon size={size} source={'account-group-outline'} color={focused ? '#5783B9' : '#000000'} />)
         }}
       />
       <Drawer.Screen

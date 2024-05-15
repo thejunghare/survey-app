@@ -1,12 +1,53 @@
 import * as React from 'react';
-import { SafeAreaView, View, Image } from 'react-native';
-import { Button, Text, TextInput, TouchableRipple, Divider } from 'react-native-paper'
+import { SafeAreaView, View, Image, Keyboard } from 'react-native';
+import { Button, Text, TextInput, TouchableRipple, Divider, ActivityIndicator, } from 'react-native-paper'
 import { useNavigation } from '@react-navigation/native';
-
+import { auth } from '../firebase'
 
 const LoginScreen = () => {
     const navigation = useNavigation();
-    const [text, setText] = React.useState('');
+    const [userEmail, setUserEmail] = React.useState('');
+    const [userPassword, setUserPassword] = React.useState('');
+    const [loading, setLoading] = React.useState(false);
+    const passwordInputRef = React.createRef();
+
+    React.useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            if (user) {
+                navigation.replace('Dashboard');
+            }
+        });
+
+        return unsubscribe;
+    }, []);
+
+    const handleLogin = () => {
+        setLoading(true);
+
+        if (!userEmail) {
+            alert('Username is required');
+            return;
+        }
+
+        if (!userPassword) {
+            alert('Password is required');
+            return;
+        }
+
+        auth
+            .signInWithEmailAndPassword(userEmail, userPassword)
+            .then((userCredentials) => {
+                const user = userCredentials.user;
+                console.log(`logged in with:`, user.email);
+                setLoading(false);
+            })
+            .catch((error) => {
+                alert(error.message);
+                setLoading(false);
+            });
+
+
+    };
 
     return (
         <SafeAreaView className='h-screen bg-white flex-1 justify-around'>
@@ -25,6 +66,12 @@ const LoginScreen = () => {
                     placeholder="Username/Email"
                     right={<TextInput.Icon icon="account" />}
                     className='my-2'
+
+                    onChangeText={(text) => setUserEmail(text)}
+                    autoCapitalize='none'
+                    keyboardType='email-address'
+                    returnKeyType='next'
+                    value={userEmail}
                 />
 
                 <TextInput
@@ -33,6 +80,13 @@ const LoginScreen = () => {
                     secureTextEntry
                     right={<TextInput.Icon icon="eye" />}
                     className='my-2'
+
+                    keyboardType='default'
+                    ref={passwordInputRef}
+                    onSubmitEditing={Keyboard.dismiss}
+                    blurOnSubmit={false}
+                    returnKeyType='next'
+                    onChangeText={(text) => setUserPassword(text)}
                 />
 
                 <TouchableRipple
@@ -46,9 +100,13 @@ const LoginScreen = () => {
                     mode='contained'
                     buttonColor='#5783B9'
                     icon='arrow-right'
-                    onPress={() => navigation.replace('Dashboard')}
+                    onPress={handleLogin}
                 >
-                    Login
+                    {loading ? (
+                        <ActivityIndicator animating={true} color={"white"} />
+                    ) : (
+                        "Login"
+                    )}
                 </Button>
             </View>
 

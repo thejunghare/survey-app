@@ -10,6 +10,8 @@ import DashboardScreen from './screens/DashboardScreen';
 import SurveyOptionScreen from './screens/SurveyOptionScreen';
 import OpinionPollOptionScreen from './screens/OpinionPollOptionScreen';
 import CustomDrawer from './CustomDrawer';
+import ShopSurveyScreen from './screens/ShopSurveyScreen';
+import PeopleSurveyScreen from './screens/PeopleSurveyScreen';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -72,6 +74,16 @@ const App = () => {
           name="Dashboard"
           component={DashboardStack}
           options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ShopSurveyScreen"
+          component={ShopSurveyScreen}
+          options={{ title: 'Shop Survey' }}
+        />
+        <Stack.Screen
+          name="PeopleSurveyScreen"
+          component={PeopleSurveyScreen}
+          options={{ title: 'People Survey' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -11,7 +11,7 @@ import SurveyOptionScreen from './screens/SurveyOptionScreen';
 import OpinionPollOptionScreen from './screens/OpinionPollOptionScreen';
 import CustomDrawer from './CustomDrawer';
 import ShopSurveyScreen from './screens/ShopSurveyScreen';
-import PeopleSurveyScreen from './screens/PeopleSurveyScreen';
+import DoorToDoorSurveyScreen from './screens/DoorToDoorSurveyScreen';
 import VoterSearch from './screens/VoterSearch';
 
 const Drawer = createDrawerNavigator();
@@ -92,9 +92,9 @@ const App = () => {
           options={{ title: 'Shop Survey' }}
         />
         <Stack.Screen
-          name="PeopleSurveyScreen"
-          component={PeopleSurveyScreen}
-          options={{ title: 'People Survey' }}
+          name="DoorToDoorSurveyScreen"
+          component={DoorToDoorSurveyScreen}
+          options={{ title: 'D2D Survey' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

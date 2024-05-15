@@ -6,7 +6,7 @@ const DashboardScreen = () => {
     return (
         <SafeAreaView className='flex-1 h-screen'>
             <View className='h-2/4 bg-app-blue flex items-center justify-evenly'>
-                <Avatar.Image className='bg-transparent' size={204} source={require('../assets/avatar.jpg')} />
+                <Avatar.Image className='bg-transparent' size={200} source={require('../assets/noun-avatar.png')} />
                 <Text className='bg-white shadow-sm py-2 px-5 rounded-lg text-base'>Prasad Junghare</Text>
             </View>
 

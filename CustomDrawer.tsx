@@ -7,7 +7,8 @@ import {
 import {
     Divider,
     List,
-    TouchableRipple
+    TouchableRipple,
+    Avatar
 } from 'react-native-paper'
 import {
     DrawerContentScrollView,
@@ -25,12 +26,12 @@ const CustomDrawer = (props) => {
 
     const handleLogout = () => {
         auth
-        .signOut()
-        .then(()=>{
-            navigation.replace('Login')
-            console.info('Logout');
-        })
-        .catch((error)=>alert(error.message))
+            .signOut()
+            .then(() => {
+                navigation.replace('Login')
+                console.info('Logout');
+            })
+            .catch((error) => alert(error.message))
     }
     return (
         <View style={{ flex: 1 }}>
@@ -41,13 +42,15 @@ const CustomDrawer = (props) => {
                     zIndex: 10,
                 }}
             >
+                <View style={styles.container}>
+                    <Image
+                        alt="app-logo"
+                        source={require("./assets/digital-neta-logo.png")}
+                        style={styles.image}
+                    />
 
-                <Image
-                    alt="Not find"
-                    source={require("./assets/digital-neta-logo.png")}
-                    style={styles.image}
-                />
-
+                    <Avatar.Text size={40} label="PJ" style={styles.avatarText} />
+                </View>
                 <Divider />
 
                 <View style={{ flex: 1, backgroundColor: "#fff", paddingTop: 10 }}>
@@ -74,8 +77,20 @@ export default CustomDrawer;
 
 const styles = StyleSheet.create({
     image: {
-        width: 280,
+        width: 192,
         height: 50,
         marginTop: 40,
-    }
+    },
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        padding: 4,
+    },
+    avatarText: {
+
+        marginTop: 40,
+    },
 });

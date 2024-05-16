@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, Button } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button } from 'react-native-paper'
+import {Icon } from 'react-native-paper'
 import { useNavigation } from '@react-navigation/native';
 
-const WelcomeScreen = () => {
+const WelcomeScreen: React.FC = () => {
     const navigation = useNavigation();
 
     return (
@@ -12,15 +12,14 @@ const WelcomeScreen = () => {
             <View className='h-1/2 m-auto flex items-center justify-around'>
                 <Image
                     source={require('../assets/digital-neta-logo.png')}
-                    className='w-52 h-14'
+                    className='w-52 h-12'
                 />
                 <Button
-                    mode='contained'
-                    buttonColor='#5783B9'
-                    icon='arrow-right'
-                    compact={true}
+                    title='Get Started'
+                    color={'#5783B9'}
                     onPress={() => navigation.replace('Login')}
-                ></Button>
+                    
+                />
             </View>
         </SafeAreaView>
     );

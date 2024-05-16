@@ -53,7 +53,7 @@ const LoginScreen = () => {
         <SafeAreaView className='h-screen bg-white flex-1 justify-around'>
             <View className='h-2/5 flex items-center justify-end'>
                 <Image
-                    source={require('../assets/digital-neta-logo.png')} className='w-52 h-14'
+                    source={require('../assets/digital-neta-logo.png')} className='w-52 h-12'
                 />
                 <Text className='text-base font-semibold my-1'>Welcome Back!</Text>
                 <Text className='text-sm font-medium text-slate-400 my-1'>lorem ipsum dolor sit amet consectetur</Text>
@@ -99,7 +99,7 @@ const LoginScreen = () => {
                 <Button
                     mode='contained'
                     buttonColor='#5783B9'
-                    icon='arrow-right'
+                    // icon='arrow-right'
                     onPress={handleLogin}
                 >
                     {loading ? (

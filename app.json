@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "survey-app",
+    "name": "Chanakya Niti",
     "slug": "survey-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,10 +18,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.thejunghare.chanakyaniti"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "80e4d994-5c53-46b3-bbed-a397eb0ac234"
+      }
     }
   }
 }

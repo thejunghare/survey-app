@@ -4,31 +4,31 @@ import { List } from 'react-native-paper';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 type RootStackParamList = {
-    DoorToDoorSurveyScreen: undefined;
-    ShopSurveyScreen: undefined;
+    DoorToDoorSurvey: undefined;
+    ShopSurvey: undefined;
 };
 
 type SurveyOptionScreenNavigationProp = StackNavigationProp<
     RootStackParamList,
-    'DoorToDoorSurveyScreen' | 'ShopSurveyScreen'
+    'DoorToDoorSurvey' | 'ShopSurvey'
 >;
 
 type Props = {
     navigation: SurveyOptionScreenNavigationProp;
 };
 
-const SurveyOptionScreen: React.FC<Props> = ({ navigation }) => {
+const SurveyOption: React.FC<Props> = ({ navigation }) => {
     return (
         <SafeAreaView>
             <List.Item
                 title="Door to door survey"
-                onPress={() => navigation.navigate('DoorToDoorSurveyScreen')}
+                onPress={() => navigation.navigate('DoorToDoorSurvey')}
                 left={(props) => <List.Icon {...props} icon="account-group-outline" />}
                 right={(props) => <List.Icon {...props} icon="chevron-right" />}
             />
             <List.Item
                 title="Shop survey"
-                onPress={() => navigation.navigate('ShopSurveyScreen')}
+                onPress={() => navigation.navigate('ShopSurvey')}
                 left={(props) => <List.Icon {...props} icon="shopping-outline" />}
                 right={(props) => <List.Icon {...props} icon="chevron-right" />}
             />
@@ -36,4 +36,4 @@ const SurveyOptionScreen: React.FC<Props> = ({ navigation }) => {
     );
 };
 
-export default SurveyOptionScreen;
+export default SurveyOption;

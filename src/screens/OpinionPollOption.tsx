@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SafeAreaView } from 'react-native';
 import { Text, List } from 'react-native-paper';
 
-const OpinionPollOptionScreen = () => {
+const OpinionPollOption = () => {
     return (
         <SafeAreaView className='mx-2'>
             <List.Item
@@ -19,4 +19,4 @@ const OpinionPollOptionScreen = () => {
     );
 };
 
-export default OpinionPollOptionScreen;
+export default OpinionPollOption;

@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import Login from '../screens/Login';
 import Dashboard from '../screens/Dashboard';
+import DoorToDoorSurvey from '../screens/DoorToDoorSurvey';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useUser } from '../appwrite/UserContext';
 
@@ -22,7 +23,13 @@ export function Router() {
                         component={Dashboard}
                         options={{ title: 'Home' }}
                     />
+
                 )}
+                <Stack.Screen
+                    name="D2D_Survey"
+                    component={DoorToDoorSurvey}
+                    options={{ title: 'Door To Door Survey' }}
+                />
 
             </Stack.Navigator>
         </NavigationContainer>

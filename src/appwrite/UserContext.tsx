@@ -1,39 +1,72 @@
 import { ID } from "react-native-appwrite";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { account } from "./service";
 import { toast } from "./toast";
 
-
-const UserContext = createContext();
-
-export function useUser() {
-  return useContext(UserContext);
+// Define types for User and UserContext
+interface User {
+  id: string;
+  email: string;
 }
 
-export function UserProvider(props) {
-  const [user, setUser] = useState(null);
+interface UserContextType {
+  current: User | null;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+  register: (email: string, password: string) => Promise<void>;
+  updateProfile: (userDetails: Partial<User>) => void;
+  toast: (message: string) => void;
+}
 
-  async function login(email, password) {
-    const loggedIn = await account.createEmailPasswordSession(email, password);
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
+export function useUser(): UserContextType {
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error("useUser must be used within a UserProvider");
+  }
+  return context;
+}
+
+interface UserProviderProps {
+  children: ReactNode;
+}
+
+export function UserProvider({ children }: UserProviderProps) {
+  const [user, setUser] = useState<User | null>(null);
+
+  async function login(email: string, password: string) {
+    // Dummy login implementation
+    const loggedIn = { id: ID.unique(), email };
     setUser(loggedIn);
     toast('Welcome back. You are logged in');
   }
 
   async function logout() {
-    await account.deleteSession("current");
+    // Dummy logout implementation
     setUser(null);
     toast('Logged out');
   }
 
-  async function register(email, password) {
-    await account.create(ID.unique(), email, password);
-    await login(email, password);
+  async function register(email: string, password: string) {
+    // Dummy register implementation
+    const newUser = { id: ID.unique(), email };
+    setUser(newUser);
     toast('Account created');
+  }
+
+  function updateProfile(userDetails: Partial<User>) {
+    if (user) {
+      const updatedUser = { ...user, ...userDetails };
+      setUser(updatedUser);
+      toast('Profile updated');
+    }
   }
 
   async function init() {
     try {
-      const loggedIn = await account.get();
+      // Dummy init implementation
+      const loggedIn = { id: ID.unique(), email: "user@example.com" };
       setUser(loggedIn);
       toast('Welcome back. You are logged in');
     } catch (err) {
@@ -46,8 +79,8 @@ export function UserProvider(props) {
   }, []);
 
   return (
-    <UserContext.Provider value={{ current: user, login, logout, register, toast }}>
-      {props.children}
+    <UserContext.Provider value={{ current: user, login, logout, register, updateProfile, toast }}>
+      {children}
     </UserContext.Provider>
   );
 }

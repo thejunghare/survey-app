@@ -1,37 +1,42 @@
-import { NavigationContainer } from '@react-navigation/native';
-import Login from '../screens/Login';
-import Dashboard from '../screens/Dashboard';
-import DoorToDoorSurvey from '../screens/DoorToDoorSurvey';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useUser } from '../appwrite/UserContext';
 
-const Stack = createNativeStackNavigator();
-export function Router() {
-    const user = useUser();
+import React, { useContext, useEffect, useState } from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+
+import { AppwriteContext } from '../appwrite/UserContext';
+import Loading from '../components/Loading';
+
+//Routes
+import { AppStack } from './AppStack';
+import { AuthStack } from './AuthStack';
+
+
+
+export const Router = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    const { appwrite, isLoggedIn, setIsLoggedIn } = useContext(AppwriteContext)
+
+    useEffect(() => {
+        appwrite
+            .getCurrentUser()
+            .then(response => {
+                setIsLoading(false)
+                if (response) {
+                    setIsLoggedIn(true)
+                }
+            })
+            .catch(_ => {
+                setIsLoading(false)
+                setIsLoggedIn(false)
+            })
+    }, [appwrite, setIsLoggedIn])
+
+    if (isLoading) {
+        return <Loading />
+    }
+
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                {user.current == null ? (
-                    <Stack.Screen
-                        name="Login"
-                        component={Login}
-                        options={{ title: 'Login' }}
-                    />
-                ) : (
-                    <Stack.Screen
-                        name="Home"
-                        component={Dashboard}
-                        options={{ title: 'Home' }}
-                    />
-
-                )}
-                <Stack.Screen
-                    name="D2D_Survey"
-                    component={DoorToDoorSurvey}
-                    options={{ title: 'Door To Door Survey' }}
-                />
-
-            </Stack.Navigator>
+            {isLoggedIn ? <AppStack /> : <AuthStack />}
         </NavigationContainer>
-    );
+    )
 }

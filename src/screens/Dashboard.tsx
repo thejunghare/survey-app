@@ -1,56 +1,105 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react'
 import { SafeAreaView, View, Text, Image, TouchableOpacity } from 'react-native';
-import { useUser } from '../appwrite/UserContext';
+import { AppwriteContext } from '../appwrite/UserContext';
 import { Button, Icon, Avatar } from '@rneui/themed';
 import { useNavigation } from '@react-navigation/native';
+import { toast } from "../appwrite/toast";
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AppStackParamList } from '../routes/AppStack';
 
-export default function Dashboard() {
-    const user = useUser();
+type DashboardScreenNavigationProp = NativeStackNavigationProp<AppStackParamList, 'Dashboard'>;
+
+type UserObj = {
+    name: String;
+    email: String;
+    id: String;
+}
+
+const Dashboard: React.FC = () => {
+    const { appwrite, setIsLoggedIn } = useContext(AppwriteContext)
     const navigation = useNavigation();
+    const [userData, setUserData] = useState<UserObj>()
+
     const handleLogout = () => {
-        user.logout(user.current)
+        appwrite.logout()
+            .then(() => {
+                setIsLoggedIn(false);
+                toast('Logout')
+            })
     }
 
-    // console.log(user.current);
+    useEffect(() => {
+        appwrite.getCurrentUser()
+            .then(response => {
+                if (response) {
+                    const user: UserObj = {
+                        name: response.name,
+                        email: response.email,
+                        id: response.userId
+                    }
+                    setUserData(user)
+                }
+            })
+    }, [appwrite])
+
     return (
         <SafeAreaView className='bg-white'>
-            <View className='h-screen justify-around'>
-                <View className='h-2/5 bg-app-blue justify-around items-center'>
+            <View className='h-screen justify-between'>
+                <View className='h-2/4 bg-app-blue justify-evenly items-center'>
                     <Avatar
-                        size={60}
+                        size={'xlarge'}
                         rounded
                         title="PJ"
                         containerStyle={{ backgroundColor: "blue" }}
                     />
 
                     <View className='flex flex-row items-center'>
-                        <Text className='bg-app-white p-3 font-semibold text-base'>
-                            {user.current ? user.current.name : 'Please login'}
-                        </Text>
-
-                        <Avatar
-                            size={46}
+                        {userData && (
+                            <Text className='bg-app-white p-2 font-semibold text-base'>
+                                {userData.name}
+                            </Text>
+                        )}
+                        <Icon
                             onPress={handleLogout}
-                            icon={{ name: "logout", type: 'simple-line-icon' }}
-                            containerStyle={{ backgroundColor: "#9700b9" }}
+                            name="logout"
+                            type='material-community'
+                            color={'white'}
+                            containerStyle={{
+                                backgroundColor: "#9700b9",
+                                padding: 8,
+                            }}
                         />
                     </View>
                 </View>
 
-                <View className='h-3/5 justify-center'>
-                    <View className='flex flex-row justify-evenly items-center'>
-                        <View className='bg-app-white w-2/5 rounded-lg p-3 items-center'>
-                            <Icon name='handbag' type='simple-line-icon' />
-                            <Text className='m-1 font-bold text-base'>0</Text>
-                            <Text className='m-1 font-semibold text-base'>Shop survey</Text>
+                <View className='h-1/3 justify-start'>
+                    <View className='w-full flex flex-row items-start justify-evenly'>
+                        <View className='w-5/12 flex items-center justify-evenly bg-app-white rounded-lg shadow-sm p-2.5'>
+                            <TouchableOpacity >
+                                <View className="items-center">
+                                    <Icon name='store-outline' type='material-community' size={35} />
+                                </View>
+                                <View className='mt-2 flex items-center'>
+                                    <Text className='font-bold text-lg text-center'>
+                                        0
+                                    </Text>
+                                    <Text className="font-semibold text-base text-center">Shop</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
 
 
-                        <View className='bg-app-white w-2/5 rounded-lg p-3 items-center'>
-                            <TouchableOpacity onPress={() => { navigation.navigate('D2D_Survey') }}>
-                                <Icon name='people' type='simple-line-icon' />
-                                <Text className='m-1 font-bold text-base text-center'>0</Text>
-                                <Text className='m-1 font-semibold text-base'>D2D survey</Text>
+                        <View className='w-5/12 flex items-center justify-evenly bg-app-white rounded-lg shadow-sm p-2.5'>
+                            <TouchableOpacity onPress={() => { navigation.navigate('DoorToDoorSurvey', { userId: userData.id }) }}>
+                                <View className='items-center'>
+                                    <Icon name='book-outline' type='material-community' size={35} />
+                                </View>
+                                <View className='mt-2 flex items-center'>
+                                    <Text className='font-bold text-lg text-center'>
+                                        0
+                                    </Text>
+                                    <Text className="font-semibold text-base text-center">Survey</Text>
+                                </View>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -61,3 +110,5 @@ export default function Dashboard() {
         </SafeAreaView>
     );
 }
+
+export default Dashboard

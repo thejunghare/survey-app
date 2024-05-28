@@ -1,17 +1,48 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react'
 import { View, Text, TextInput, StyleSheet, Image } from 'react-native';
-import { useUser } from '../appwrite/UserContext';
+import { AppwriteContext } from '../appwrite/UserContext';
 import { Button, Icon } from '@rneui/themed';
 
-export default function Login() {
-    const user = useUser();
+import { toast } from "../appwrite/toast";
+
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { AuthStackParamList } from '../routes/AuthStack';
+
+type LoginScreenProps = NativeStackScreenProps<AuthStackParamList, 'Login'>
+
+
+const Login = ({ navigation }: LoginScreenProps) => {
+    const { appwrite, setIsLoggedIn } = useContext(AppwriteContext);
+
+    const [error, setError] = useState<string>('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
-        user.login(email, password)
-    }
 
+
+    const handleLogin = () => {
+        if (email.length < 1 || password.length < 1) {
+            setError('All fields are required')
+        } else {
+            const user = {
+                email,
+                password
+            }
+            appwrite
+                .login(user)
+                .then((response) => {
+                    if (response) {
+                        setIsLoggedIn(true);
+                        toast('Login sucess')
+                    }
+                })
+                .catch(e => {
+                    console.log(e);
+                    setEmail('Incorrect email or password')
+
+                })
+        }
+    }
     return (
         <View style={styles.container}>
             <Image
@@ -29,13 +60,15 @@ export default function Login() {
                     placeholder="Email"
                     value={email}
                     onChangeText={setEmail}
+                    keyboardType={'email-address'}
                 />
                 <TextInput
                     style={styles.input}
                     placeholder="Password"
                     value={password}
                     onChangeText={setPassword}
-                    secureTextEntry
+                    // secureTextEntry
+                    keyboardType='visible-password'
                 />
                 <Button
                     onPress={handleLogin}
@@ -76,3 +109,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f2f2'
     },
 });
+
+
+export default Login

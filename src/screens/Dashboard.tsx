@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
                     const user: UserObj = {
                         name: response.name,
                         email: response.email,
-                        id: response.userId
+                        id: response.$id
                     }
                     setUserData(user)
                 }
@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
                     <View className='flex flex-row items-center'>
                         {userData && (
                             <Text className='bg-app-white p-2 font-semibold text-base'>
-                                {userData.name}
+                                {userData.id}
                             </Text>
                         )}
                         <Icon

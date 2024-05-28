@@ -11,6 +11,8 @@ interface SurveyData {
   division: string;
   ward: string;
   type: string;
+  area:string;
+  building:string;
   surveyData: string; // Your actual survey question-answer structure
 }
 

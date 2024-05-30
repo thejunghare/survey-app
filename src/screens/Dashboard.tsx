@@ -116,7 +116,7 @@ const Dashboard: React.FC = () => {
                         <View className='mt-3 w-full flex flex-row items-start justify-evenly'>
                             <View
                                 className='w-5/12 flex items-center justify-evenly bg-app-white rounded-lg shadow-sm p-2.5'>
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={()=>navigation.navigate('Voter Search')}>
                                     <View className="items-center">
                                         <Icon name='account-search-outline' type='material-community' size={35}/>
                                     </View>

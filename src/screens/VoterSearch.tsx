@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, Searchbar, FAB } from 'react-native-paper';
+import React, {useState} from 'react';
+import {SearchBar} from '@rneui/themed';
 import {
     SafeAreaView,
     StyleSheet,
@@ -8,23 +8,21 @@ import {
 } from 'react-native';
 
 const VoterSearch: React.FC = () => {
-    const [searchQuery, setSearchQuery] = React.useState('');
-    return (
-        <SafeAreaView className='flex-1' >
-            <ScrollView >
-                <Searchbar
-                    placeholder="Search"
-                    onChangeText={setSearchQuery}
-                    value={searchQuery}
-                    className='m-2'
-                />
-            </ScrollView>
+    const [search, setSearch] = useState("");
 
-            <FAB
-                icon="plus"
-                style={styles.fab}
-                onPress={() => console.log('Pressed')}
-            />
+    const updateSearch = (search) => {
+        setSearch(search);
+    };
+
+    return (
+        <SafeAreaView className='flex-1'>
+            <View className={'m-2'}>
+                <SearchBar
+                    placeholder="Type Here..."
+                    onChangeText={updateSearch}
+                    value={search}
+                />
+            </View>
         </SafeAreaView>
     );
 };

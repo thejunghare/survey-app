@@ -6,7 +6,7 @@ import VoterSearch from '../screens/VoterSearch';
 
 export type AppStackParamList = {
     Dashboard: undefined;
-    'DoorToDoorSurvey': { userId: string };
+    'Survey form': { userId: string };
     'Voter Search': undefined;
 }
 
@@ -22,7 +22,7 @@ export const AppStack = () => {
             }}
         >
             <Stack.Screen name='Dashboard' component={Dashboard}/>
-            <Stack.Screen name='DoorToDoorSurvey' component={DoorToDoorSurvey}/>
+            <Stack.Screen name={'Survey form'} component={DoorToDoorSurvey}/>
             <Stack.Screen name={'Voter Search'} component={VoterSearch}/>
         </Stack.Navigator>
     )

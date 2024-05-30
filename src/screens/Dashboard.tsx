@@ -98,7 +98,7 @@ const Dashboard: React.FC = () => {
                             <View
                                 className='w-5/12 flex items-center justify-evenly bg-app-white rounded-lg shadow-sm p-2.5'>
                                 <TouchableOpacity onPress={() => {
-                                    navigation.navigate('DoorToDoorSurvey', {userId: userData.id})
+                                    navigation.navigate('Survey form', {userId: userData.id})
                                 }}>
                                     <View className='items-center'>
                                         <Icon name='book-outline' type='material-community' size={35}/>

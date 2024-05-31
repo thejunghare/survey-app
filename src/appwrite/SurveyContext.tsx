@@ -13,8 +13,9 @@ interface SurveyData {
     type: string;
     area: string;
     building: string;
-    surveyData: string;
+    familyhead: string;
     members: string;
+    roomNumber: string;
 }
 
 interface SurveyContextProps {

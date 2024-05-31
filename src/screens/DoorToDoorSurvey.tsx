@@ -26,8 +26,9 @@ interface SurveyData {
     type: string;
     area: string;
     building: string;
-    familyHead: string;
+    familyhead: string;
     members: string;
+    roomNumber: string;
 }
 
 const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
@@ -40,6 +41,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [type, setType] = useState('Door To Door');
     const [area, setArea] = useState('');
     const [building, setBuilding] = useState('');
+    const [roomNumber, setRoomNumber] = useState('');
     const [familyHeadName, setFamilyHeadName] = useState('');
     const [familyHeadBirthdate, setFamilyHeadBirthdate] = useState('');
     const [familyHeadMobileNumber, setFamilyHeadMobileNumber] = useState('');
@@ -48,8 +50,6 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [voter, setVoter] = useState('');
     const [voterPoll, setVoterPoll] = useState('');
     const [members, setMembers] = useState<MemberData[]>([]);
-
-    const [selectedLanguage, setSelectedLanguage] = useState();
 
     const handleAddMember = () => {
         const newMember: MemberData = {
@@ -82,7 +82,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
 
         const familyDataObject = {
             familyHeadName,
-            familyHeadBirthdate: familyHeadBirthdate.toISOString(),
+            familyHeadBirthdate,
             familyHeadMobileNumber,
             familyHeadEducation,
             caste,
@@ -97,20 +97,21 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
             type,
             area,
             building,
-            familyHead: JSON.stringify(familyDataObject),
+            roomNumber,
+            familyhead: JSON.stringify(familyDataObject),
             members: JSON.stringify(members)
         };
 
         await add(data);
 
-        setEmployeeId('');
         setDivision('');
         setWard('');
         setType('Door To Door');
         setArea('');
         setBuilding('');
+        setRoomNumber('');
         setFamilyHeadName('');
-        setFamilyHeadBirthdate(new Date());
+        setFamilyHeadBirthdate('');
         setFamilyHeadMobileNumber('');
         setFamilyHeadEducation('');
         setCaste('');
@@ -161,6 +162,12 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                     style={styles.textInput}
                 />
                 <TextInput
+                    value={roomNumber}
+                    onChangeText={setRoomNumber}
+                    placeholder="Room number"
+                    style={styles.textInput}
+                />
+                <TextInput
                     value={familyHeadName}
                     onChangeText={setFamilyHeadName}
                     placeholder="Family head name"
@@ -175,7 +182,6 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                 <TextInput
                     value={familyHeadBirthdate}
                     style={styles.textInput}
-                    editable={false}
                     placeholder="Family head birthday"
                     onChangeText={setFamilyHeadBirthdate}
                 />

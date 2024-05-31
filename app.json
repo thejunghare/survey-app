@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "Chanakya Niti",
+    "name": "Digital Election Management",
     "slug": "survey-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/cn-logo.png",
+      "image": "./assets/dem-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

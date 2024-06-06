@@ -94,7 +94,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://665973ae77ed45e3d328f015--thriving-crostata-1c5957.netlify.app/division.json');
+                const response = await fetch('https://thejunghare.github.io/survey-app/src/json/data.json');
                 const data = await response.json();
                 setDivisions(data);
                 setLoading(false);

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Satara",
+        "wards": [
+            {
+                "id": 1,
+                "name": "1"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Medha",
+        "wards": [
+            {
+                "id": 1,
+                "name": "1"
+            }
+        ]
+    }
+]

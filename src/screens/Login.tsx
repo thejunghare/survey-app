@@ -46,7 +46,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../../assets/cn-logo.png')}
+                source={require('../../assets/dem-logo.png')}
                 style={{
                     width: 250,
                     height: 250,
@@ -67,8 +67,8 @@ const Login = ({ navigation }: LoginScreenProps) => {
                     placeholder="Password"
                     value={password}
                     onChangeText={setPassword}
-                    // secureTextEntry
-                    keyboardType='visible-password'
+                    secureTextEntry
+//                    keyboardType='visible-password'
                 />
                 <Button
                     onPress={handleLogin}

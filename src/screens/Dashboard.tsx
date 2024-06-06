@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
                         <View className='flex flex-row items-center'>
                             {userData && (
                                 <Text className='bg-white p-2 font-semibold text-base'>
-                                    {userData.id}
+                                    {userData.name}
                                 </Text>
                             )}
                             <Icon
@@ -188,13 +188,13 @@ const Dashboard: React.FC = () => {
                                     <TouchableOpacity
                                     >
                                         <View className='items-center'>
-                                            <Icon name='call-made' type='material-community' size={35}/>
+                                            <Icon name='chart-box-outline' type='material-community' size={35}/>
                                         </View>
                                         <View className='mt-2 flex items-center'>
                                             <Text className='font-bold text-lg text-center'>
                                                 0
                                             </Text>
-                                            <Text className="font-semibold text-base text-center">Call</Text>
+                                            <Text className="font-semibold text-base text-center">Opinion Poll</Text>
                                         </View>
                                     </TouchableOpacity>
                                 </View>

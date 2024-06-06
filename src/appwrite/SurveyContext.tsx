@@ -16,6 +16,8 @@ interface SurveyData {
     familyhead: string;
     members: string;
     roomNumber: string;
+    native: string;
+    isRoomLocked: boolean;
 }
 
 interface SurveyContextProps {

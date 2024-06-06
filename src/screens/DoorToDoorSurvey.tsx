@@ -145,7 +145,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     };
 
     const handleDateChange = (index, event, selectedDate) => {
-        const currentDate = selectedDate || new Date(members[index].memberBirthdate);
+        const currentDate = selectedDate || new Date(members[index].memberBirthdate || new Date());
         setShowDatePicker(showDatePicker.map((show, i) => (i === index ? false : show)));
         const birthdate = new Date(currentDate);
         const newMembers = [...members]; // create a copy of the members array
@@ -154,9 +154,6 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         newMembers[index].memberAge = age.toString(); // update the age
         setMembers(newMembers); // update the state variable
     };
-
-    
-
 
     const handleAddMember = () => {
         const newMember = {
@@ -245,13 +242,12 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         setIsLoading(false); // stop loading
     };
 
-
     if (loading) {
         return <ActivityIndicator size="large" color="#0000ff"/>;
     }
 
     return (
-        <SafeAreaView style={{flex: 1, padding: 10}}>
+        <SafeAreaView className={'bg-white'} style={{flex: 1, padding: 10}}>
             <ScrollView>
                 <TextInput
                     value={type}
@@ -267,21 +263,24 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                     style={styles.textInput}
                     editable={false}
                 />
+                {/*<Text style={styles.label}>Division</Text>*/}
                 <Picker
                     selectedValue={division}
-                    onValueChange={(itemValue) => handleDivisionChange(itemValue)}
+                    onValueChange={handleDivisionChange}
+                    style={styles.picker}
                 >
-                    <Picker.Item label="Division name" value=""/>
-                    {divisions.map((div) => (
-                        <Picker.Item key={div.id} label={div.name} value={div.name}/>
+                    <Picker.Item label="Select Division" value=""/>
+                    {divisions.map((division) => (
+                        <Picker.Item key={division.id} label={division.name} value={division.name}/>
                     ))}
                 </Picker>
-
+                {/*<Text style={styles.label}>Ward</Text>*/}
                 <Picker
                     selectedValue={ward}
                     onValueChange={(itemValue) => setWard(itemValue)}
+                    style={styles.picker}
                 >
-                    <Picker.Item label="Ward name" value=""/>
+                    <Picker.Item label="Select Ward" value=""/>
                     {wards.map((ward) => (
                         <Picker.Item key={ward.id} label={ward.name} value={ward.name}/>
                     ))}
@@ -289,98 +288,84 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                 <TextInput
                     value={area}
                     onChangeText={setArea}
-                    placeholder="Area name"
+                    placeholder="Area"
                     style={styles.textInput}
                 />
                 <TextInput
                     value={building}
                     onChangeText={setBuilding}
-                    placeholder="Building name"
+                    placeholder="Building"
                     style={styles.textInput}
                 />
                 <TextInput
                     value={roomNumber}
                     onChangeText={setRoomNumber}
-                    placeholder="Room number"
+                    placeholder="Room Number"
                     style={styles.textInput}
                 />
                 <CheckBox
-                    style={{flex: 1, padding: 10, borderRadius: 4}}
-                    title="Room locked"
-                    checkedTitle={'Room is locked'}
+                    title="Room Locked"
                     checked={isRoomLocked}
                     onPress={() => setIsRoomLocked(!isRoomLocked)}
+                />
+
+                <TextInput
+                    value={native}
+                    onChangeText={setNativePlace}
+                    placeholder="Native Place"
+                    style={styles.textInput}
                 />
                 <TextInput
                     value={familyHeadName}
                     onChangeText={setFamilyHeadName}
-                    placeholder="Family head name"
+                    placeholder="Family Head Name"
                     style={styles.textInput}
-                    editable={!isRoomLocked}
-                    //required={!isRoomLocked}
+                />
+                <View>
+                    {/*<Text>Family Head Birthdate</Text>*/}
+                    <Pressable onPress={toggleFamilyHeadDatePicker}>
+                        <TextInput
+                            value={familyHeadBirthdate}
+                            placeholder="Birthdate"
+                            style={styles.textInput}
+                            editable={false}
+                        />
+                    </Pressable>
+                    {familyHeadShowPicker && (
+                        <DateTimePicker
+                            value={familyHeadDate}
+                            mode="date"
+                            display="default"
+                            onChange={onFamilyHeadDateChange}
+                        />
+                    )}
+                </View>
+                <TextInput
+                    value={familyHeadAge}
+                    onChangeText={setFamilyHeadAge}
+                    placeholder="Age"
+                    style={styles.textInput}
+                    keyboardType="numeric"
+                    editable={false}
                 />
                 <TextInput
                     value={familyHeadMobileNumber}
                     onChangeText={setFamilyHeadMobileNumber}
-                    placeholder="Family head mobile number"
-                    inputMode={'decimal'}
-                    maxLength={10}
+                    placeholder="Mobile Number"
                     style={styles.textInput}
-                    editable={!isRoomLocked}
-                />
-
-                <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-                    <View style={{width: '60%'}}>
-                        {familyHeadShowPicker && (
-                            <DateTimePicker
-                                mode={'date'}
-                                display={'spinner'}
-                                value={familyHeadDate}
-                                onChange={onFamilyHeadDateChange}
-                            />
-                        )}
-                        {!familyHeadShowPicker && (
-                            <Pressable onPress={toggleFamilyHeadDatePicker}>
-                                <TextInput
-                                    value={familyHeadBirthdate}
-                                    placeholder="Family Head Birthdate"
-                                    style={styles.textInput}
-                                    editable={false}
-                                />
-                            </Pressable>
-                        )}
-                    </View>
-                    <View style={{width: '35%'}}>
-                        <TextInput
-                            value={familyHeadAge}
-                            editable={false}
-                            placeholder="Age"
-                            style={styles.textInput}
-                            editable={!isRoomLocked}
-                        />
-                    </View>
-                </View>
-
-                <TextInput
-                    value={familyHeadEducation}
-                    onChangeText={setFamilyHeadEducation}
-                    placeholder="Family head education"
-                    style={styles.textInput}
-                    editable={!isRoomLocked}
+                    keyboardType="phone-pad"
                 />
                 <TextInput
                     value={caste}
                     onChangeText={setCaste}
                     placeholder="Caste"
                     style={styles.textInput}
-                    editable={!isRoomLocked}
                 />
                 <TextInput
-                    value={native}
-                    onChangeText={setNativePlace}
-                    placeholder="Native place"
+                    value={familyHeadEducation}
+                    onChangeText={setFamilyHeadEducation}
+                    placeholder="Education"
                     style={styles.textInput}
-                    editable={!isRoomLocked}
                 />
                 <View style={{width: '100%'}}>
                     <Picker
@@ -421,151 +406,129 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         </Picker>
                     )}
                 </View>
-                {members.map((member, index) => (
-                    <View key={index} style={{padding: 10, marginVertical: 5}}
-                          className={'border border-dashed rounded-xl border-slate-400'}>
-                        <Text className={'text-center text-sm font-semibold my-4'}>Member {index + 1}</Text>
-                        <TextInput
-                            value={member.memberName}
-                            onChangeText={(text) => handleUpdateMember(index, 'memberName', text)}
-                            placeholder="Name"
-                            style={styles.textInput}
-                        />
-                        <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <View style={{width: '60%'}}>
-                                {showDatePicker[index] && (
-                                    <DateTimePicker
-                                        mode={'date'}
-                                        display={'spinner'}
-                                        value={new Date(members[index].memberBirthdate)}
-                                        onChange={(event, selectedDate) => handleDateChange(index, event, selectedDate)}
+                <View>
 
-                                    />
-                                )}
-                                {!showDatePicker[index] && (
-                                    <Pressable onPress={() => showDatePickerModal(index)}>
-                                        <TextInput
-                                            value={members[index].memberBirthdate}
-                                            placeholder="Family Head Birthdate"
-                                            style={styles.textInput}
-
-                                        />
-                                    </Pressable>
-                                )}
-                            </View>
-                            <View style={{width: '35%'}}>
+                    {members.map((member, index) => (
+                        <View key={index} style={styles.memberContainer}>
+                            <TextInput
+                                value={member.memberName}
+                                onChangeText={(text) => handleUpdateMember(index, 'memberName', text)}
+                                placeholder={`Member ${index + 1} Name`}
+                                style={styles.textInput}
+                            />
+                            <Pressable onPress={() => showDatePickerModal(index)}>
                                 <TextInput
-                                    value={members[index].memberAge}
-                                    placeholder="Age"
+                                    value={member.memberBirthdate}
+                                    placeholder={`Member ${index + 1} Birthdate`}
                                     style={styles.textInput}
-                                     editable={false}
+                                    editable={false}
                                 />
-                            </View>
-                        </View>
-
-                        <TextInput
-                            value={member.memberMobileNumber}
-                            onChangeText={(text) => handleUpdateMember(index, 'memberMobileNumber', text)}
-                            placeholder="Mobile number"
-                            inputMode={'decimal'}
-                            maxLength={10}
-                            style={styles.textInput}
-                        />
-                        <TextInput
-                            value={member.memberEducation}
-                            onChangeText={(text) => handleUpdateMember(index, 'memberEducation', text)}
-                            placeholder="Education"
-                            style={styles.textInput}
-                        />
-                        <View style={{width: '100%'}}>
-                            <Picker
-                                enabled={!isRoomLocked}
-                                selectedValue={member.voter}
-                                onValueChange={(itemValue) => handleUpdateMember(index, 'voter', itemValue)}
-                            >
-                                <Picker.Item label="Are you a voter" value=""/>
-                                <Picker.Item label="Yes" value="yes"/>
-                                <Picker.Item label="No" value="no"/>
-                            </Picker>
-
-                            {member.voter === 'yes' && (
-                                <>
-                                    <TextInput
-                                        value={member.voterPoll}
-                                        onChangeText={(text) => handleUpdateMember(index, 'voterPoll', text)}
-                                        placeholder="Voter poll"
-                                        style={styles.textInput}
-                                    />
-                                    <TextInput
-                                        value={member.voterPollArea}
-                                        onChangeText={(text) => handleUpdateMember(index, 'voterPollArea', text)}
-                                        placeholder="Voter poll area"
-                                        style={styles.textInput}
-                                    />
-                                </>
+                            </Pressable>
+                            {showDatePicker[index] && (
+                                <DateTimePicker
+                                    value={new Date(member.memberBirthdate || new Date())}
+                                    mode="date"
+                                    display="default"
+                                    onChange={(event, date) => handleDateChange(index, event, date)}
+                                />
                             )}
-
-                            {member.voter === 'no' && (
+                            <TextInput
+                                value={member.memberAge}
+                                onChangeText={(text) => handleUpdateMember(index, 'memberAge', text)}
+                                placeholder={`Member ${index + 1} Age`}
+                                style={styles.textInput}
+                                keyboardType="numeric"
+                                editable={false}
+                            />
+                            <TextInput
+                                value={member.memberMobileNumber}
+                                onChangeText={(text) => handleUpdateMember(index, 'memberMobileNumber', text)}
+                                placeholder={`Member ${index + 1} Mobile Number`}
+                                style={styles.textInput}
+                                keyboardType="phone-pad"
+                            />
+                            <TextInput
+                                value={member.memberEducation}
+                                onChangeText={(text) => handleUpdateMember(index, 'memberEducation', text)}
+                                placeholder={`Member ${index + 1} Education`}
+                                style={styles.textInput}
+                            />
+                            <View style={{width: '100%'}}>
                                 <Picker
                                     enabled={!isRoomLocked}
-                                    selectedValue={member.newVoterRegistration}
-                                    onValueChange={(itemValue) => handleUpdateMember(index, 'newVoterRegistration', itemValue)}
+                                    selectedValue={member.voter}
+                                    onValueChange={(itemValue) => handleUpdateMember(index, 'voter', itemValue)}
                                 >
-                                    <Picker.Item label="Do you want to register as a new voter?" value=""/>
+                                    <Picker.Item label="Are you a voter" value=""/>
                                     <Picker.Item label="Yes" value="yes"/>
                                     <Picker.Item label="No" value="no"/>
                                 </Picker>
-                            )}
+
+                                {member.voter === 'yes' && (
+                                    <>
+                                        <TextInput
+                                            value={member.voterPoll}
+                                            onChangeText={(text) => handleUpdateMember(index, 'voterPoll', text)}
+                                            placeholder="Voter poll"
+                                            style={styles.textInput}
+                                        />
+                                        <TextInput
+                                            value={member.voterPollArea}
+                                            onChangeText={(text) => handleUpdateMember(index, 'voterPollArea', text)}
+                                            placeholder="Voter poll area"
+                                            style={styles.textInput}
+                                        />
+                                    </>
+                                )}
+
+                                {member.voter === 'no' && (
+                                    <Picker
+                                        enabled={!isRoomLocked}
+                                        selectedValue={member.newVoterRegistration}
+                                        onValueChange={(itemValue) => handleUpdateMember(index, 'newVoterRegistration', itemValue)}
+                                    >
+                                        <Picker.Item label="Do you want to register as a new voter?" value=""/>
+                                        <Picker.Item label="Yes" value="yes"/>
+                                        <Picker.Item label="No" value="no"/>
+                                    </Picker>
+                                )}
+                            </View>
+                            <Button
+                                title="Delete Member"
+                                onPress={() => handleDeleteMember(index)}
+                                buttonStyle={{
+                                    backgroundColor: 'red',
+
+                                }}
+                                containerStyle={{
+                                    width: 140,
+                                    marginVertical: 5,
+                                    marginHorizontal: 'auto'
+                                }}/>
                         </View>
-                        <Button
-                            title="Remove member"
-                            onPress={() => handleDeleteMember(index)}
-                            buttonStyle={{
-                                backgroundColor: 'red',
-                                borderRadius: 99,
-                            }}
-                            containerStyle={{
-                                width: 150,
-                                marginVertical: 10,
-                                marginHorizontal: 'auto'
-                            }}
-                        />
-                    </View>
-                ))}
-                <View className='my-3 w-screen flex flex-row items-center justify-around'>
+                    ))}
+                </View>
+                <View className={'flex flex-row items-center justify-between'}>
                     <Button
-                        title="Add member"
-                        disabled={isRoomLocked}
-                        onPress={handleAddMember}
-                        size="md"
-                        type="solid"
+                        title="Add Member"
+                        onPress={handleAddMember} buttonStyle={{
+                        backgroundColor: 'rgba(78, 116, 289, 1)',
+
+                    }}
+                        containerStyle={{
+                            width: 120,
+                        }}/>
+                    <Button
+                        title="Submit"
+                        onPress={handleSubmit} disabled={isLoading}
                         buttonStyle={{
-                            backgroundColor: 'rgba(78, 116, 289, 1)',
-                            borderRadius: 99,
+                            backgroundColor: 'rgba(127, 220, 103, 1)',
+
                         }}
                         containerStyle={{
                             width: 120,
-                        }}
-                    />
-                    {isLoading ? (
-                        <ActivityIndicator size="large" color="#0000ff"/>
-                    ) : (
-                        <Button
-                            title="Submit data"
-                            size="md"
-                            type="solid"
-                            onPress={handleSubmit}
-                            disabled={!isRoomLocked}
-                            buttonStyle={{
-                                backgroundColor: 'rgba(127, 220, 103, 1)',
-                                borderRadius: 99,
-                            }}
-                            containerStyle={{
-                                width: 120,
-                            }}
-                        />
-                    )}
-
+                        }}/>
+                    {isLoading && <ActivityIndicator size="large" color="#0000ff"/>}
                 </View>
             </ScrollView>
         </SafeAreaView>
@@ -574,32 +537,29 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
 
 const styles = StyleSheet.create({
     textInput: {
-        backgroundColor: '#ffffff',
-        padding: 12,
-        marginHorizontal: 0,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        padding: 10,
         marginVertical: 5,
-        borderRadius: 6,
     },
-    submitButton: {
-        borderRadius: 99,
+    picker: {
+        borderWidth: 1,
+        borderColor: '#ccc',
+        padding: 10,
+        marginVertical: 5,
+    },
+    memberContainer: {
+        marginVertical: 10,
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        borderRadius: 5,
     },
     label: {
         fontSize: 16,
-        marginBottom: 8,
-        color: '#333',
-    },
-    pickerContainer: {
-        marginBottom: 16,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        borderRadius: 8,
-        overflow: 'hidden',
-    },
-    picker: {
-        height: 50,
-        width: '100%',
-        color: '#333',
-    },
-})
+        fontWeight: 'bold',
+        marginVertical: 5,
+    }
+});
 
 export default DoorToDoorSurvey;

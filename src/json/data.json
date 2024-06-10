@@ -5,7 +5,19 @@
         "wards": [
             {
                 "id": 1,
-                "name": "1"
+                "name": "1",
+                "areas": [
+                    {
+                        "id": 1,
+                        "name": "D.B. Chowk",
+                        "buildings": [
+                            {
+                                "id": 1,
+                                "name": "Mohan Regency Wing A2"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "id": 2,

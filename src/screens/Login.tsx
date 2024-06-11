@@ -1,23 +1,23 @@
-import React, { useContext, useState } from 'react'
-import { View, Text, TextInput, StyleSheet, Image } from 'react-native';
-import { AppwriteContext } from '../appwrite/UserContext';
-import { Button, Icon } from '@rneui/themed';
+import React, {useContext, useState} from 'react'
+import {View, Text, TextInput, StyleSheet, Image} from 'react-native';
+import {AppwriteContext} from '../appwrite/UserContext';
+import {Button, Icon} from '@rneui/themed';
+import {StatusBar} from 'expo-status-bar';
 
-import { toast } from "../appwrite/toast";
+import {toast} from "../appwrite/toast";
 
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { AuthStackParamList } from '../routes/AuthStack';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {AuthStackParamList} from '../routes/AuthStack';
 
 type LoginScreenProps = NativeStackScreenProps<AuthStackParamList, 'Login'>
 
 
-const Login = ({ navigation }: LoginScreenProps) => {
-    const { appwrite, setIsLoggedIn } = useContext(AppwriteContext);
+const Login = ({navigation}: LoginScreenProps) => {
+    const {appwrite, setIsLoggedIn} = useContext(AppwriteContext);
 
     const [error, setError] = useState<string>('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
 
 
     const handleLogin = () => {
@@ -68,7 +68,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
                     value={password}
                     onChangeText={setPassword}
                     secureTextEntry
-//                    keyboardType='visible-password'
+                    //                    keyboardType='visible-password'
                 />
                 <Button
                     onPress={handleLogin}
@@ -90,6 +90,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
                     />
                 </Button>
             </View>
+            <StatusBar style="dark"/>
         </View>
     );
 }

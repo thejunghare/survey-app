@@ -19,6 +19,7 @@ import {RouteProp} from '@react-navigation/native';
 import {AppStackParamList} from '../routes/AppStack';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {Picker} from '@react-native-picker/picker';
+import { StatusBar } from 'expo-status-bar';
 
 type DoorToDoorSurveyRouteProp = RouteProp<AppStackParamList, 'DoorToDoorSurvey'>;
 
@@ -309,7 +310,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     }
 
     return (
-        <SafeAreaView className={''} style={{flex: 1, padding: 10}}>
+        <SafeAreaView className={'bg-white'} style={{flex: 1, padding: 10}}>
             <ScrollView>
                 <TextInput
                     value={type}
@@ -621,17 +622,16 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                     {isLoading && <ActivityIndicator size="large" color="#0000ff"/>}
                 </View>
             </ScrollView>
+            <StatusBar style="dark" />
         </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
     textInput: {
-        borderWidth: 0,
-//        borderColor: '#ccc',
         padding: 10,
         marginVertical: 8,
-        backgroundColor: '#fff',
+        backgroundColor: '#f1f1f1',
         borderRadius: 8,
     },
     picker: {

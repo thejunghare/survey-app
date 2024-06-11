@@ -17,6 +17,7 @@ import {toast} from "../appwrite/toast";
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AppStackParamList} from '../routes/AppStack';
 import {useSurvey} from '../appwrite/SurveyContext';
+import { StatusBar } from 'expo-status-bar';
 
 type DashboardScreenNavigationProp = NativeStackNavigationProp<AppStackParamList, 'Dashboard'>;
 
@@ -229,9 +230,45 @@ const Dashboard: React.FC = () => {
                                 </TouchableOpacity>
                             </View>
                         </View>
+
+{/*                        <View className='mt-3 w-full flex flex-row items-start justify-evenly'>
+                            <View
+                                style={{backgroundColor: '#2A9D8F'}}
+                                className='w-5/12 flex items-center justify-evenly bg-app-white rounded shadow-sm p-2.5'>
+                                <TouchableOpacity onPress={() => navigation.navigate('Voter Search')}>
+                                    <View className="items-center">
+                                        <Icon name='account-search-outline' type='material-community' size={35}/>
+                                    </View>
+                                    <View className='mt-2 flex items-center'>
+                                        <Text className='font-bold text-lg text-center'>
+                                            0
+                                        </Text>
+                                        <Text className="font-semibold text-base text-center">Voter Search</Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+
+                            <View
+                                style={{backgroundColor: '#E9C46A'}}
+                                className='w-5/12 flex items-center justify-evenly bg-app-white rounded shadow-sm p-2.5'>
+                                <TouchableOpacity
+                                >
+                                    <View className='items-center'>
+                                        <Icon name='chart-box-outline' type='material-community' size={35}/>
+                                    </View>
+                                    <View className='mt-2 flex items-center'>
+                                        <Text className='font-bold text-lg text-center'>
+                                            0
+                                        </Text>
+                                        <Text className="font-semibold text-base text-center">Opinion Poll</Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                        </View>*/}
                     </ScrollView>
                 </View>
             </SafeAreaView>
+            <StatusBar style="dark" />
         </ScrollView>
     );
 }

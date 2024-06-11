@@ -96,6 +96,21 @@
               {
                 "id": 7,
                 "name": "New lulla co-operative society wing D11"
+              },{
+                "id": 8,
+                "name":"Shree Complex Phase 2 Building No 3"
+              },
+              {
+                "id": 9,
+                "name":"Shree Complex Phase 2 Building No 4"
+              },
+              {
+                "id": 10,
+                "name":"Shree Complex Phase 2 Building No 5"
+              },
+              {
+                "id": 11,
+                "name":"Shree Complex Phase 2 Building No 6"
               }
             ]
           }

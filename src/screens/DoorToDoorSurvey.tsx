@@ -11,8 +11,9 @@ import {
     StyleSheet,
     Platform,
     KeyboardType,
+
 } from 'react-native';
-import {Button, Input, Icon, CheckBox} from '@rneui/base';
+import {Button, Input, Icon, CheckBox,} from '@rneui/base';
 import {useSurvey} from '../appwrite/SurveyContext';
 import {RouteProp} from '@react-navigation/native';
 import {AppStackParamList} from '../routes/AppStack';
@@ -46,17 +47,31 @@ interface SurveyData {
     roomNumber: string;
     native: string;
     isRoomLocked: boolean;
+    surveyRemark: string;
+    surveyDenied: boolean;
 }
 
 interface Ward {
     id: number;
     name: string;
+    areas: Area[]
 }
 
 interface Division {
     id: number;
     name: string;
     wards: Ward[];
+}
+
+interface Area {
+    id: number;
+    name: string;
+    buildings: Building[];
+}
+
+interface Building {
+    id: number;
+    name: string;
 }
 
 const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
@@ -81,6 +96,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [members, setMembers] = useState([]);
     const [divisions, setDivisions] = useState([]);
     const [wards, setWards] = useState([]);
+    const [areas, setAreas] = useState([]);
+    const [buildings, setBuildings] = useState([]);
     const [loading, setLoading] = useState(true);
     const [voterPollArea, setVoterPollArea] = useState('');
     const [newVoterRegistration, setNewVoterRegistration] = useState('');
@@ -90,6 +107,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [showDatePicker, setShowDatePicker] = useState(Array(members.length).fill(false));
     const [isLoading, setIsLoading] = useState(false);
     const [isRoomLocked, setIsRoomLocked] = useState(false);
+    const [surveyDenied, setSurveyDenied] = useState(false);
+    const [surveyRemark, setSurveyRemark] = useState('')
 
     useEffect(() => {
         const fetchData = async () => {
@@ -114,11 +133,50 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         return ageInYears;
     };
 
-    const handleDivisionChange = (itemValue) => {
+    /*const handleDivisionChange = (itemValue) => {
         setDivision(itemValue);
         const selectedDivision = divisions.find(div => div.name === itemValue);
         setWards(selectedDivision ? selectedDivision.wards : []);
         setWard('');
+    };*/
+    const handleDivisionChange = (itemValue) => {
+        setDivision(itemValue);
+        const selectedDivision = divisions.find(div => div.name === itemValue);
+        if (selectedDivision) {
+            setWards(selectedDivision.wards);
+        } else {
+            setWards([]);
+        }
+        setWard('');
+        setArea('');
+        setBuilding('');
+    };
+
+    const handleWardChange = (itemValue) => {
+        setWard(itemValue);
+        const selectedWard = wards.find(ward => ward.name === itemValue);
+        if (selectedWard && selectedWard.areas) {
+            setAreas(selectedWard.areas);
+        } else {
+            setAreas([]);
+        }
+        setArea('');
+        setBuilding('');
+    };
+
+    const handleAreaChange = (itemValue) => {
+        setArea(itemValue);
+        const selectedArea = areas.find(area => area.name === itemValue);
+        if (selectedArea && selectedArea.buildings) {
+            setBuildings(selectedArea.buildings);
+        } else {
+            setBuildings([]);
+        }
+        setBuilding('');
+    };
+
+    const handleBuildingChange = (itemValue) => {
+        setBuilding(itemValue);
     };
 
     const toggleFamilyHeadDatePicker = () => {
@@ -185,7 +243,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
 
     const handleSubmit = async () => {
         setIsLoading(true); // start loading
-        if (!employeeId || !division || !ward || !type) {
+        if (!employeeId || !division || !ward || !type || !roomNumber) {
             alert('All fileds are required unless marked optional.');
             setIsLoading(false); // stop loading
             return;
@@ -214,6 +272,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
             roomNumber,
             native,
             isRoomLocked,
+            surveyDenied,
+            surveyRemark,
             familyhead: JSON.stringify(familyDataObject),
             members: JSON.stringify(members)
         };
@@ -239,6 +299,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         setNativePlace('');
         setFamilyHeadAge('');
         setIsRoomLocked(false);
+        setSurveyDenied(false);
+        setSurveyRemark('');
         setIsLoading(false); // stop loading
     };
 
@@ -247,7 +309,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     }
 
     return (
-        <SafeAreaView className={'bg-white'} style={{flex: 1, padding: 10}}>
+        <SafeAreaView className={''} style={{flex: 1, padding: 10}}>
             <ScrollView>
                 <TextInput
                     value={type}
@@ -269,45 +331,63 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                     onValueChange={handleDivisionChange}
                     style={styles.picker}
                 >
-                    <Picker.Item label="Select Division" value=""/>
+                    <Picker.Item label="Select Division (Required)" value=""/>
                     {divisions.map((division) => (
                         <Picker.Item key={division.id} label={division.name} value={division.name}/>
                     ))}
                 </Picker>
-                {/*<Text style={styles.label}>Ward</Text>*/}
+
                 <Picker
                     selectedValue={ward}
-                    onValueChange={(itemValue) => setWard(itemValue)}
+                    onValueChange={handleWardChange}
                     style={styles.picker}
                 >
-                    <Picker.Item label="Select Ward" value=""/>
+                    <Picker.Item label="Select Ward (Required)" value=""/>
                     {wards.map((ward) => (
                         <Picker.Item key={ward.id} label={ward.name} value={ward.name}/>
                     ))}
                 </Picker>
-                <TextInput
-                    value={area}
-                    onChangeText={setArea}
-                    placeholder="Area"
-                    style={styles.textInput}
-                />
-                <TextInput
-                    value={building}
-                    onChangeText={setBuilding}
-                    placeholder="Building"
-                    style={styles.textInput}
-                />
+
+                <Picker
+                    selectedValue={area}
+                    onValueChange={handleAreaChange}
+                    style={styles.picker}
+                >
+                    <Picker.Item label="Select Area (Required)" value=""/>
+                    {areas.map((area) => (
+                        <Picker.Item key={area.id} label={area.name} value={area.name}/>
+                    ))}
+                </Picker>
+
+                <Picker
+                    selectedValue={building}
+                    onValueChange={handleBuildingChange}
+                    style={styles.picker}
+                >
+                    <Picker.Item label="Select Building (Required)" value=""/>
+                    {buildings.map((building) => (
+                        <Picker.Item key={building.id} label={building.name} value={building.name}/>
+                    ))}
+                </Picker>
                 <TextInput
                     value={roomNumber}
                     onChangeText={setRoomNumber}
-                    placeholder="Room Number"
+                    placeholder="Room Number (Required)"
                     style={styles.textInput}
                 />
-                <CheckBox
-                    title="Room Locked"
-                    checked={isRoomLocked}
-                    onPress={() => setIsRoomLocked(!isRoomLocked)}
-                />
+                <View className={'flex flex-row items-center justify-evenly'}>
+                    <CheckBox
+                        title="Room Locked"
+                        checked={isRoomLocked}
+                        onPress={() => setIsRoomLocked(!isRoomLocked)}
+                    />
+                    <CheckBox
+                        title="Survey Denied"
+                        checked={surveyDenied}
+                        onPress={() => setSurveyDenied(!surveyDenied)}
+                        checkedColor='red'
+                    />
+                </View>
 
                 <TextInput
                     value={native}
@@ -335,7 +415,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         <DateTimePicker
                             value={familyHeadDate}
                             mode="date"
-                            display="default"
+                            display="spinner"
                             onChange={onFamilyHeadDateChange}
                         />
                     )}
@@ -343,7 +423,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                 <TextInput
                     value={familyHeadAge}
                     onChangeText={setFamilyHeadAge}
-                    placeholder="Age"
+                    placeholder="Age (Auto-Fill)"
                     style={styles.textInput}
                     keyboardType="numeric"
                     editable={false}
@@ -354,6 +434,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                     placeholder="Mobile Number"
                     style={styles.textInput}
                     keyboardType="phone-pad"
+                    maxLength={10}
                 />
                 <TextInput
                     value={caste}
@@ -406,6 +487,12 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         </Picker>
                     )}
                 </View>
+                <TextInput
+                    value={surveyRemark}
+                    onChangeText={setSurveyRemark}
+                    placeholder="Survey Remark"
+                    style={styles.textInput}
+                />
                 <View>
 
                     {members.map((member, index) => (
@@ -428,7 +515,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                                 <DateTimePicker
                                     value={new Date(member.memberBirthdate || new Date())}
                                     mode="date"
-                                    display="default"
+                                    display="spinner"
                                     onChange={(event, date) => handleDateChange(index, event, date)}
                                 />
                             )}
@@ -446,6 +533,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                                 placeholder={`Member ${index + 1} Mobile Number`}
                                 style={styles.textInput}
                                 keyboardType="phone-pad"
+                                maxLength={10}
                             />
                             <TextInput
                                 value={member.memberEducation}
@@ -487,7 +575,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                                         selectedValue={member.newVoterRegistration}
                                         onValueChange={(itemValue) => handleUpdateMember(index, 'newVoterRegistration', itemValue)}
                                     >
-                                        <Picker.Item label="Do you want to register as a new voter?" value=""/>
+                                        <Picker.Item label="Do you want to register as a new voter?"
+                                                     value=""/>
                                         <Picker.Item label="Yes" value="yes"/>
                                         <Picker.Item label="No" value="no"/>
                                     </Picker>
@@ -498,7 +587,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                                 onPress={() => handleDeleteMember(index)}
                                 buttonStyle={{
                                     backgroundColor: 'red',
-
+                                    borderRadius: 8,
                                 }}
                                 containerStyle={{
                                     width: 140,
@@ -513,6 +602,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         title="Add Member"
                         onPress={handleAddMember} buttonStyle={{
                         backgroundColor: 'rgba(78, 116, 289, 1)',
+                        borderRadius: 8,
 
                     }}
                         containerStyle={{
@@ -523,7 +613,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         onPress={handleSubmit} disabled={isLoading}
                         buttonStyle={{
                             backgroundColor: 'rgba(127, 220, 103, 1)',
-
+                            borderRadius: 8,
                         }}
                         containerStyle={{
                             width: 120,
@@ -537,10 +627,12 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
 
 const styles = StyleSheet.create({
     textInput: {
-        borderWidth: 1,
-        borderColor: '#ccc',
+        borderWidth: 0,
+//        borderColor: '#ccc',
         padding: 10,
-        marginVertical: 5,
+        marginVertical: 8,
+        backgroundColor: '#fff',
+        borderRadius: 8,
     },
     picker: {
         borderWidth: 1,

@@ -18,6 +18,8 @@ interface SurveyData {
     roomNumber: string;
     native: string;
     isRoomLocked: boolean;
+    surveyRemark:string;
+    surveyDenied:boolean;
 }
 
 interface SurveyContextProps {

@@ -67,7 +67,37 @@
           },
           {
             "id": 2,
-            "name": "office back side"
+            "name": "office back side",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "New lulla co-operative society wing D5"
+              },
+              {
+                "id": 2,
+                "name": "New lulla co-operative society wing D6"
+              },
+              {
+                "id": 3,
+                "name": "New lulla co-operative society wing D7"
+              },
+              {
+                "id": 4,
+                "name": "New lulla co-operative society wing D8"
+              },
+              {
+                "id": 5,
+                "name": "New lulla co-operative society wing D9"
+              },
+              {
+                "id": 6,
+                "name": "New lulla co-operative society wing D10"
+              },
+              {
+                "id": 7,
+                "name": "New lulla co-operative society wing D11"
+              }
+            ]
           }
         ]
       },

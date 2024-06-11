@@ -15,10 +15,11 @@ export const AuthStack = () => {
     return (
         <Stack.Navigator
             screenOptions={{
-                headerTitleAlign: 'center',
+                headerTitleAlign: 'left',
                 headerBackTitleVisible: false,
+
             }}>
-            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Login" component={Login}  options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 }

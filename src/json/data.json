@@ -14,6 +14,24 @@
                             {
                                 "id": 1,
                                 "name": "Mohan Regency Wing A2"
+                            },{
+                                "id": 2,
+                                "name": "Mohan Regency Wing A3"
+                            },{
+                                "id": 3,
+                                "name": "Mohan Regency Wing A4"
+                            },{
+                                "id": 4,
+                                "name": "Mohan Regency Wing A5"
+                            },{
+                                "id": 5,
+                                "name": "Mohan Regency Wing A6"
+                            },{
+                                "id": 6,
+                                "name": "Mohan Regency Wing A7"
+                            },{
+                                "id": 7,
+                                "name": "Mohan Regency Wing A8"
                             }
                         ]
                     }

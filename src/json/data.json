@@ -1,62 +1,96 @@
 [
-    {
+  {
+    "id": 1,
+    "name": "Kalyan",
+    "wards": [
+      {
         "id": 1,
-        "name": "Kalyan",
-        "wards": [
-            {
+        "name": "1",
+        "areas": [
+          {
+            "id": 1,
+            "name": "D.B. Chowk",
+            "buildings": [
+              {
                 "id": 1,
-                "name": "1",
-                "areas": [
-                    {
-                        "id": 1,
-                        "name": "D.B. Chowk",
-                        "buildings": [
-                            {
-                                "id": 1,
-                                "name": "Mohan Regency Wing A2"
-                            },{
-                                "id": 2,
-                                "name": "Mohan Regency Wing A3"
-                            },{
-                                "id": 3,
-                                "name": "Mohan Regency Wing A4"
-                            },{
-                                "id": 4,
-                                "name": "Mohan Regency Wing A5"
-                            },{
-                                "id": 5,
-                                "name": "Mohan Regency Wing A6"
-                            },{
-                                "id": 6,
-                                "name": "Mohan Regency Wing A7"
-                            },{
-                                "id": 7,
-                                "name": "Mohan Regency Wing A8"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
+                "name": "Mohan Regency Wing A2"
+              },
+              {
                 "id": 2,
-                "name": "2"
-            },
-            {
+                "name": "Mohan Regency Wing A3"
+              },
+              {
                 "id": 3,
-                "name": "3"
-            },
-            {
+                "name": "Mohan Regency Wing A4"
+              },
+              {
                 "id": 4,
-                "name": "4"
-            },
-            {
+                "name": "Mohan Regency Wing A5"
+              },
+              {
                 "id": 5,
-                "name": "5"
-            },
-            {
+                "name": "Mohan Regency Wing A6"
+              },
+              {
                 "id": 6,
-                "name": "6"
-            }
+                "name": "Mohan Regency Wing A7"
+              },
+              {
+                "id": 7,
+                "name": "Mohan Regency Wing A8"
+              },
+              {
+                "id": 8,
+                "name": "Mohan Regency Wing B1"
+              },
+              {
+                "id": 9,
+                "name": "Mohan Regency Wing B2"
+              },
+              {
+                "id": 10,
+                "name": "Mohan Regency Wing B3"
+              },
+              {
+                "id": 11,
+                "name": "Mohan Regency Wing B4"
+              },
+              {
+                "id": 12,
+                "name": "Mohan Regency Wing B5"
+              },
+              {
+                "id": 13,
+                "name": "Mohan Regency Wing B6"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "office back side"
+          }
         ]
-    }
+      },
+      {
+        "id": 2,
+        "name": "2"
+      },
+      {
+        "id": 3,
+        "name": "3"
+      },
+      {
+        "id": 4,
+        "name": "4"
+      },
+      {
+        "id": 5,
+        "name": "5"
+      },
+      {
+        "id": 6,
+        "name": "6"
+      }
+    ]
+  }
 ]

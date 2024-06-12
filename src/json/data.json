@@ -137,7 +137,8 @@
                 "name":"Shree Complex Phase 2 Building No.2A"
               }
             ]
-          },{
+          },
+          {
             "id": 3,
             "name": "Umbarde Road",
             "buildings": [
@@ -179,7 +180,7 @@
               },
               {
                 "id":10,
-                "name": "Wangeshi Vihar  2"
+                "name": "Mangeshi Vihar 2"
               },
               {
                 "id":11,
@@ -192,6 +193,64 @@
               {
                 "id":13,
                 "name": "Sarvoday Deep"
+              }
+            ]
+          },
+          {
+            "id":4,
+            "name": "Chankya Nagar",
+            "buildings": [
+              {
+                "id":1,
+                "name":"Building No.9A"
+              },
+              {
+                "id":2,
+                "name":"Building No.8A"
+              },
+              {
+                "id":3,
+                "name":"Deepti Building No.7"
+              },
+              {
+                "id":4,
+                "name":"Jay Shree Ram Building No.6A"
+              },
+              {
+                "id":5,
+                "name":"Jay Sairam Vatika Building No.5"
+              },
+              {
+                "id":6,
+                "name":"Chankya Building No.4"
+              },
+              {
+                "id":7,
+                "name":"Sudhakar Shrusti E1"
+              },
+              {
+                "id":8,
+                "name":"Sudhakar Shrusti E2"
+              },
+              {
+                "id":9,
+                "name":"Sudhakar Shrusti E3"
+              },
+              {
+                "id":10,
+                "name":"Deep Casaal Wing A"
+              },
+              {
+                "id":11,
+                "name":"Krishna Pride"
+              },
+              {
+                "id":12,
+                "name":"Sheth Sakharam Tower"
+              },
+              {
+                "id":13,
+                "name":"Chincha Pada Area Umbrade Gav"
               }
             ]
           }

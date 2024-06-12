@@ -26,6 +26,7 @@ interface SurveyData {
   isRoomLocked: boolean;
   surveyRemark: string;
   surveyDenied: boolean;
+  memberCount:string;
   createdAt: string;
 }
 

@@ -53,6 +53,7 @@ interface SurveyData {
   surveyRemark: string;
   surveyDenied: boolean;
   createdAt: string;
+  memberCount: string;
 }
 
 interface Ward {
@@ -115,6 +116,7 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
   const [isRoomLocked, setIsRoomLocked] = useState(false);
   const [surveyDenied, setSurveyDenied] = useState(false);
   const [surveyRemark, setSurveyRemark] = useState("");
+  const [memberCount, setMemberCount] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -311,13 +313,14 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
       isRoomLocked,
       surveyDenied,
       surveyRemark,
+      memberCount,
       createdAt, // Include the formatted createdAt field
       familyhead: JSON.stringify(familyDataObject),
       members: JSON.stringify(members),
     };
 
     await add(data);
-
+    setMemberCount('');
     setDivision("");
     setWard("");
     setType("Door To Door");
@@ -434,7 +437,13 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
             checkedColor="red"
           />
         </View>
-
+        <TextInput
+          value={memberCount}
+          onChangeText={setMemberCount}
+          placeholder="Total Members in family"
+          style={styles.textInput}
+          keyboardType="number-pad"
+        />
         <TextInput
           value={native}
           onChangeText={setNativePlace}

@@ -137,6 +137,63 @@
                 "name":"Shree Complex Phase 2 Building No.2A"
               }
             ]
+          },{
+            "id": 3,
+            "name": "Umbarde Road",
+            "buildings": [
+              {
+                "id":1,
+                "name": "Appachi Dham Shree Complex Wing A"
+              },
+              {
+                "id":2,
+                "name": "Appachi Dham Shree Complex Wing B"
+              },
+              {
+                "id":3,
+                "name": "MeherNagar Co-operative Society Wing B4"
+              },
+              {
+                "id":4,
+                "name": "Gorkhanath Co-operative Society Wing B3"
+              },
+              {
+                "id":5,
+                "name": "Goldmohar Co-operative Society B2"
+              },
+              {
+                "id":6,
+                "name": "MeherNagar Co-operative Society Wing B1"
+              },
+              {
+                "id":7,
+                "name": "MeherNagar Co-operative Society Wing A1"
+              },
+              {
+                "id":8,
+                "name": "MeherNagar Co-operative Society Wing A2"
+              },
+              {
+                "id":9,
+                "name": "Mangeshi Vihar"
+              },
+              {
+                "id":10,
+                "name": "Wangeshi Vihar  2"
+              },
+              {
+                "id":11,
+                "name": "Shiv Darshan Complex Wing A"
+              },
+              {
+                "id":12,
+                "name": "Shiv Darshan Complex Wing B"
+              },
+              {
+                "id":13,
+                "name": "Sarvoday Deep"
+              }
+            ]
           }
         ]
       },

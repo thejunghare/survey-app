@@ -96,45 +96,46 @@
               {
                 "id": 7,
                 "name": "New lulla co-operative society wing D11"
-              },{
+              },
+              {
                 "id": 8,
-                "name":"Shree Complex Phase 2 Building No 3"
+                "name": "Shree Complex Phase 2 Building No 3"
               },
               {
                 "id": 9,
-                "name":"Shree Complex Phase 2 Building No 4"
+                "name": "Shree Complex Phase 2 Building No 4"
               },
               {
                 "id": 10,
-                "name":"Shree Complex Phase 2 Building No 5"
+                "name": "Shree Complex Phase 2 Building No 5"
               },
               {
                 "id": 11,
-                "name":"Shree Complex Phase 2 Building No 6"
+                "name": "Shree Complex Phase 2 Building No 6"
               },
               {
                 "id": 12,
-                "name":"Devdatta Building No.C1"
+                "name": "Devdatta Building No.C1"
               },
               {
                 "id": 13,
-                "name":"Mani Pushpa Building No.C3"
+                "name": "Mani Pushpa Building No.C3"
               },
               {
                 "id": 14,
-                "name":"Building No 02"
+                "name": "Building No 02"
               },
               {
                 "id": 15,
-                "name":"Jay Vinayak Co-operative Society"
+                "name": "Jay Vinayak Co-operative Society"
               },
               {
                 "id": 16,
-                "name":"office Back Side Banglo"
+                "name": "office Back Side Banglo"
               },
               {
                 "id": 17,
-                "name":"Shree Complex Phase 2 Building No.2A"
+                "name": "Shree Complex Phase 2 Building No.2A"
               }
             ]
           },
@@ -143,114 +144,302 @@
             "name": "Umbarde Road",
             "buildings": [
               {
-                "id":1,
+                "id": 1,
                 "name": "Appachi Dham Shree Complex Wing A"
               },
               {
-                "id":2,
+                "id": 2,
                 "name": "Appachi Dham Shree Complex Wing B"
               },
               {
-                "id":3,
+                "id": 3,
                 "name": "MeherNagar CHS Wing B4"
               },
               {
-                "id":4,
+                "id": 4,
                 "name": "Gorkhanath Co-operative Society Wing B3"
               },
               {
-                "id":5,
+                "id": 5,
                 "name": "Goldmohar Co-operative Society B2"
               },
               {
-                "id":6,
+                "id": 6,
                 "name": "MeherNagar CHS Wing B1"
               },
               {
-                "id":7,
+                "id": 7,
                 "name": "MeherNagar CHS Wing A1"
               },
               {
-                "id":8,
+                "id": 8,
                 "name": "MeherNagar CHS Wing A2"
               },
               {
-                "id":9,
+                "id": 9,
                 "name": "Mangeshi Vihar"
               },
               {
-                "id":10,
+                "id": 10,
                 "name": "Mangeshi Vihar 2"
               },
               {
-                "id":11,
+                "id": 11,
                 "name": "Shiv Darshan Complex Wing A"
               },
               {
-                "id":12,
+                "id": 12,
                 "name": "Shiv Darshan Complex Wing B"
               },
               {
-                "id":13,
+                "id": 13,
                 "name": "Sarvoday Deep"
               }
             ]
           },
           {
-            "id":4,
+            "id": 4,
             "name": "Chankya Nagar",
             "buildings": [
               {
-                "id":1,
-                "name":"Building No.9A"
+                "id": 1,
+                "name": "Building No.9A"
               },
               {
-                "id":2,
-                "name":"Building No.8A"
+                "id": 2,
+                "name": "Building No.8A"
               },
               {
-                "id":3,
-                "name":"Deepti Building No.7"
+                "id": 3,
+                "name": "Deepti Building No.7"
               },
               {
-                "id":4,
-                "name":"Jay Shree Ram Building No.6A"
+                "id": 4,
+                "name": "Jay Shree Ram Building No.6A"
               },
               {
-                "id":5,
-                "name":"Jay Sairam Vatika Building No.5"
+                "id": 5,
+                "name": "Jay Sairam Vatika Building No.5"
               },
               {
-                "id":6,
-                "name":"Chankya Building No.4"
+                "id": 6,
+                "name": "Chankya Building No.4"
               },
               {
-                "id":7,
-                "name":"Sudhakar Shrusti E1"
+                "id": 7,
+                "name": "Sudhakar Shrusti E1"
               },
               {
-                "id":8,
-                "name":"Sudhakar Shrusti E2"
+                "id": 8,
+                "name": "Sudhakar Shrusti E2"
               },
               {
-                "id":9,
-                "name":"Sudhakar Shrusti E3"
+                "id": 9,
+                "name": "Sudhakar Shrusti E3"
               },
               {
-                "id":10,
-                "name":"Deep Casaal Wing A"
+                "id": 10,
+                "name": "Deep Casaal Wing A"
               },
               {
-                "id":11,
-                "name":"Krishna Pride"
+                "id": 11,
+                "name": "Krishna Pride"
               },
               {
-                "id":12,
-                "name":"Sheth Sakharam Tower"
+                "id": 12,
+                "name": "Sheth Sakharam Tower"
               },
               {
-                "id":13,
-                "name":"Chincha Pada Area Umbrade Gav"
+                "id": 13,
+                "name": "Chincha Pada Area Umbrade Gav"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Don Bosco School",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Pawan Vatika A1"
+              },
+              {
+                "id": 2,
+                "name": "Pawan Vatika A2"
+              },
+              {
+                "id": 3,
+                "name": "Pawan Vatika B1"
+              },
+              {
+                "id": 4,
+                "name": "Pawan Vatika B2"
+              },
+              {
+                "id": 5,
+                "name": "Punyodaya Park A1"
+              },
+              {
+                "id": 6,
+                "name": "Punyodaya Park A2"
+              },
+              {
+                "id": 7,
+                "name": "Punyodaya Park A3"
+              },
+              {
+                "id": 8,
+                "name": "Punyodaya Park B1"
+              },
+              {
+                "id": 9,
+                "name": "Punyodaya Park B2"
+              },
+              {
+                "id": 10,
+                "name": "Punyodaya Park B3"
+              },
+              {
+                "id": 11,
+                "name": "Punyodaya Park A4"
+              },
+              {
+                "id": 12,
+                "name": "Punyodaya Park A5"
+              },
+              {
+                "id": 13,
+                "name": "Punyodaya Park A6"
+              },
+              {
+                "id": 14,
+                "name": "Punyodaya Park E2"
+              },
+              {
+                "id": 15,
+                "name": "Punyodaya Park E3"
+              },
+              {
+                "id": 16,
+                "name": "Punyodaya Park C1"
+              },
+              {
+                "id": 17,
+                "name": "Punyodaya Park C2"
+              },
+              {
+                "id": 18,
+                "name": "Punyodaya Park C3"
+              },
+              {
+                "id": 19,
+                "name": "Punyodaya Park C4"
+              },
+              {
+                "id": 20,
+                "name": "Sai Dham Best Vasahat A"
+              },
+              {
+                "id": 21,
+                "name": "Sai Dham Best Vasahat B"
+              },
+              {
+                "id": 22,
+                "name": "Sai Dham Best Vasahat C"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "WadeGhar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shreeji Avenue"
+              },
+              {
+                "id": 2,
+                "name": "Sarvodaya Patwradhan Baug"
+              },
+              {
+                "id": 3,
+                "name": "The Shramik Vishram Wing A"
+              },
+              {
+                "id": 4,
+                "name": "The Shramik Vishram Wing B"
+              },
+              {
+                "id": 5,
+                "name": "The Shramik Vishram Wing C"
+              },
+              {
+                "id": 6,
+                "name": "The sai sharanam Apartment"
+              },
+              {
+                "id": 7,
+                "name": "Sai Sharanam Apartment Wing A"
+              },
+              {
+                "id": 8,
+                "name": "Sai Sharanam Apartment Wing A1"
+              },
+              {
+                "id": 9,
+                "name": "kashi Darshan"
+              },
+              {
+                "id": 10,
+                "name": "Neelkhant Shrusti Building(Ambarnath)"
+              },
+              {
+                "id": 11,
+                "name": "Neelkhant Shrusti Building(Kedharnath)"
+              },
+              {
+                "id": 12,
+                "name": "Neelarnaht Shrusti Building(vedhnaht)"
+              },
+              {
+                "id": 13,
+                "name": "Neeanathnt Shrusti Building(Somnath)"
+              },
+              {
+                "id": 14,
+                "name": "Anand Sagar Building I-A"
+              },
+              {
+                "id": 15,
+                "name": "Anand Sagar Building I-B"
+              },
+              {
+                "id": 16,
+                "name": "Anand Sagar Building I-C"
+              },
+              {
+                "id": 17,
+                "name": "Anand Sagar Building II-A"
+              },
+              {
+                "id": 18,
+                "name": "Anand Sagar Building II-A"
+              },
+              {
+                "id": 19,
+                "name": "Anand Sagar Building II-C"
+              },
+              {
+                "id": 20,
+                "name": "Rameshwar Darshan Building"
+              },
+              {
+                "id": 21,
+                "name": "Anand Sagar Duo Wing A"
+              },
+              {
+                "id": 22,
+                "name": "Anand Sagar Duo Wing B"
               }
             ]
           }

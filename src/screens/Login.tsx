@@ -118,7 +118,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
           About
         </Text>
         <Text className="text-sm font-semibold underline decoration-dotted tracking-wide leading-6">
-          v0.8.0
+          v0.9.1
         </Text>
       </View>
       <StatusBar style="dark" />

@@ -53,6 +53,9 @@ interface SurveyData {
   surveyRemark: string;
   surveyDenied: boolean;
   createdAt: string;
+  isOwner: boolean;
+  isRented: boolean;
+  roomOwnerMobileNumber: string;
   memberCount: string;
 }
 
@@ -115,8 +118,11 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isRoomLocked, setIsRoomLocked] = useState(false);
   const [surveyDenied, setSurveyDenied] = useState(false);
+  const [isOwner, setIsOwner] = useState(false);
+  const [isRented, setIsRented] = useState(false);
+  const [roomOwnerMobileNumber, setRoomOwnerMobileNumber] = useState("");
   const [surveyRemark, setSurveyRemark] = useState("");
-  const [memberCount, setMemberCount] = useState('');
+  const [memberCount, setMemberCount] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -314,13 +320,16 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
       surveyDenied,
       surveyRemark,
       memberCount,
+      isOwner,
+      isRented,
+      roomOwnerMobileNumber,
       createdAt, // Include the formatted createdAt field
       familyhead: JSON.stringify(familyDataObject),
       members: JSON.stringify(members),
     };
 
     await add(data);
-    setMemberCount('');
+    setMemberCount("");
     setDivision("");
     setWard("");
     setType("Door To Door");
@@ -341,7 +350,10 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
     setFamilyHeadAge("");
     setIsRoomLocked(false);
     setSurveyDenied(false);
+    setIsOwner(false);
+    setIsRented(false);
     setSurveyRemark("");
+    setRoomOwnerMobileNumber("");
     setIsLoading(false); // stop loading
   };
 
@@ -437,6 +449,29 @@ const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
             checkedColor="red"
           />
         </View>
+        <View className={"flex flex-row items-center justify-evenly"}>
+          <CheckBox
+            title="Room owner"
+            checked={isOwner}
+            onPress={() => setIsOwner(!isOwner)}
+            checkedColor="green"
+          />
+          <CheckBox
+            title="Room Rented"
+            checked={isRented}
+            onPress={() => setIsRented(!isRented)}
+            checkedColor="orange"
+          />
+        </View>
+        {isRented && (
+          <TextInput
+            value={roomOwnerMobileNumber}
+            onChangeText={setRoomOwnerMobileNumber}
+            placeholder="Room Owner Mobile Number"
+            style={styles.textInput}
+            keyboardType="number-pad"
+          />
+        )}
         <TextInput
           value={memberCount}
           onChangeText={setMemberCount}

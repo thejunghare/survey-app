@@ -28,6 +28,9 @@ interface SurveyData {
   surveyDenied: boolean;
   memberCount:string;
   createdAt: string;
+  isOwner: boolean;
+  isRented: boolean;
+  roomOwnerMobileNumber: string;
 }
 
 interface SurveyContextProps {

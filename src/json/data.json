@@ -446,6 +446,52 @@
                 "name": "Anand Sagar Duo Wing B"
               }
             ]
+          },
+          {
+            "id": 7,
+            "name": "Ronak City",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mangla Prastha Wing C"
+              },
+              {
+                "id": 2,
+                "name": "Mangla Prastha Wing D"
+              },
+              {
+                "id": 3,
+                "name": "Mangla Prastha Wing E"
+              },
+              {
+                "id": 4,
+                "name": "Mangla Prastha Wing F"
+              },
+              {
+                "id": 5,
+                "name": "Mangla Prastha Wing G"
+              },
+              {
+                "id": 6,
+                "name": "Sai Satyam Residency Wing C"
+              },
+              {
+                "id": 7,
+                "name": "Sai Satyam Residency Wing D"
+              },
+              {
+                "id": 8,
+                "name": "Sai Satyam Residency Wing E"
+              },
+              {
+                "id": 9,
+                "name": "Sai Satyam Residency Wing F"
+              },
+              {
+                "id": 10,
+                "name": "Sai Satyam Residency Wing G"
+              }
+            ]
           }
         ]
       },

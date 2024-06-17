@@ -492,6 +492,123 @@
                 "name": "Sai Satyam Residency Wing G"
               }
             ]
+          },{
+            "id":8,
+            "name": "Raunak city",
+            "buildings": [
+              {
+                "id":1,
+                "name":"Raunak City Building B-01"
+              },
+              {
+                "id":2,
+                "name":"Raunak City Building B-02"
+              },
+              {
+                "id":3,
+                "name":"Raunak City Building B-03"
+              },
+              {
+                "id":4,
+                "name":"Raunak City Building B-04"
+              },
+              {
+                "id":5,
+                "name":"Raunak City Building B-05"
+              },
+              {
+                "id":6,
+                "name":"Raunak City Building B-06"
+              },
+              {
+                "id":7,
+                "name":"Raunak City Building B-07"
+              },
+              {
+                "id":8,
+                "name":"Raunak City Building B-08"
+              },
+              {
+                "id":9,
+                "name":"Raunak City Building B-09"
+              },
+              {
+                "id":10,
+                "name":"Raunak City Building B-10"
+              },
+              {
+                "id":11,
+                "name":"Raunak City Building B-11"
+              },
+              {
+                "id":1,
+                "name":"Raunak City Building C-01"
+              },
+              {
+                "id":2,
+                "name":"Raunak City Building C-02"
+              },
+              {
+                "id":3,
+                "name":"Raunak City Building C-03"
+              },
+              {
+                "id":4,
+                "name":"Raunak City Building C-04"
+              },
+              {
+                "id":5,
+                "name":"Raunak City Building C-05"
+              },
+              {
+                "id":6,
+                "name":"Raunak City Building C-06"
+              },
+              {
+                "id":7,
+                "name":"Raunak City Building C-07"
+              },
+              {
+                "id":8,
+                "name":"Raunak City Building C-08"
+              },
+              {
+                "id":9,
+                "name":"Raunak City Building C-09"
+              },
+              {
+                "id":10,
+                "name":"Raunak City Building C-10"
+              },
+              {
+                "id":11,
+                "name":"Raunak City Building C-11"
+              },
+              {
+                "id":12,
+                "name":"Raunak City Building C-12"
+              },
+              {
+                "id":13,
+                "name":"Raunak City Building C-13"
+              },
+              {
+                "id":14,
+                "name":"Raunak City Building C-14"
+              },
+              {
+                "id":15,
+                "name":"Raunak City Building C-15"
+              },
+              {
+                "id":16,
+                "name":"Raunak City Building C-16"
+              },
+              {
+                "id":17,
+                "name":"Raunak City Building C-17"
+              }
+            ]
           }
         ]
       },

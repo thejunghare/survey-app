@@ -490,185 +490,242 @@
               {
                 "id": 10,
                 "name": "Sai Satyam Residency Wing G"
-              }, {
+              },
+              {
                 "id": 11,
                 "name": "Sai Satyam Wing Residency I"
-              }, {
+              },
+              {
                 "id": 12,
                 "name": "Sai Satyam Wing Residency H"
               }
             ]
-          },{
-            "id":8,
+          },
+          {
+            "id": 8,
             "name": "Raunak city",
             "buildings": [
               {
-                "id":1,
-                "name":"Raunak City Building B-01"
+                "id": 1,
+                "name": "Raunak City Building B-01"
               },
               {
-                "id":2,
-                "name":"Raunak City Building B-02"
+                "id": 2,
+                "name": "Raunak City Building B-02"
               },
               {
-                "id":3,
-                "name":"Raunak City Building B-03"
+                "id": 3,
+                "name": "Raunak City Building B-03"
               },
               {
-                "id":4,
-                "name":"Raunak City Building B-04"
+                "id": 4,
+                "name": "Raunak City Building B-04"
               },
               {
-                "id":5,
-                "name":"Raunak City Building B-05"
+                "id": 5,
+                "name": "Raunak City Building B-05"
               },
               {
-                "id":6,
-                "name":"Raunak City Building B-06"
+                "id": 6,
+                "name": "Raunak City Building B-06"
               },
               {
-                "id":7,
-                "name":"Raunak City Building B-07"
+                "id": 7,
+                "name": "Raunak City Building B-07"
               },
               {
-                "id":8,
-                "name":"Raunak City Building B-08"
+                "id": 8,
+                "name": "Raunak City Building B-08"
               },
               {
-                "id":9,
-                "name":"Raunak City Building B-09"
+                "id": 9,
+                "name": "Raunak City Building B-09"
               },
               {
-                "id":10,
-                "name":"Raunak City Building B-10"
+                "id": 10,
+                "name": "Raunak City Building B-10"
               },
               {
-                "id":11,
-                "name":"Raunak City Building B-11"
+                "id": 11,
+                "name": "Raunak City Building B-11"
               },
               {
-                "id":1,
-                "name":"Raunak City Building C-01"
+                "id": 1,
+                "name": "Raunak City Building C-01"
               },
               {
-                "id":2,
-                "name":"Raunak City Building C-02"
+                "id": 2,
+                "name": "Raunak City Building C-02"
               },
               {
-                "id":3,
-                "name":"Raunak City Building C-03"
+                "id": 3,
+                "name": "Raunak City Building C-03"
               },
               {
-                "id":4,
-                "name":"Raunak City Building C-04"
+                "id": 4,
+                "name": "Raunak City Building C-04"
               },
               {
-                "id":5,
-                "name":"Raunak City Building C-05"
+                "id": 5,
+                "name": "Raunak City Building C-05"
               },
               {
-                "id":6,
-                "name":"Raunak City Building C-06"
+                "id": 6,
+                "name": "Raunak City Building C-06"
               },
               {
-                "id":7,
-                "name":"Raunak City Building C-07"
+                "id": 7,
+                "name": "Raunak City Building C-07"
               },
               {
-                "id":8,
-                "name":"Raunak City Building C-08"
+                "id": 8,
+                "name": "Raunak City Building C-08"
               },
               {
-                "id":9,
-                "name":"Raunak City Building C-09"
+                "id": 9,
+                "name": "Raunak City Building C-09"
               },
               {
-                "id":10,
-                "name":"Raunak City Building C-10"
+                "id": 10,
+                "name": "Raunak City Building C-10"
               },
               {
-                "id":11,
-                "name":"Raunak City Building C-11"
+                "id": 11,
+                "name": "Raunak City Building C-11"
               },
               {
-                "id":12,
-                "name":"Raunak City Building C-12"
+                "id": 12,
+                "name": "Raunak City Building C-12"
               },
               {
-                "id":13,
-                "name":"Raunak City Building C-13"
+                "id": 13,
+                "name": "Raunak City Building C-13"
               },
               {
-                "id":14,
-                "name":"Raunak City Building C-14"
+                "id": 14,
+                "name": "Raunak City Building C-14"
               },
               {
-                "id":15,
-                "name":"Raunak City Building C-15"
+                "id": 15,
+                "name": "Raunak City Building C-15"
               },
               {
-                "id":16,
-                "name":"Raunak City Building C-16"
+                "id": 16,
+                "name": "Raunak City Building C-16"
               },
               {
-                "id":17,
-                "name":"Raunak City Building C-17"
+                "id": 17,
+                "name": "Raunak City Building C-17"
               },
               {
-                "id":18,
-                "name":"Raunak City D10"
+                "id": 18,
+                "name": "Raunak City D10"
               },
               {
-                "id":19,
-                "name":"Raunak City D09"
+                "id": 19,
+                "name": "Raunak City D09"
               },
               {
-                "id":20,
-                "name":"Raunak City D1"
+                "id": 20,
+                "name": "Raunak City D1"
               },
               {
-                "id":21,
-                "name":"Raunak City D2"
+                "id": 21,
+                "name": "Raunak City D2"
               },
               {
-                "id":22,
-                "name":"Raunk City D 3"
+                "id": 22,
+                "name": "Raunk City D 3"
               },
               {
-                "id":23,
-                "name":"Raunk City D4"
+                "id": 23,
+                "name": "Raunk City D4"
               },
               {
-                "id":24,
-                "name":"Om Residency wing A"
+                "id": 24,
+                "name": "Om Residency wing A"
               },
               {
-                "id":25,
-                "name":"Om Residency Wing B"
+                "id": 25,
+                "name": "Om Residency Wing B"
               },
               {
-                "id":26,
-                "name":"Om Residency Wing C"
+                "id": 26,
+                "name": "Om Residency Wing C"
               },
               {
-                "id":27,
-                "name":"Om Residency Wing D"
+                "id": 27,
+                "name": "Om Residency Wing D"
               },
               {
-                "id":28,
-                "name":"Om Residency Wing E"
+                "id": 28,
+                "name": "Om Residency Wing E"
               },
               {
-                "id":29,
-                "name":"Om Residency Wing F"
+                "id": 29,
+                "name": "Om Residency Wing F"
               },
               {
-                "id":30,
-                "name":"Triveni Majesta Wing A"
+                "id": 30,
+                "name": "Triveni Majesta Wing A"
               },
               {
-                "id":31,
-                "name":"Triveni Majesta Wing B"
+                "id": 31,
+                "name": "Triveni Majesta Wing B"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "name": "Pailwan Chowk",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sai Satyam Home Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Sai Satyam Home Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Dynamic Ultima Buliding Aspira"
+              },
+              {
+                "id": 4,
+                "name": "Dynamic Ultima Buliding Glory"
+              },
+              {
+                "id": 5,
+                "name": "Dynamic Ultima Building  Bliss"
+              },
+              {
+                "id": 6,
+                "name": "Deepak Paradise Wing B"
+              },
+              {
+                "id": 7,
+                "name": "Sai Mangeshi Park Wing A"
+              },
+              {
+                "id": 8,
+                "name": "Sai Mangeshi Park Wing B"
+              },
+              {
+                "id": 9,
+                "name": "Sai Mangeshi Park Wing C"
+              },
+              {
+                "id": 10,
+                "name": "Sai Mangeshi Park Wing D"
+              },
+              {
+                "id": 11,
+                "name": "Sai Mangeshi Park Wing E"
+              },
+              {
+                "id": 12,
+                "name": "Sai Mangeshi Park Wing F"
               }
             ]
           }

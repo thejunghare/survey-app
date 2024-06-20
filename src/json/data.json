@@ -613,6 +613,62 @@
               {
                 "id":17,
                 "name":"Raunak City Building C-17"
+              },
+              {
+                "id":18,
+                "name":"Raunak City D10"
+              },
+              {
+                "id":19,
+                "name":"Raunak City D09"
+              },
+              {
+                "id":20,
+                "name":"Raunak City D1"
+              },
+              {
+                "id":21,
+                "name":"Raunak City D2"
+              },
+              {
+                "id":22,
+                "name":"Raunk City D 3"
+              },
+              {
+                "id":23,
+                "name":"Raunk City D4"
+              },
+              {
+                "id":24,
+                "name":"Om Residency wing A"
+              },
+              {
+                "id":25,
+                "name":"Om Residency Wing B"
+              },
+              {
+                "id":26,
+                "name":"Om Residency Wing C"
+              },
+              {
+                "id":27,
+                "name":"Om Residency Wing D"
+              },
+              {
+                "id":28,
+                "name":"Om Residency Wing E"
+              },
+              {
+                "id":29,
+                "name":"Om Residency Wing F"
+              },
+              {
+                "id":30,
+                "name":"Triveni Majesta Wing A"
+              },
+              {
+                "id":31,
+                "name":"Triveni Majesta Wing B"
               }
             ]
           }

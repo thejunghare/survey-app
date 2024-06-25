@@ -256,7 +256,8 @@
               {
                 "id": 13,
                 "name": "Chincha Pada Area Umbrade Gav"
-              },{
+              },
+              {
                 "id": 14,
                 "name": "Krishna Paradise Soham Building"
               }
@@ -729,6 +730,17 @@
               {
                 "id": 12,
                 "name": "Sai Mangeshi Park Wing F"
+              },
+              {
+                "id": 13,
+                "name": "Sathe Nagar Building No.1"
+              },
+              {
+                "id": 14,
+                "name": "Sathe Nagar Building No.2"
+              },{
+                "id": 15,
+                "name": "Avadhumber Shrusti"
               }
             ]
           }

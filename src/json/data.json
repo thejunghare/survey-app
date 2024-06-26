@@ -738,7 +738,8 @@
               {
                 "id": 14,
                 "name": "Sathe Nagar Building No.2"
-              },{
+              },
+              {
                 "id": 15,
                 "name": "Avadhumber Shrusti"
               }
@@ -748,7 +749,59 @@
       },
       {
         "id": 2,
-        "name": "2"
+        "name": "2",
+        "areas": [
+          {
+            "id": 1,
+            "namw": "Bhagirathi Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Jay Shiv Shankar building No.1"
+              },
+              {
+                "id": 2,
+                "name": "Chintamani building No.2"
+              },
+              {
+                "id": 3,
+                "name": "Siddhivinayak building No.3"
+              },
+              {
+                "id": 4,
+                "name": "Shree Ganesh building No.4"
+              },
+              {
+                "id": 5,
+                "name": "Shree Vighnaharta building No.5"
+              },
+              {
+                "id": 6,
+                "name": "Shree Ekdant building No.6"
+              },
+              {
+                "id": 7,
+                "name": "Shree Mayureshwar building No.7"
+              },
+              {
+                "id": 8,
+                "name": "Shree Vighneshwar building No.8"
+              },
+              {
+                "id": 9,
+                "name": "Om Atharva building No.9"
+              },
+              {
+                "id": 10,
+                "name": "Gajanan building No.10"
+              },
+              {
+                "id": 11,
+                "name": "Shree Vedhant building No.11"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 3,

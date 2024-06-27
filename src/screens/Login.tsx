@@ -56,7 +56,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
   };
 
   return (
-    <SafeAreaView className="bg-white h-screen flex-1 justify-between">
+    <SafeAreaView className="bg-white h-screen flex-1">
       <View className="h-4/5 m-5 justify-center">
         <Image
           source={require("../../assets/dem-logo-new.png")}
@@ -68,26 +68,26 @@ const Login = ({ navigation }: LoginScreenProps) => {
           }}
         />
         <TextInput
-          placeholder="Registered email address"
+          placeholder="Useremail"
           value={email}
           onChangeText={setEmail}
           keyboardType={"email-address"}
           className={
-            "p-3 bg-white border border-slate-300 rounded font-semibold text-base shadwo-sm tracking-wide leading-6"
+            "p-3 bg-white border border-slate-300 rounded-xl font-semibold text-base shadwo-sm tracking-wide leading-6"
           }
         />
         <TextInput
-          placeholder="Given password"
+          placeholder="Password"
           value={password}
           onChangeText={setPassword}
           secureTextEntry
           className={
-            "my-2.5 p-3 bg-white border border-slate-300 rounded font-semibold text-base shadwo-sm tracking-wide leading-6"
+            "my-2.5 p-3 bg-white border border-slate-300 rounded-xl font-semibold text-base shadwo-sm tracking-wide leading-6"
           }
         />
         <Pressable
           onPress={handleLogin}
-          className="bg-black p-3 rounded justify-center items-center"
+          className="bg-blue-700 p-3 rounded-xl justify-center items-center"
         >
           <Text
             className={"text-white text-base font-bold tracking-wide leading-6"}
@@ -109,18 +109,6 @@ const Login = ({ navigation }: LoginScreenProps) => {
         </Pressable>
       </View>
 
-      <View
-        className={
-          "border h-11 flex flex-row justify-between items-center px-4 bg-white border-t border-slate-300"
-        }
-      >
-        <Text className="text-sm font-semibold tracking-wide leading-6">
-          About
-        </Text>
-        <Text className="text-sm font-semibold underline decoration-dotted tracking-wide leading-6">
-          v0.9.1
-        </Text>
-      </View>
       <StatusBar style="dark" />
     </SafeAreaView>
   );

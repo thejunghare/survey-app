@@ -1,17 +1,17 @@
 import React, { useContext, useState, useEffect, useCallback } from "react";
 import {
-  SafeAreaView,
   View,
   Text,
-  ActivityIndicator,
-  TouchableOpacity,
-  ScrollView,
-  RefreshControl,
-  Dimensions,
   Image,
+  TouchableOpacity,
+  ActivityIndicator,
+  RefreshControl,
+  ScrollView,
 } from "react-native";
+import { Avatar, Icon } from "@rneui/themed";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { AntDesign } from "@expo/vector-icons";
 import { AppwriteContext } from "../appwrite/UserContext";
-import { Icon, Avatar } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
 import { toast } from "../appwrite/toast";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -29,9 +29,8 @@ type UserObj = {
   email: String;
   id: String;
 };
-const screenWidth = Dimensions.get("window").width;
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   const { appwrite, setIsLoggedIn } = useContext(AppwriteContext);
   const navigation = useNavigation();
   const [userData, setUserData] = useState<UserObj>();
@@ -155,7 +154,7 @@ const Dashboard: React.FC = () => {
     fetchLockefRoomSurveyCount,
     fetchDeniedSurveyCount,
     userData,
-  ]); // Add fetchLockefRoomSurveyCount to the dependency array
+  ]);
 
   useEffect(() => {
     fetchUserData().then((user) => {
@@ -175,177 +174,132 @@ const Dashboard: React.FC = () => {
     let initials = name.match(/\b\w/g) || [];
     return ((initials.shift() || "") + (initials.pop() || "")).toUpperCase();
   };
-
   return (
     <ScrollView
       refreshControl={
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
-      <SafeAreaView className="bg-white h-screen justify-evenly">
-        <ScrollView horizontal={true} className={"h-2/4 content-evenly"}>
-          <View
-            className="border-r items-center justify-around bg-slate-200"
-            style={{ width: screenWidth }}
-          >
-            <Image
-              source={require("../../assets/mla-1.png")}
-              style={{ width: screenWidth, height: 298 }}
-            />
-
-            <View className="flex flex-row items-center">
-              <Text className=" p-2 rounded font-semibold text-base">
-                विश्वनाथ भोईर कल्याण पश्चिम आमदार
-              </Text>
-            </View>
+      <View className="flex-1">
+        {/* avatar with employee name and id */}
+        <View className="p-3 flex flex-row items-center justify-start bg-blue-700 h-30">
+          <Avatar
+            size={50}
+            rounded
+            title={userData ? getInitials(userData.name) : ""}
+            containerStyle={{
+              backgroundColor: "#fff",
+            }}
+            titleStyle={{
+              color: "#000",
+            }}
+          />
+          <View className="mx-5">
+            <Text className="text-xl font-medium text-white">
+              {userData.name}
+            </Text>
+            <Text className="text-xs font-normal text-white">
+              ID: {userData.id}
+            </Text>
           </View>
-          <View
-            className="items-center justify-around bg-slate-200 "
-            style={{ width: screenWidth }}
-          >
-            <Avatar
-              size={"xlarge"}
-              rounded
-              title={userData ? getInitials(userData.name) : ""}
-              containerStyle={{ backgroundColor: "#d97706" }}
-            />
+        </View>
 
-            <View className="flex flex-row items-center">
-              {userData && (
-                <Text className="bg-white p-2 font-semibold text-base">
-                  {userData.name}
-                </Text>
-              )}
-              <Icon
-                onPress={handleLogout}
-                name="logout"
-                type="material-community"
-                color={"white"}
-                containerStyle={{
-                  backgroundColor: "#9700b9",
-                  padding: 8,
-                }}
-              />
-            </View>
-          </View>
-        </ScrollView>
+        {/* client image */}
+        <View className="rounded-md items-center justify-around bg-gray-50 m-3">
+          <Image
+            source={require("../../assets/mla.png")}
+            style={{ height: 250 }}
+            className="w-full"
+          />
 
-        <View className={"h-1/6 mx-3 justify-center"}>
-          <Text
-            style={{ backgroundColor: "#264653" }}
-            className={
-              "bg-app-white m-3 p-3 text-center text-white rounded font-semibold text-base"
-            }
-          >
-            Statistics
+          <Text className="p-2 font-semibold text-base">
+            Vishwanath Bhoir Kalyan West MLA
           </Text>
         </View>
 
-        <View className="h-2/5 justify-start">
-          <ScrollView>
-            <View className="w-full flex flex-row items-start justify-evenly">
-              <View
-                style={{ backgroundColor: "#E76F51" }}
-                className="w-5/12 flex items-center justify-evenly text-white rounded shadow-sm p-2.5"
-              >
-                <TouchableOpacity>
-                  <View className="items-center">
-                    <Icon
-                      name="store-outline"
-                      type="material-community"
-                      size={35}
-                    />
-                  </View>
-                  <View className="mt-2 flex items-center">
-                    <Text className="font-bold text-lg text-center">
-                      {" "}
-                      {LockedRoomSurveyCount}
-                    </Text>
-                    <Text className="font-semibold text-base text-center">
-                      Locked Room
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+        {/* daily counter */}
+        <View className="bg-gray-50 m-3 rounded-md flex flex-row items-center justify-around p-3">
 
-              <View
-                style={{ backgroundColor: "#F4A261" }}
-                className="w-5/12 flex items-center justify-evenly bg-app-white rounded shadow-sm p-2.5"
-              >
-                <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate("Survey form", { userId: userData.id });
-                  }}
-                >
-                  <View className="items-center">
-                    <Icon
-                      name="book-outline"
-                      type="material-community"
-                      size={35}
-                    />
-                  </View>
-                  <View className="mt-2 flex items-center">
-                    <Text className="font-bold text-lg text-center">
-                      {surveyCount}
-                    </Text>
-                    <Text className="font-semibold text-base text-center">
-                      Survey
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
+          <View>
+            <Text className="bg-green-500 text-center rounded-full p-2 font-bold text-2xl text-white">
+              {surveyCount}
+            </Text>
+            <Text className="font-bold py-2">Survey</Text>
+          </View>
 
-            <View className="mt-3 w-full flex flex-row items-start justify-evenly">
-              <View
-                style={{ backgroundColor: "#2A9D8F" }}
-                className="w-5/12 flex items-center justify-evenly bg-app-white rounded shadow-sm p-2.5"
-              >
-                <TouchableOpacity
-                  onPress={() => navigation.navigate("Voter Search")}
-                >
-                  <View className="items-center">
-                    <Icon
-                      name="account-search-outline"
-                      type="material-community"
-                      size={35}
-                    />
-                  </View>
-                  <View className="mt-2 flex items-center">
-                    <Text className="font-bold text-lg text-center">0</Text>
-                    <Text className="font-semibold text-base text-center">
-                      Voter Search
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+          <View>
+            <Text className="bg-blue-500 text-center rounded-full p-2 font-bold text-2xl text-white">
+              {LockedRoomSurveyCount}
+            </Text>
+            <Text className="font-bold py-2">Locked</Text>
+          </View>
 
-              <View
-                style={{ backgroundColor: "#E9C46A" }}
-                className="w-5/12 flex items-center justify-evenly bg-app-white rounded shadow-sm p-2.5"
-              >
-                <TouchableOpacity>
-                  <View className="items-center">
-                    <Icon
-                      name="chart-box-outline"
-                      type="material-community"
-                      size={35}
-                    />
-                  </View>
-                  <View className="mt-2 flex items-center">
-                    <Text className="font-bold text-lg text-center">
-                      {deniedSurveyCount}
-                    </Text>
-                    <Text className="font-semibold text-base text-center">
-                      Denied Survey
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
-          </ScrollView>
+
+          <View>
+            <Text className="bg-red-500 text-center rounded-full p-2 font-bold text-2xl text-white">
+              {deniedSurveyCount}
+            </Text>
+            <Text className="font-bold py-2">Denied</Text>
+          </View>
         </View>
-      </SafeAreaView>
+
+        {/* form navigation container */}
+        <View className="bg-gray-50 m-3 rounded-md flex items-start justify-center">
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Survey form", { userId: userData.id });
+            }}
+          >
+            <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
+              <AntDesign
+                name="form"
+                size={24}
+                color="blue"
+                className="w-1/4"
+              />
+              <Text className="text-base font-semibold w-10/12">
+                Survey Form
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Locked Room");
+          }}
+          >
+            <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
+              <AntDesign
+                name="lock"
+                size={24}
+                color="blue"
+                className="w-1/4"
+              />
+              <Text className="text-base font-semibold w-10/12">
+                Locked Survey Form
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Edit Survey");
+          }}
+          >
+            <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
+              <AntDesign
+                name="edit"
+                size={24}
+                color="blue"
+                className="w-1/4"
+              />
+              <Text className="text-base font-semibold w-10/12">
+                Edit Survey Form
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
       <StatusBar style="dark" />
     </ScrollView>
   );

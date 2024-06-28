@@ -800,6 +800,136 @@
                 "name": "Shree Vedhant building No.11"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Saket Paradise",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Saket Paradise Delight A1"
+              },
+              {
+                "id": 2,
+                "name": "Saket Paradise Joy A2"
+              },
+              {
+                "id": 3,
+                "name": "Saket Paradise Bless A3"
+              },
+              {
+                "id": 4,
+                "name": "Saket Paradise Cloud Nine B1"
+              },
+              {
+                "id": 5,
+                "name": "Saket Paradise Seven Heaven B2"
+              },
+              {
+                "id": 6,
+                "name": "Saket Paradise Euphoria C1"
+              },
+              {
+                "id": 7,
+                "name": "Saket Paradise Jubilation C2"
+              },
+              {
+                "id": 8,
+                "name": "Sudhanshu Kiran Co-operative Society"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Mangeshi Dream City",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Building No 1 Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Building No 1 Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Building No 1 Wing C"
+              },
+              {
+                "id": 4,
+                "name": "Building No 1 Wing D"
+              },
+              {
+                "id": 5,
+                "name": "Building No 1 Wing E"
+              },
+              {
+                "id": 6,
+                "name": "Building No 1 Wing F"
+              },
+              {
+                "id": 7,
+                "name": "Building No 2 Wing A"
+              },
+              {
+                "id": 8,
+                "name": "Building No 2 Wing B"
+              },
+              {
+                "id": 9,
+                "name": "Building No 2 Wing C"
+              },
+              {
+                "id": 10,
+                "name": "Building No 2 Wing D"
+              },
+              {
+                "id": 11,
+                "name": "Mangeshi Dream City Wing A1"
+              },
+              {
+                "id": 12,
+                "name": "Mangeshi Dream City Wing A2"
+              },
+              {
+                "id": 13,
+                "name": "Mangeshi Dream City Wing B1"
+              },
+              {
+                "id": 14,
+                "name": "Mangeshi Dream City Wing B2"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Office Opp. Side",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shree Ji Park Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Shree Ji Park Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Shree Ji Park Wing C"
+              },
+              {
+                "id": 4,
+                "name": "Chandra Bhaga Tower 2 Wing A"
+              },
+              {
+                "id": 5,
+                "name": "Chandra Bhaga Tower 2 Wing B"
+              },
+              {
+                "id": 6,
+                "name": "Chandra Bhaga Tower"
+              }
+            ]
           }
         ]
       },

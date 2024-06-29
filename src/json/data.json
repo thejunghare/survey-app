@@ -962,6 +962,54 @@
               {
                 "id": 6,
                 "name": "Manohar Kunj Wing F Mangeshi City Phase 1"
+              },
+              {
+                "id": 7,
+                "name":"Mangeshi City Phase 2 Wing A1"
+              },
+              {
+                "id": 8,
+                "name":"Mangeshi City Phase 2 Wing B1"
+              },
+              {
+                "id": 9,
+                "name":"Mangeshi City Phase 2 Wing C1"
+              },
+              {
+                "id": 10,
+                "name":"Mangeshi City Phase 3"
+              },
+              {
+                "id": 11,
+                "name":"Sai Parab"
+              },
+              {
+                "id": 12,
+                "name":"Shankhwar Platinum Buliding No.1"
+              },
+              {
+                "id": 13,
+                "name":"Shankhwar Platinum Buliding No.2"
+              },
+              {
+                "id": 14,
+                "name":"Shankhwar Platinum Buliding No.3"
+              },
+              {
+                "id": 15,
+                "name":"Shankhwar Platinum Buliding No.4"
+              },
+              {
+                "id": 16,
+                "name":"Shankhwar Platinum Buliding No.5"
+              },
+              {
+                "id": 17,
+                "name":"Thakkar Park"
+              },
+              {
+                "id": 18,
+                "name":"Tulasi Dham"
               }
             ]
           }

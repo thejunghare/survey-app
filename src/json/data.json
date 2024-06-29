@@ -448,7 +448,8 @@
               {
                 "id": 22,
                 "name": "Anand Sagar Duo Wing B"
-              },{
+              },
+              {
                 "id": 23,
                 "name": "Nilkhant Shrusti Society Parisar"
               }
@@ -931,6 +932,36 @@
               {
                 "id": 6,
                 "name": "Chandra Bhaga Tower"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "St. Lawrence School Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Madhuban Kunj Wing B Mangeshi City Phase 1"
+              },
+              {
+                "id": 2,
+                "name": "Mohan Kunj Wing C Mangeshi City Phase 1"
+              },
+              {
+                "id": 3,
+                "name": "Murli Kunj Wing D Mangeshi City Phase 1"
+              },
+              {
+                "id": 4,
+                "name": "Mayur Kunj Wing E Mangeshi City Phase 1"
+              },
+              {
+                "id": 5,
+                "name": "Madhav Kunj Wing G Mangeshi City Phase 1"
+              },
+              {
+                "id": 6,
+                "name": "Manohar Kunj Wing F Mangeshi City Phase 1"
               }
             ]
           }

@@ -18,6 +18,8 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { AppStackParamList } from "../routes/AppStack";
 import { useSurvey } from "../appwrite/SurveyContext";
 import { StatusBar } from "expo-status-bar";
+import { databases } from "../appwrite/service";
+import { Query } from "appwrite";
 
 type DashboardScreenNavigationProp = NativeStackNavigationProp<
   AppStackParamList,
@@ -42,6 +44,9 @@ const Dashboard = () => {
   const [deniedSurveyCount, setDeniedSurveyCount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
   const [refreshing, setRefreshing] = useState<boolean>(false);
+  const [employee, setEmployee] = useState(null);
+  const [clientImageUri, setClientImageUri] = useState<string>('');
+  const [clientId, setClientId] = useState<string>('')
 
   const handleLogout = async () => {
     try {
@@ -164,6 +169,41 @@ const Dashboard = () => {
         fetchDeniedSurveyCount(user.id);
       }
     });
+
+    const fetchEmployeeAndClient = async () => {
+      const user = await fetchUserData();
+
+      if (!user || !user.id) {
+        console.error("No user data found, skipping employee and client fetch.");
+        return;
+      }
+
+      const employeeResponse = await databases.listDocuments(
+        "66502c6e0015d7be8526",
+        "666fe230001152bad565",
+        [Query.equal("employeeId", [user.id])]
+      );
+      console.log(employeeResponse);
+
+      const clientData = employeeResponse.documents[0].client;
+      //console.log(clientData);
+
+      setEmployee(clientData);
+
+      if (clientData) {
+        console.info("Employee working for:", clientData)
+        const imgUrl = clientData.imgurl
+        const clientName = clientData.client_name
+
+        //console.log('client image uri: ', imgUrl)
+        //console.log('client id: ', clientId)
+        setClientImageUri(imgUrl)
+        setClientId(clientName)
+      }
+      else console.error("not found");
+    };
+
+    fetchEmployeeAndClient();
   }, [fetchUserData, fetchSurveyCount]);
 
   if (loading) {
@@ -207,19 +247,18 @@ const Dashboard = () => {
         {/* client image */}
         <View className="rounded-md items-center justify-around bg-gray-50 m-3">
           <Image
-            source={require("../../assets/mla.png")}
+            source={{ uri: clientImageUri }}
             style={{ height: 250 }}
             className="w-full"
           />
 
           <Text className="p-2 font-semibold text-base">
-            Vishwanath Bhoir Kalyan West MLA
+           {clientId}
           </Text>
         </View>
 
         {/* daily counter */}
         <View className="bg-gray-50 m-3 rounded-md flex flex-row items-center justify-around p-3">
-
           <View>
             <Text className="bg-green-500 text-center rounded-full p-2 font-bold text-2xl text-white">
               {surveyCount}
@@ -233,7 +272,6 @@ const Dashboard = () => {
             </Text>
             <Text className="font-bold py-2">Locked</Text>
           </View>
-
 
           <View>
             <Text className="bg-red-500 text-center rounded-full p-2 font-bold text-2xl text-white">
@@ -251,12 +289,7 @@ const Dashboard = () => {
             }}
           >
             <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
-              <AntDesign
-                name="form"
-                size={24}
-                color="blue"
-                className="w-1/4"
-              />
+              <AntDesign name="form" size={24} color="blue" className="w-1/4" />
               <Text className="text-base font-semibold w-10/12">
                 Survey Form
               </Text>
@@ -264,17 +297,12 @@ const Dashboard = () => {
           </TouchableOpacity>
 
           <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Locked Room");
-          }}
+            onPress={() => {
+              navigation.navigate("Locked Room");
+            }}
           >
             <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
-              <AntDesign
-                name="lock"
-                size={24}
-                color="blue"
-                className="w-1/4"
-              />
+              <AntDesign name="lock" size={24} color="blue" className="w-1/4" />
               <Text className="text-base font-semibold w-10/12">
                 Locked Survey Form
               </Text>
@@ -282,17 +310,12 @@ const Dashboard = () => {
           </TouchableOpacity>
 
           <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Edit Survey");
-          }}
+            onPress={() => {
+              navigation.navigate("Edit Survey");
+            }}
           >
             <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
-              <AntDesign
-                name="edit"
-                size={24}
-                color="blue"
-                className="w-1/4"
-              />
+              <AntDesign name="edit" size={24} color="blue" className="w-1/4" />
               <Text className="text-base font-semibold w-10/12">
                 Edit Survey Form
               </Text>

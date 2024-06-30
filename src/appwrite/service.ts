@@ -1,7 +1,7 @@
-import { ID, Account, Client , Databases} from 'appwrite'
+import { ID, Account, Client , Databases,Storage,  } from 'appwrite'
 import { toast } from "./toast";
 
-const appwriteClient = new Client()
+const appwriteClient = new Client();
 
 const APPWRITE_ENDPOINT: string = 'https://cloud.appwrite.io/v1';
 const APPWRITE_PROJECT_ID: string = '6648c699000032e4623c';
@@ -11,6 +11,7 @@ type CreateUserAccount = {
   password: string;
   name: string
 }
+
 type LoginUserAccount = {
   email: string;
   password: string;
@@ -79,3 +80,8 @@ class AppwriteService {
 
 export default AppwriteService;
 export const databases = new Databases (appwriteClient)
+const storage = new Storage(appwriteClient);
+
+/* const result = await storage.listFiles(
+  '667015bc000fb36a6215',
+); */

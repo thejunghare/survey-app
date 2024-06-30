@@ -11,6 +11,7 @@ import {
 import { AppwriteContext } from "../appwrite/UserContext";
 import { Icon } from "@rneui/themed";
 import { StatusBar } from "expo-status-bar";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import { toast } from "../appwrite/toast";
 
@@ -56,61 +57,63 @@ const Login = ({ navigation }: LoginScreenProps) => {
   };
 
   return (
-    <SafeAreaView className="bg-white h-screen flex-1">
-      <View className="h-4/5 m-5 justify-center">
-        <Image
-          source={require("../../assets/dem-logo-new.png")}
-          style={{
-            width: 200,
-            height: 150,
-            marginRight: "auto",
-            marginLeft: "auto",
-          }}
-        />
-        <TextInput
-          placeholder="Useremail"
-          value={email}
-          onChangeText={setEmail}
-          keyboardType={"email-address"}
-          className={
-            "p-3 bg-white border border-slate-300 rounded-xl font-semibold text-base shadwo-sm tracking-wide leading-6"
-          }
-        />
-        <TextInput
-          placeholder="Password"
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry
-          className={
-            "my-2.5 p-3 bg-white border border-slate-300 rounded-xl font-semibold text-base shadwo-sm tracking-wide leading-6"
-          }
-        />
-        <Pressable
-          onPress={handleLogin}
-          className="bg-blue-700 p-3 rounded-xl justify-center items-center"
-        >
-          <Text
-            className={"text-white text-base font-bold tracking-wide leading-6"}
-          >
-            Submit
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={handleLogin}
-          className="mt-5 p-3 rounded justify-center items-center"
-        >
-          <Text
+    <KeyboardAwareScrollView>
+      <SafeAreaView className="bg-white h-screen flex-1">
+        <View className="h-4/5 m-5 justify-center">
+          <Image
+            source={require("../../assets/dem-logo-new.png")}
+            style={{
+              width: 200,
+              height: 150,
+              marginRight: "auto",
+              marginLeft: "auto",
+            }}
+          />
+          <TextInput
+            placeholder="Useremail"
+            value={email}
+            onChangeText={setEmail}
+            keyboardType={"email-address"}
             className={
-              "text-black underline text-sm font-bold tracking-wide leading-6"
+              "p-3 bg-white border border-slate-300 rounded-xl font-semibold text-base shadwo-sm tracking-wide leading-6"
             }
+          />
+          <TextInput
+            placeholder="Password"
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+            className={
+              "my-2.5 p-3 bg-white border border-slate-300 rounded-xl font-semibold text-base shadwo-sm tracking-wide leading-6"
+            }
+          />
+          <Pressable
+            onPress={handleLogin}
+            className="bg-blue-700 p-3 rounded-xl justify-center items-center"
           >
-            Need help?
-          </Text>
-        </Pressable>
-      </View>
+            <Text
+              className={"text-white text-base font-bold tracking-wide leading-6"}
+            >
+              Submit
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={handleLogin}
+            className="mt-5 p-3 rounded justify-center items-center"
+          >
+            <Text
+              className={
+                "text-black underline text-sm font-bold tracking-wide leading-6"
+              }
+            >
+              Need help?
+            </Text>
+          </Pressable>
+        </View>
 
-      <StatusBar style="dark" />
-    </SafeAreaView>
+        <StatusBar style="dark" />
+      </SafeAreaView>
+    </KeyboardAwareScrollView>
   );
 };
 

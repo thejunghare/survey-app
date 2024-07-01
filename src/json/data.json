@@ -965,51 +965,89 @@
               },
               {
                 "id": 7,
-                "name":"Mangeshi City Phase 2 Wing A1"
+                "name": "Mangeshi City Phase 2 Wing A1"
               },
               {
                 "id": 8,
-                "name":"Mangeshi City Phase 2 Wing B1"
+                "name": "Mangeshi City Phase 2 Wing B1"
               },
               {
                 "id": 9,
-                "name":"Mangeshi City Phase 2 Wing C1"
+                "name": "Mangeshi City Phase 2 Wing C1"
               },
               {
                 "id": 10,
-                "name":"Mangeshi City Phase 3"
+                "name": "Mangeshi City Phase 3"
               },
               {
                 "id": 11,
-                "name":"Sai Parab"
+                "name": "Sai Parab"
               },
               {
                 "id": 12,
-                "name":"Shankhwar Platinum Buliding No.1"
+                "name": "Shankhwar Platinum Buliding No.1"
               },
               {
                 "id": 13,
-                "name":"Shankhwar Platinum Buliding No.2"
+                "name": "Shankhwar Platinum Buliding No.2"
               },
               {
                 "id": 14,
-                "name":"Shankhwar Platinum Buliding No.3"
+                "name": "Shankhwar Platinum Buliding No.3"
               },
               {
                 "id": 15,
-                "name":"Shankhwar Platinum Buliding No.4"
+                "name": "Shankhwar Platinum Buliding No.4"
               },
               {
                 "id": 16,
-                "name":"Shankhwar Platinum Buliding No.5"
+                "name": "Shankhwar Platinum Buliding No.5"
               },
               {
                 "id": 17,
-                "name":"Thakkar Park"
+                "name": "Thakkar Park"
               },
               {
                 "id": 18,
-                "name":"Tulasi Dham"
+                "name": "Tulasi Dham"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "Mla Banglo Back Side",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Venkatesh Park Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Venkatesh Park Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Venkatesh Park Wing C"
+              },
+              {
+                "id": 4,
+                "name": "Shishodia Arcade Wing A"
+              },
+              {
+                "id": 5,
+                "name": "Shishodia Arcade Wing B"
+              },
+              {
+                "id": 6,
+                "name": "MarutI Dham Wing A"
+              },
+              {
+                "id": 7,
+                "name": "MarutI Dham Wing B"
+              },
+              {
+                "id": 8,
+                "name": "MarutI Dham Wing C"
               }
             ]
           }

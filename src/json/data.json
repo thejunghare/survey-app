@@ -1101,6 +1101,54 @@
                 "name": "Durgamata Chowk Koliwali Gav Area"
               }
             ]
+          },{
+            "id" : 7,
+            "name" : "Ward 2 Office Back Side",
+            "buildings": [
+              {
+                "id":1,
+                "name":"Atrinandhan Heights"
+              },{
+                "id":2,
+                "name":"Nav Anjaneya Building No 1"
+              },{
+                "id": 3,
+                "name":"Nav Anjaneya Building No 2"
+              },{
+                 "id": 4,
+                "name":"Karishma"
+              },{
+                "id": 5,
+                "name":"Dayal Krupa CHS"
+              },{
+                "id":6,
+                "name": "Ganesh Ashish CHS"
+              },{
+                "id":7,
+                "name": "Om Samruddhi Wing A"
+              },{
+                "id":8,
+                "name": "Om Samruddhi Wing A"
+              },{
+                "id":9,
+                "name": "Anand Homes Wing A"
+              },{
+                "id":10,
+                "name": "Anand Homes Wing B"
+              },{
+                "id":11,
+                "name": "Anand Homes Wing C"
+              },{
+                "id":12,
+                "name": "Anand Homes Wing D"
+              },{
+                "id":13,
+                "name": "Chit Park"
+              },{
+                "id":14,
+                "name": "Ganesh Prasad"
+              }
+            ]
           }
         ]
       },

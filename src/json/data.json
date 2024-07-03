@@ -1010,6 +1010,24 @@
               {
                 "id": 18,
                 "name": "Tulasi Dham"
+              },{
+                "id":19,
+                "name": "Crown City Building Sapire"
+              },{
+                "id": 20,
+                "name":"Crown City Building Coral"
+              },{
+                "id": 21,
+                "name":"Crown City Building Peral"
+              },{
+                "id": 22,
+                "name":"Crown City Building Opal"
+              },{
+                "id": 23,
+                "name":"Crown City Building Emeral"
+              },{
+                "id": 24,
+                "name":"Crown City Building Rubi"
               }
             ]
           },

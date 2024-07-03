@@ -1050,6 +1050,39 @@
                 "name": "Maruti Dham Wing C"
               }
             ]
+          },{
+            "id": 7,
+            "name": "Durgamata Chowk",
+            "buildings": [
+              {
+                "id":1,
+                "name":"Shankeshwar Peral Wing A"
+              },
+              {
+                "id":2,
+                "name":"Shankeshwar Peral Wing B"
+              },
+              {
+                "id":3,
+                "name":"Shankeshwar Platinum Vaibhavi City Wing A"
+              },
+              {
+                "id": 4,
+                "name":"Vaibhavi City Wing B"
+              },{
+                "id": 5,
+                "name": "Vaibhavi City Wing C"
+              },{
+                "id":6,
+                "name":"Bhgayodhya Heights Wing A"
+              },{
+                "id": 7,
+                "name":"Bhgayodhya Heights Wing B"
+              },{
+                "id":8,
+                "name": "Durgamata Chowk Koliwali Gav Area"
+              }
+            ]
           }
         ]
       },

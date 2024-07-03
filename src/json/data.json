@@ -1234,6 +1234,32 @@
                 "name": "Shirji Vihar Wing B"
               }
             ]
+          },
+          {
+            "id": 8,
+            "name": "Koliwali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Riddhi Siddhi Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Riddhi Siddhi Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Nebula Srusti"
+              },
+              {
+                "id": 4,
+                "name": "Ashtvinayak Apartment"
+              },
+              {
+                "id": 5,
+                "name": "Atlantic Orra"
+              }
+            ]
           }
         ]
       },

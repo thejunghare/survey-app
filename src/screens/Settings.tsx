@@ -26,7 +26,7 @@ const Settings = () => {
         </TouchableOpacity>
         <View className="border-slate-400 flex flex-row items-center px-3">
           <Icon name="info"  type='antdesign' />
-          <Text className="p-5 font-semibold">1.0.0</Text>
+          <Text className="p-5 font-semibold">1.5.0</Text>
         </View>
       </View>
     </View>

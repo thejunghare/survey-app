@@ -214,6 +214,8 @@ const Dashboard = () => {
     let initials = name.match(/\b\w/g) || [];
     return ((initials.shift() || "") + (initials.pop() || "")).toUpperCase();
   };
+
+  const fairSurveyCount = surveyCount - LockedRoomSurveyCount - deniedSurveyCount;
   return (
     <ScrollView
       refreshControl={
@@ -253,7 +255,7 @@ const Dashboard = () => {
           />
 
           <Text className="p-2 font-semibold text-base">
-           {clientId}
+            {clientId}
           </Text>
         </View>
 
@@ -261,7 +263,7 @@ const Dashboard = () => {
         <View className="bg-gray-50 m-3 rounded-md flex flex-row items-center justify-around p-3">
           <View>
             <Text className="bg-green-500 text-center rounded-full p-2 font-bold text-2xl text-white">
-              {surveyCount}
+              {fairSurveyCount}
             </Text>
             <Text className="font-bold py-2">Survey</Text>
           </View>

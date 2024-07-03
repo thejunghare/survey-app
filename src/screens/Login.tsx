@@ -70,7 +70,7 @@ const Login = ({ navigation }: LoginScreenProps) => {
             }}
           />
           <TextInput
-            placeholder="Useremail"
+            placeholder="User email"
             value={email}
             onChangeText={setEmail}
             keyboardType={"email-address"}

@@ -80,12 +80,18 @@ const SettingsStack = () => {
 
 export const AppStack = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarHideOnKeyboard: true, // This hides the tab bar when the keyboard opens
+      }}
+    >
       <Tab.Screen
         name="Dashboard"
+
         component={DashboardStack}
         options={{
           headerShown: false,
+
           tabBarIcon: ({ color, size }) => (
             <Icon name="home-outline" color={color} size={size} />
           ),

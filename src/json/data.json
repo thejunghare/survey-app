@@ -1287,10 +1287,17 @@
     "wards":[
       {
         "id":1,
-        "name": "",
+        "name": "Koparkhairane",
         "areas": [
           {
-            
+            "id": 1,
+            "name": "Sector 17",
+            "buildings" : [
+              {
+                "id": 1,
+                "name": "Durga Mata Welfare Owner Association"
+              }
+            ]
           }
         ]
       }

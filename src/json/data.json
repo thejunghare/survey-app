@@ -1280,5 +1280,20 @@
         "name": "6"
       }
     ]
+  },
+  {
+    "id": 2,
+    "name": "Airoli Vidhan Sabha",
+    "wards":[
+      {
+        "id":1,
+        "name": "",
+        "areas": [
+          {
+            
+          }
+        ]
+      }
+    ]
   }
 ]

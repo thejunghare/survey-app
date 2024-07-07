@@ -1366,6 +1366,84 @@
                 "name": "Royce Paradise B7"
               }
             ]
+          },
+          {
+            "id": 12,
+            "name": "Rutu River Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mahaveer River Valley  Building No.1"
+              },
+              {
+                "id": 2,
+                "name": "Mahaveer River Valley  Building No.2"
+              },
+              {
+                "id": 3,
+                "name": "Mahaveer River Valley  Building No.3"
+              },
+              {
+                "id": 4,
+                "name": "Mahaveer River Valley  Building No.4"
+              },
+              {
+                "id": 5,
+                "name": "Mahaveer River Valley  Building No.5"
+              },
+              {
+                "id": 6,
+                "name": "Rutu River estate Building No.3 wing A"
+              },
+              {
+                "id": 7,
+                "name": "Rutu River estate Building No.3 wing B"
+              },
+              {
+                "id": 8,
+                "name": "Rutu River estate Building No.3 wing C"
+              },
+              {
+                "id": 9,
+                "name": "Rutu River estate Building No.2 wing A"
+              },
+              {
+                "id": 10,
+                "name": "Rutu River estate Building No.2 wing B"
+              },
+              {
+                "id": 11,
+                "name": "Riverview Classic Building No.1"
+              },
+              {
+                "id": 12,
+                "name": "Riverview Classic Building No.2"
+              },
+              {
+                "id": 13,
+                "name": "Riverview Classic Building No.3"
+              },
+              {
+                "id": 14,
+                "name": "Riverview Classic Building No.4"
+              },
+              {
+                "id": 15,
+                "name": "Riverview Classic Building No.5"
+              },
+              {
+                "id": 16,
+                "name": "Riverview Classic Building No.6"
+              },
+              {
+                "id": 17,
+                "name": "Rutu River Estate Building No.1"
+              },
+              {
+                "id": 18,
+                "name": "Rutu Riverside Estate Building No.4"
+              }
+            ]
           }
         ]
       },

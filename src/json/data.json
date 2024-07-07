@@ -1260,6 +1260,37 @@
                 "name": "Atlantic Orra"
               }
             ]
+          },
+          {
+            "id": 9,
+            "name": "Lodha Garden",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Jai Buliding Wing C"
+              },
+              {
+                "id": 2,
+                "name": "Jui Buliding Wing D"
+              },
+              {
+                "id": 3,
+                "name": "Harshingar Building Wing B2"
+              },
+              {
+                "id": 4,
+                "name": "Gulmohar Building Wing B3"
+              },
+              {
+                "id": 5,
+                "name": "Prajakta Building Wing A"
+              }
+              ,
+              {
+                "id": 6,
+                "name": "Shree Krupa"
+              }
+            ]
           }
         ]
       },
@@ -1284,15 +1315,15 @@
   {
     "id": 2,
     "name": "Airoli Vidhan Sabha",
-    "wards":[
+    "wards": [
       {
-        "id":1,
+        "id": 1,
         "name": "Koparkhairane",
         "areas": [
           {
             "id": 1,
             "name": "Sector 17",
-            "buildings" : [
+            "buildings": [
               {
                 "id": 1,
                 "name": "Durga Mata Welfare Owner Association"

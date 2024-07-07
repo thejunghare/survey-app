@@ -1284,11 +1284,86 @@
               {
                 "id": 5,
                 "name": "Prajakta Building Wing A"
-              }
-              ,
+              },
               {
                 "id": 6,
                 "name": "Shree Krupa"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "name": "Agarwal College Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Agarwal College Samoril Area"
+              },
+              {
+                "id": 2,
+                "name": "Vijay kabhari Niwas"
+              },
+              {
+                "id": 3,
+                "name": "Vaishnavi Heights"
+              },
+              {
+                "id": 4,
+                "name": "Purnodya Rio"
+              },
+              {
+                "id": 5,
+                "name": "Rocey Galaxy"
+              },
+              {
+                "id": 6,
+                "name": "Lokhnade Heights"
+              },
+              {
+                "id": 7,
+                "name": "Mahaveer Heaven Phase 1 Wing A"
+              },
+              {
+                "id": 8,
+                "name": "Mahaveer Heaven Phase 1 Wing b"
+              },
+              {
+                "id": 9,
+                "name": "Mahaveer Heaven Phase 2"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "name": "Gandhari Road",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Royce Paradise B1"
+              },
+              {
+                "id": 2,
+                "name": "Royce Paradise B2"
+              },
+              {
+                "id": 3,
+                "name": "Royce Paradise B3"
+              },
+              {
+                "id": 4,
+                "name": "Royce Paradise B4"
+              },
+              {
+                "id": 5,
+                "name": "Royce Paradise B5"
+              },
+              {
+                "id": 6,
+                "name": "Royce Paradise B6"
+              },
+              {
+                "id": 7,
+                "name": "Royce Paradise B7"
               }
             ]
           }

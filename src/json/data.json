@@ -1508,6 +1508,44 @@
               {
                 "id": 8,
                 "name": "Shree Ganesh Owner Association"
+              },
+              {
+                "id": 9,
+                "name": "Datta krupa Owner Association"
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Sector 18",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Navjivan Owner Association"
+              },
+              {
+                "id": 2,
+                "name": "Sahyadri Owner Association"
+              },
+              {
+                "id": 3,
+                "name": "Vighnahar Owner Association"
+              },
+              {
+                "id": 4,
+                "name": "Sai Krupa Owner Association"
+              },
+              {
+                "id": 5,
+                "name": "Om Sai Krupa Owner Association"
+              },
+              {
+                "id": 6,
+                "name": "Saish Owner Association"
+              },
+              {
+                "id": 7,
+                "name": "Siddi Owner Association"
               }
             ]
           }

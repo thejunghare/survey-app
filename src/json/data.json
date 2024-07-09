@@ -1291,6 +1291,27 @@
               },{
                 "id":7,
                 "name": "Nishignadha"
+              },{
+                "id":8,
+                "name": "Vastuvatika E Wing"
+              },{
+                "id":9,
+                "name": "Vastuvatika F Wing"
+              },{
+                "id":10,
+                "name": "Vastuvatika G Wing"
+              },{
+                "id":11,
+                "name": "Vastuvatika H Wing"
+              },{
+                "id":12,
+                "name": "Vastuvatika I Wing"
+              },{
+                "id":13,
+                "name": "Vastuvatika J Wing"
+              },{
+                "id":14,
+                "name": "Rajnigandha"
               }
             ]
           },

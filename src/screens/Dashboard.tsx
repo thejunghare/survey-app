@@ -247,7 +247,7 @@ const Dashboard = () => {
         </View>
 
         {/* client image */}
-        <View className="rounded-md items-center justify-around bg-gray-50 m-3">
+        <View className="items-center justify-around bg-gray-50 m-3 bg-white border border-slate-200 rounded-xl">
           <Image
             source={{ uri: clientImageUri }}
             style={{ height: 250 }}
@@ -260,7 +260,8 @@ const Dashboard = () => {
         </View>
 
         {/* daily counter */}
-        <View className="bg-gray-50 m-3 rounded-md flex flex-row items-center justify-around p-3">
+        <Text className="text-xs font-bold px-5">My Daily Count</Text>
+        <View className="bg-white border border-slate-200 m-4 rounded-xl flex flex-row items-center justify-around p-3">
           <View>
             <Text className="bg-green-500 text-center rounded-full p-2 font-bold text-2xl text-white">
               {fairSurveyCount}
@@ -284,14 +285,19 @@ const Dashboard = () => {
         </View>
 
         {/* form navigation container */}
-        <View className="bg-gray-50 m-3 rounded-md flex items-start justify-center">
+        <Text className="text-xs font-bold px-5 ">Survey Options</Text>
+        <View className='flex items-start justify-center bg-white border border-slate-200 m-4 rounded-xl'>
           <TouchableOpacity
             onPress={() => {
               navigation.navigate("Survey form", { userId: userData.id });
             }}
           >
-            <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
-              <AntDesign name="form" size={24} color="blue" className="w-1/4" />
+            <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly ">
+              <Icon
+                name='edit'
+                type='feather'
+                color='#517fa4'
+              />
               <Text className="text-base font-semibold w-10/12">
                 Survey Form
               </Text>
@@ -300,26 +306,35 @@ const Dashboard = () => {
 
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("Locked Room");
+              navigation.navigate("Locked Room", { userId: userData.id });
             }}
           >
             <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
-              <AntDesign name="lock" size={24} color="blue" className="w-1/4" />
+              <Icon
+                name='lock'
+                type='feather'
+                color='#517fa4'
+              />
               <Text className="text-base font-semibold w-10/12">
-                Locked Survey Form
+                Locked Room
               </Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate("Edit Survey");
+              navigation.navigate("Voter Search", { userId: userData.id });
             }}
           >
             <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
-              <AntDesign name="edit" size={24} color="blue" className="w-1/4" />
+              {/* <AntDesign name="edit" size={24} color="blue" className="w-1/4" /> */}
+              <Icon
+                name='search'
+                type='feather'
+                color='#517fa4'
+              />
               <Text className="text-base font-semibold w-10/12">
-                Edit Survey Form
+                Voter Search
               </Text>
             </View>
           </TouchableOpacity>

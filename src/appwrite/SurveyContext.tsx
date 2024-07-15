@@ -26,16 +26,18 @@ interface SurveyData {
   isRoomLocked: boolean;
   surveyRemark: string;
   surveyDenied: boolean;
-  memberCount:string;
+  memberCount: string;
   createdAt: string;
   isOwner: boolean;
   isRented: boolean;
   roomOwnerMobileNumber: string;
-  nameSource:string;
+  nameSource: string;
 }
 
 interface SurveyContextProps {
   current: SurveyData[];
+  listLockedSurvey: (userId: string) => Promise<void>;
+  fetchVoterList: Promise<void>;
   add: (survey: SurveyData) => Promise<void>;
   remove: (id: string) => Promise<void>;
   countDocument: (userId: string, date: string) => Promise<string>;
@@ -63,8 +65,54 @@ interface SurveyProviderProps {
   children: ReactNode;
 }
 
+interface Document {
+  $id: string;
+  title: string;
+  employeeId: string;
+  isRoomLocked: boolean;
+  divison: string;
+  ward: string;
+  area: string;
+  building: string;
+}
+
 export function SurveyProvider({ children }: SurveyProviderProps) {
   const [surveys, setSurveys] = useState<SurveyData[]>([]);
+
+  async function fetchVoterList() {
+    try {
+      const result = await databases.listDocuments(
+        SURVEY_DATABASE_ID,
+        '66954dd3002fefd5a66f' // collection id
+      );
+      return result.documents as Document[];
+    } catch (error) {
+      console.error('Error fetching voter list', error)
+      toast('Error fetching!');
+      return [];
+    }
+  }
+
+  async function listLockedSurvey(userId: string, division: string, ward: string, area: string, building: string): Promise<Document[]> {
+    try {
+      const result = await databases.listDocuments(
+        SURVEY_DATABASE_ID,
+        SURVEY_COLLECTION_ID,
+        [
+          Query.equal('employeeId', userId),
+          Query.equal('division', division),
+          Query.equal('ward', ward),
+          Query.equal('area', area),
+          Query.equal('building', building)
+        ]
+      );
+      return result.documents as Document[];
+    } catch (error) {
+      //console.error('Error fetching locked rooms', error)
+      toast('Error fetching!');
+      return [];
+    }
+  };
 
   async function add(survey: SurveyData) {
     const response = await databases.createDocument(
@@ -185,6 +233,8 @@ export function SurveyProvider({ children }: SurveyProviderProps) {
     <SurveyContext.Provider
       value={{
         current: surveys,
+        fetchVoterList,
+        listLockedSurvey,
         add,
         remove,
         countDocument,

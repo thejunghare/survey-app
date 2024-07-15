@@ -8,17 +8,17 @@ import EditSurvey from "../screens/EditSurvey";
 import VoterSearch from "../screens/VoterSearch";
 import ProfileScreen from "../screens/ProfileScreen";
 import Settings from "../screens/Settings";
-import Icon from "react-native-vector-icons/Ionicons"; // or any other icon set you prefer
+import { Icon } from '@rneui/themed';
 
 export type AppStackParamList = {
   Dashboard: undefined;
   "Survey form": { userId: string };
-  "Voter Search": undefined;
+  "Voter Search": { userId: string };
   "New Dashboard": undefined;
   Profile: undefined;
   Settings: undefined;
   "Edit Survey": undefined;
-  "Locked Room": undefined;
+  "Locked Room": { userId: string };
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -82,7 +82,17 @@ export const AppStack = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarHideOnKeyboard: true, // This hides the tab bar when the keyboard opens
+        tabBarHideOnKeyboard: true,
+        tabBarLabelStyle: {
+          fontWeight: 900,
+          fontSize: 11,
+          padding: 10,
+          letterSpacing: 0.5,
+        },
+        tabBarStyle: {
+          height: 80,
+          padding: 15,
+        },
       }}
     >
       <Tab.Screen
@@ -93,7 +103,7 @@ export const AppStack = () => {
           headerShown: false,
 
           tabBarIcon: ({ color, size }) => (
-            <Icon name="home-outline" color={color} size={size} />
+            <Icon name="home" color={color} size={size} type='feather' />
           ),
         }}
       />
@@ -103,7 +113,7 @@ export const AppStack = () => {
         component={ProfileStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="person-outline" color={color} size={size} />
+            <Icon name="user" color={color} size={size} type='feather' />
           ),
         }}
       />
@@ -112,7 +122,7 @@ export const AppStack = () => {
         component={SettingsStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="settings-outline" color={color} size={size} />
+            <Icon name="settings" color={color} size={size} type='feather' />
           ),
         }}
       />

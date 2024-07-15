@@ -1572,6 +1572,44 @@
                 "name": "Siddi Owner Association"
               }
             ]
+          },
+          {
+            "id": 3,
+            "name": "Sector 16",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shivneri Owner Association Room No.1 to 134"
+              },
+              {
+                "id": 2,
+                "name": "Shivneri Vaibhav Association Room No.135 to 263"
+              },
+              {
+                "id": 3,
+                "name": "Sadguru Krupa Ghrmalak Association Room No.264 to 349"
+              },
+              {
+                "id": 4,
+                "name": "Ashtvinayak owner Association  Room No.348 to 450"
+              },
+              {
+                "id": 5,
+                "name": "Shree Sai Seva Gharmalak Association Room No.451 to 628"
+              },
+              {
+                "id": 6,
+                "name": "Ganesh krupa Association Room No.629 to 758"
+              },
+              {
+                "id": 7,
+                "name": "Jay Bhavani Owner Association Room No.759 to 836"
+              },
+              {
+                "id": 8,
+                "name": "Shree Datta krupa Association Room No.837 to 914"
+              }
+            ]
           }
         ]
       }

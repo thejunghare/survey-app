@@ -1610,6 +1610,24 @@
                 "name": "Shree Datta krupa Association Room No.837 to 914"
               }
             ]
+          },
+          {
+            "id": 4,
+            "name": "Sector 15",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vighnaharta Owner Association Room No.1 to 134"
+              },
+              {
+                "id": 2,
+                "name": "Purva Shree Owner Association Room No.135 to 263"
+              },
+              {
+                "id": 3,
+                "name": "Rayreshwar Owner Association Room No.264 to 347"
+              }
+            ]
           }
         ]
       }

@@ -1288,29 +1288,37 @@
               {
                 "id": 6,
                 "name": "Shree Krupa"
-              },{
-                "id":7,
+              },
+              {
+                "id": 7,
                 "name": "Nishignadha"
-              },{
-                "id":8,
+              },
+              {
+                "id": 8,
                 "name": "Vastuvatika E Wing"
-              },{
-                "id":9,
+              },
+              {
+                "id": 9,
                 "name": "Vastuvatika F Wing"
-              },{
-                "id":10,
+              },
+              {
+                "id": 10,
                 "name": "Vastuvatika G Wing"
-              },{
-                "id":11,
+              },
+              {
+                "id": 11,
                 "name": "Vastuvatika H Wing"
-              },{
-                "id":12,
+              },
+              {
+                "id": 12,
                 "name": "Vastuvatika I Wing"
-              },{
-                "id":13,
+              },
+              {
+                "id": 13,
                 "name": "Vastuvatika J Wing"
-              },{
-                "id":14,
+              },
+              {
+                "id": 14,
                 "name": "Rajnigandha"
               }
             ]
@@ -1626,6 +1634,26 @@
               {
                 "id": 3,
                 "name": "Rayreshwar Owner Association Room No.264 to 347"
+              },
+              {
+                "id": 4,
+                "name": "Shivtej Owner Association"
+              },
+              {
+                "id": 5,
+                "name": "Shree Datta Krupa Chawl No.5"
+              },
+              {
+                "id": 6,
+                "name": "Ashtvinayak Owner Association"
+              },
+              {
+                "id": 7,
+                "name": "Shiv Sai Owner Association"
+              },
+              {
+                "id": 8,
+                "name": "Swaraj Owner Association"
               }
             ]
           }

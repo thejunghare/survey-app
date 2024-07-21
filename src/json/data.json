@@ -1656,6 +1656,44 @@
                 "name": "Swaraj Owner Association"
               }
             ]
+          },
+          {
+            "id": 5,
+            "name": "Sector 7",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Dnyandeep Owner Association"
+              },
+              {
+                "id": 2,
+                "name": "Trimurti Owner Association"
+              },
+              {
+                "id": 3,
+                "name": "Arogyadham Owner Association"
+              },
+              {
+                "id": 4,
+                "name": "Jay Ambe Owner Association"
+              },
+              {
+                "id": 5,
+                "name": "Mangal Murti Co-operative Society"
+              },
+              {
+                "id": 6,
+                "name": "Sai Shraddha Association"
+              },
+              {
+                "id": 7,
+                "name": "Shri VaradVinayak Owner Association"
+              },
+              {
+                "id": 8,
+                "name": "Dnyaneshwar Mauli Owner Association"
+              }
+            ]
           }
         ]
       }

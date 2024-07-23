@@ -1,11 +1,15 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Dashboard from "../screens/Dashboard";
 import DoorToDoorSurvey from "../screens/DoorToDoorSurvey";
 import LockedRoomSurvey from "../screens/LockedRoomSurvey";
 import EditSurvey from "../screens/EditSurvey";
 import VoterSearch from "../screens/VoterSearch";
+import VoterDetails from "../screens/VoterDetails";
+import VoterDetailsView from '../screens/VoterDetailsView';
+import VoterDetailsEdit from '../screens/VoterDetailsEdit';
 import ProfileScreen from "../screens/ProfileScreen";
 import Settings from "../screens/Settings";
 import { Icon } from '@rneui/themed';
@@ -14,6 +18,7 @@ export type AppStackParamList = {
   Dashboard: undefined;
   "Survey form": { userId: string };
   "Voter Search": { userId: string };
+  "Voter Details": { voter: any }; // Ensure the voter parameter is defined here
   "New Dashboard": undefined;
   Profile: undefined;
   Settings: undefined;
@@ -23,6 +28,7 @@ export type AppStackParamList = {
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 const Tab = createBottomTabNavigator();
+const TopTab = createMaterialTopTabNavigator();
 
 const DashboardStack = () => {
   return (
@@ -40,6 +46,7 @@ const DashboardStack = () => {
       <Stack.Screen name="Voter Search" component={VoterSearch} />
       <Stack.Screen name="Locked Room" component={LockedRoomSurvey} />
       <Stack.Screen name="Edit Survey" component={EditSurvey} />
+      <Stack.Screen name="Voter Details" component={VoterDetails} />
     </Stack.Navigator>
   );
 };
@@ -78,6 +85,8 @@ const SettingsStack = () => {
   );
 };
 
+
+
 export const AppStack = () => {
   return (
     <Tab.Navigator
@@ -97,17 +106,14 @@ export const AppStack = () => {
     >
       <Tab.Screen
         name="Dashboard"
-
         component={DashboardStack}
         options={{
           headerShown: false,
-
           tabBarIcon: ({ color, size }) => (
             <Icon name="home" color={color} size={size} type='feather' />
           ),
         }}
       />
-
       <Tab.Screen
         name="Profile"
         component={ProfileStack}

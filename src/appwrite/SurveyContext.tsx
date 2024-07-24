@@ -40,9 +40,15 @@ interface updateVoterData {
     mobile_number: string;
     caste: string;
     remark: string;
+    survey_denied: boolean,
+    is_rented: boolean,
+    room_locked: boolean,
+    is_owner: boolean,
 }
 
 interface SurveyContextProps {
+    punchIn: (puchInData: AttendanceData) => Promise<void>;
+    punchOut: (puchOutData: AttendanceData) => Promise<void>;
     current: SurveyData[];
     listLockedSurvey: (userId: string) => Promise<void>;
     fetchVoterList: Promise<void>;
@@ -84,8 +90,49 @@ interface Document {
     building: string;
 }
 
+interface AttendanceData {
+    employeeId: String;
+    dateTime: string;
+    location: string;
+    type: string;
+}
+
 export function SurveyProvider({children}: SurveyProviderProps) {
     const [surveys, setSurveys] = useState<SurveyData[]>([]);
+
+    async function punchIn(punchInData: AttendanceData) {
+        try {
+            const response = await databases.createDocument(
+                SURVEY_DATABASE_ID,
+                '5',
+                ID.unique(),
+                punchInData,
+            );
+            console.log('Punched in successfully!', response);
+            toast('Punched In!')
+            return response;
+        } catch (error) {
+            console.error(error)
+            toast('try again!')
+        }
+    }
+
+    async function punchOut(punchOutData: AttendanceData) {
+        try {
+            const response = await databases.createDocument(
+                SURVEY_DATABASE_ID,
+                '5',
+                ID.unique(),
+                punchOutData,
+            );
+            console.log('Punched out successfully!', response);
+            toast('Punched Out!')
+            return response;
+        } catch (error) {
+            console.error(error)
+            toast('try again!')
+        }
+    }
 
     // fetch voters
     async function fetchVoterList() {
@@ -267,6 +314,8 @@ export function SurveyProvider({children}: SurveyProviderProps) {
         <SurveyContext.Provider
             value={{
                 current: surveys,
+                punchIn,
+                punchOut,
                 fetchVoterList,
                 listLockedSurvey,
                 add,

@@ -1711,6 +1711,16 @@
                 "name": "Shri Siddhivinayak Rahuvashi Chawl"
               }
             ]
+          },
+          {
+            "id": 6,
+            "name": "Sector 6",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shri Ganesh Owner Association"
+              }
+            ]
           }
         ]
       }

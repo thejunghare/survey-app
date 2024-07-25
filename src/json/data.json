@@ -1706,7 +1706,8 @@
               {
                 "id": 10,
                 "name": "Kai. Shivajirao Anna Saheb Patil"
-              },{
+              },
+              {
                 "id": 11,
                 "name": "Shri Siddhivinayak Rahuvashi Chawl"
               }
@@ -1719,6 +1720,30 @@
               {
                 "id": 1,
                 "name": "Shri Ganesh Owner Association"
+              },
+              {
+                "id": 2,
+                "name": "Shivalai Dhavan Mahalaxmi chawl"
+              },
+              {
+                "id": 3,
+                "name": "Shri Ganesh Krupa Chawl"
+              },
+              {
+                "id": 4,
+                "name": "Jyotirling Rahivashi Chawl"
+              },
+              {
+                "id": 5,
+                "name": "Room No.443 To 769"
+              },
+              {
+                "id": 6,
+                "name": "Laxmi Park Om Magal Society Room No.123 To 1050"
+              },
+              {
+                "id": 7,
+                "name": "Room No.737 To 750"
               }
             ]
           }

@@ -1696,13 +1696,11 @@
               {
                 "id": 8,
                 "name": "Dnyaneshwar Mauli Owner Association"
-              }
-              ,
+              },
               {
                 "id": 9,
                 "name": "Ashtavinayak Owner Association"
-              }
-              ,
+              },
               {
                 "id": 10,
                 "name": "Kai. Shivajirao Anna Saheb Patil"
@@ -1744,6 +1742,14 @@
               {
                 "id": 7,
                 "name": "Room No.737 To 750"
+              },
+              {
+                "id": 8,
+                "name": "Jai Bhavani Owner Association"
+              },
+              {
+                "id": 9,
+                "name": "Shri Siddhivinayak Chawl"
               }
             ]
           }

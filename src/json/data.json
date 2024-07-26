@@ -1478,22 +1478,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": 3,
-        "name": "3"
-      },
-      {
-        "id": 4,
-        "name": "4"
-      },
-      {
-        "id": 5,
-        "name": "5"
-      },
-      {
-        "id": 6,
-        "name": "6"
       }
     ]
   },
@@ -1750,6 +1734,54 @@
               {
                 "id": 9,
                 "name": "Shri Siddhivinayak Chawl"
+              },
+              {
+                "id": 10,
+                "name": "Season Park"
+              },
+              {
+                "id": 11,
+                "name": "Shriji Park"
+              },
+              {
+                "id": 12,
+                "name": "Sunshine CHS"
+              },
+              {
+                "id": 13,
+                "name": "Laxmi Park 1 A & B Wing"
+              },
+              {
+                "id": 14,
+                "name": "Laxmi Park 2 A & B Wing"
+              },
+              {
+                "id": 15,
+                "name": "Dipak Apartment"
+              },
+              {
+                "id": 16,
+                "name": "Shriprabhu CHS"
+              },
+              {
+                "id": 17,
+                "name": "Swami Vivekananda CHS"
+              },
+              {
+                "id": 18,
+                "name": "Muktai CHS"
+              },
+              {
+                "id": 19,
+                "name": "New Vinayak CHS"
+              },
+              {
+                "id": 20,
+                "name": "Sai Enclave"
+              },
+              {
+                "id": 21,
+                "name": "Vireshwer Darshan CHS"
               }
             ]
           }

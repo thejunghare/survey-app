@@ -1782,6 +1782,48 @@
               {
                 "id": 21,
                 "name": "Vireshwer Darshan CHS"
+              },
+              {
+                "id": 22,
+                "name": "S.S.2"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "Sector 8",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Gurukrupa Owner Association Room No.758 to 836"
+              },
+              {
+                "id": 2,
+                "name": "Kotak Apartment"
+              },
+              {
+                "id": 3,
+                "name": "Shiv Kripa Owner Association"
+              },
+              {
+                "id": 4,
+                "name": "Adarsh Owner Association Room No.336 To 450"
+              },
+              {
+                "id": 5,
+                "name": "Room No.195 to 1013"
+              },
+              {
+                "id": 6,
+                "name": "Room No.1014 to 1032"
+              },
+              {
+                "id": 7,
+                "name": "Room No.1042 to 1033"
+              },
+              {
+                "id": 8,
+                "name": "Siddivinayk Owner Association Room No.649 to 746"
               }
             ]
           }

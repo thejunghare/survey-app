@@ -135,11 +135,14 @@ export function SurveyProvider({children}: SurveyProviderProps) {
     }
 
     // fetch voters
-    async function fetchVoterList() {
+    /*async function fetchVoterList() {
         try {
             const result = await databases.listDocuments(
                 SURVEY_DATABASE_ID,
-                '66954dd3002fefd5a66f' // collection id
+                '66954dd3002fefd5a66f', // collection id
+                [
+                    Query.search('first_name', query)
+                ]
             );
             return result.documents as Document[];
         } catch (error) {
@@ -147,7 +150,25 @@ export function SurveyProvider({children}: SurveyProviderProps) {
             toast('Error fetching!');
             return [];
         }
+    }*/
+
+    async function fetchVoterList(query: string) {
+        try {
+            const result = await databases.listDocuments(
+                SURVEY_DATABASE_ID,
+                '66954dd3002fefd5a66f', // collection id
+                [
+                    Query.search('first_name', query)
+                ]
+            );
+            return result.documents;
+        } catch (error) {
+            console.error('Error fetching voter list', error);
+            toast('Error fetching!');
+            return [];
+        }
     }
+
 
     // fetch locked rooms
     async function listLockedSurvey(userId: string, division: string, ward: string, area: string, building: string): Promise<Document[]> {

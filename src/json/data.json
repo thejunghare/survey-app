@@ -1824,6 +1824,120 @@
               {
                 "id": 8,
                 "name": "Siddivinayk Owner Association Room No.649 to 746"
+              },
+              {
+                "id": 9,
+                "name": "Shivshakti Owner Association"
+              },
+              {
+                "id": 10,
+                "name": "S.S.2"
+              },
+              {
+                "id": 11,
+                "name": "Shivshakti Owner Association Room No.135 To 263"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "Sector 5",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "S.S-2 Uday Owner Association Room No.135 To 263"
+              },
+              {
+                "id": 2,
+                "name": "Nikita Apartment"
+              },
+              {
+                "id": 3,
+                "name": "Royal Plaza Apartment"
+              },
+              {
+                "id": 4,
+                "name": "Shri Ballaleshwar Apartment"
+              },
+              {
+                "id": 5,
+                "name": "Shanakar Mahadev Apartment"
+              },
+              {
+                "id": 6,
+                "name": "Nishigandha Apartment"
+              },
+              {
+                "id": 7,
+                "name": "Samrudhi Apartment"
+              },
+              {
+                "id": 8,
+                "name": "Varadvinayak Apartment"
+              },
+              {
+                "id": 9,
+                "name": "Shri Ghanesh Apartment"
+              },
+              {
+                "id": 10,
+                "name": "N.K Apartment"
+              },
+              {
+                "id": 11,
+                "name": "Kokan Apartment"
+              },
+              {
+                "id": 12,
+                "name": "Trimurti Apartment"
+              },
+              {
+                "id": 13,
+                "name": "Ghanesh Bhavan"
+              },
+              {
+                "id": 14,
+                "name": "Somanth Apartment"
+              },
+              {
+                "id": 15,
+                "name": "Jai Kedarnath Apartment"
+              },
+              {
+                "id": 16,
+                "name": "Yash Apartment"
+              },
+              {
+                "id": 17,
+                "name": "Anand Niwas"
+              },
+              {
+                "id": 18,
+                "name": "Vighneshwer Apartment"
+              },
+              {
+                "id": 19,
+                "name": "Omkar Apartment"
+              },
+              {
+                "id": 20,
+                "name": "Sai Owner Association Room No.875 To 914"
+              },
+              {
+                "id": 21,
+                "name": "Ganesh Krupa Owner Association Room No.263 To 411"
+              },
+              {
+                "id": 22,
+                "name": "Santakrupa Owner Association Room No.969 To 1059"
+              },
+              {
+                "id": 23,
+                "name":"S.S.3"
+              },
+              {
+                "id": 24,
+                "name":"Indraprastha Owner Association S.S.2 Room No.639 To 751"
               }
             ]
           }

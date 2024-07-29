@@ -1940,6 +1940,40 @@
                 "name":"Indraprastha Owner Association S.S.2 Room No.639 To 751"
               }
             ]
+          },
+          {
+            "id": 9,
+            "name": "Sector 3",
+            "buildings":[
+              {
+                "id": 1,
+                "name":"Siddhivinayak Owner Association Room No.774 To 787"
+              },
+              {
+                "id": 2,
+                "name":"Ashirwad Owner Association"
+              },
+              {
+                "id": 3,
+                "name" :"Shivshankar Owner Association"
+              },
+              {
+                "id": 4,
+                "name" :"Shri Raj Garden Plot No.33"
+              },
+              {
+                "id": 5,
+                "name":"Siddhivinayak Owner Association Room No.135 To 263"
+              },
+              {
+                "id": 6,
+                "name":"Omkareshwar Owner Association Room No.1 To 134"
+              },
+              {
+                "id": 7,
+                "name":"Mauli Owner Association Room No.629 To 756"
+              }
+            ]
           }
         ]
       }

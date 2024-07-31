@@ -1933,53 +1933,83 @@
               },
               {
                 "id": 23,
-                "name":"S.S.3"
+                "name": "S.S.3"
               },
               {
                 "id": 24,
-                "name":"Indraprastha Owner Association S.S.2 Room No.639 To 751"
+                "name": "Indraprastha Owner Association S.S.2 Room No.639 To 751"
               }
             ]
           },
           {
             "id": 9,
             "name": "Sector 3",
-            "buildings":[
+            "buildings": [
               {
                 "id": 1,
-                "name":"Siddhivinayak Owner Association Room No.774 To 787"
+                "name": "Siddhivinayak Owner Association Room No.774 To 787"
               },
               {
                 "id": 2,
-                "name":"Ashirwad Owner Association"
+                "name": "Ashirwad Owner Association"
               },
               {
                 "id": 3,
-                "name" :"Shivshankar Owner Association"
+                "name": "Shivshankar Owner Association"
               },
               {
                 "id": 4,
-                "name" :"Shri Raj Garden Plot No.33"
+                "name": "Shri Raj Garden Plot No.33"
               },
               {
                 "id": 5,
-                "name":"Siddhivinayak Owner Association Room No.135 To 263"
+                "name": "Siddhivinayak Owner Association Room No.135 To 263"
               },
               {
                 "id": 6,
-                "name":"Omkareshwar Owner Association Room No.1 To 134"
+                "name": "Omkareshwar Owner Association Room No.1 To 134"
               },
               {
                 "id": 7,
-                "name":"Mauli Owner Association Room No.629 To 756"
+                "name": "Mauli Owner Association Room No.629 To 756"
               },
               {
-                "id":8,
+                "id": 8,
                 "name": "Tirupati Owner Association"
               },
               {
-                "id":9,
+                "id": 9,
                 "name": "Jai Hanuman Owner Assoication"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "name": "Sector 1",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sai Krupa Owner Association Room No.264 To 347"
+              },
+              {
+                "id": 2,
+                "name": "S.S - 1"
+              },
+              {
+                "id": 3,
+                "name": "S.S - 2"
+              },
+              {
+                "id": 4,
+                "name": "Navjavan Owner Association Room No.629 To 756"
+              },
+              {
+                "id": 5,
+                "name": "Sadguru Owner Association Room No.757 To 836"
+              },
+              {
+                "id": 6,
+                "name": "Suyog Owner Association Room No.451 To 628"
               }
             ]
           }

@@ -2012,6 +2012,44 @@
                 "name": "Suyog Owner Association Room No.451 To 628"
               }
             ]
+          },
+          {
+            "id": 11,
+            "name": "Sector 2",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sai Shraddha OA Room No.1 To 134"
+              },
+              {
+                "id": 2,
+                "name": "Sai Prerna OA Room No.135 To 263"
+              },
+              {
+                "id": 3,
+                "name": "Ekta OA Room No.264 To 347"
+              },
+              {
+                "id": 4,
+                "name": "Shivkrupa OA Room No.348 To 450"
+              },
+              {
+                "id": 5,
+                "name": "Siddhivinayak OA Room No.837 To 914"
+              },
+              {
+                "id": 6,
+                "name": "Snehabandh OA Room No.757 To 836"
+              },
+              {
+                "id": 7,
+                "name": "Jai Hanuman OA Room No.629 To 756"
+              },
+              {
+                "id": 8,
+                "name": "Shri Mauli krupa OA Room No.451 To 628"
+              }
+            ]
           }
         ]
       }

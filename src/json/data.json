@@ -2050,6 +2050,48 @@
                 "name": "Shri Mauli krupa OA Room No.451 To 628"
               }
             ]
+          },
+          {
+            "id": 12,
+            "name": "Sector 4",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shri Ganesh OA Rn.1 To 134"
+              },
+              {
+                "id": 2,
+                "name": "Shri Vittal Rakhumai OA Rn.135 To 244"
+              },
+              {
+                "id": 3,
+                "name": "Sahyadri OA Rn.264 To 347"
+              },
+              {
+                "id": 4,
+                "name": "Varadvinayak Rahuvashi Sangh Rn.339 To 356"
+              },
+              {
+                "id": 5,
+                "name": "Jai Bhavani OA Rn.980 To 1035"
+              },
+              {
+                "id": 6,
+                "name": "Dharmavir Sambhaji Raje OA Rn.348 To 450"
+              },
+              {
+                "id": 7,
+                "name": "Sai Shraddha OA Rn.876 To 902"
+              },
+              {
+                "id": 8,
+                "name": "Shivaji patil OA Rn.837 To 914"
+              },
+              {
+                "id": 9,
+                "name": "Trimurti OA Rn.629 To 756"
+              }
+            ]
           }
         ]
       }

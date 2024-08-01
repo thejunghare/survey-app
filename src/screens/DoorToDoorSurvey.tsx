@@ -62,7 +62,7 @@ interface SurveyData {
     isRented: boolean;
     roomOwnerMobileNumber: string;
     memberCount: string;
-    nameSource: string;
+   // nameSource: string;
 }
 
 interface Ward {
@@ -130,7 +130,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [surveyRemark, setSurveyRemark] = useState("");
     const [memberCount, setMemberCount] = useState("");
 
-    const [nameSource, setNameSource] = React.useState<string | undefined>();
+    //const [nameSource, setNameSource] = React.useState<string | undefined>();
     const radioButtons: RadioButtonProps[] = React.useMemo(() => ([
         {
             id: 'dnp',
@@ -320,7 +320,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
             isOwner,
             isRented,
             roomOwnerMobileNumber,
-            nameSource,
+          //  nameSource,
             createdAt, // Include the formatted createdAt field
             familyhead: JSON.stringify(familyDataObject),
             members: JSON.stringify(members),
@@ -352,7 +352,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         setIsRented(false);
         setSurveyRemark("");
         setRoomOwnerMobileNumber("");
-        setNameSource('');
+        //setNameSource('');
         setIsLoading(false); // stop loading
     };
 
@@ -442,41 +442,42 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         <Text className='text-xl font-bold'>Voter Details</Text>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>First name: {selectedVoter.first_name}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.first_name)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Last name: {selectedVoter.last_name}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.last_name)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Age: {selectedVoter.age}</Text>
-                            <Icon name='copy' size={16} type={'feather'} onPress={() => handleCopy(selectedVoter.age)}/>
+                            <Icon name='clipboard' size={16} type={'feather'}
+                                  onPress={() => handleCopy(selectedVoter.age)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Gender: {selectedVoter.gender}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.gender)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Address: {selectedVoter.address}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.address)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>House/Room number: {selectedVoter.house_number}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.house_number)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Epic number: {selectedVoter.epic_number}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.epic_number)}/>
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Booth address: {selectedVoter.booth_address}</Text>
-                            <Icon name='copy' size={16} type={'feather'}
+                            <Icon name='clipboard' size={16} type={'feather'}
                                   onPress={() => handleCopy(selectedVoter.booth_address)}/>
                         </View>
                     </View>
@@ -923,17 +924,58 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         type="solid"
                         onPress={handleAddMember}
                         color="warning"
-                    >
-                        Add Member
-                    </Button>
+
+
+                        title="MEMBER"
+                        icon={{
+                            name: 'users',
+                            type: 'feather',
+                            size: 15,
+                            color: 'white',
+                        }}
+                        iconRight
+                        iconContainerStyle={{marginLeft: 10}}
+                        titleStyle={{fontWeight: '700'}}
+                        buttonStyle={{
+                            backgroundColor: 'rgba(199, 43, 98, 1)',
+                            borderColor: 'transparent',
+                            borderWidth: 0,
+                            borderRadius: 30,
+                        }}
+                        containerStyle={{
+                            width: 150,
+                            marginHorizontal: 'auto',
+                            marginVertical: 10,
+                        }}
+                    />
                     <Button
                         radius={"sm"}
                         type="solid"
                         onPress={handleSubmit}
                         disabled={isLoading}
-                    >
-                        Submit data
-                    </Button>
+
+                        title="SUBMIT"
+                        icon={{
+                            name: 'save',
+                            type: 'feather',
+                            size: 15,
+                            color: 'white',
+                        }}
+                        iconRight
+                        iconContainerStyle={{marginLeft: 10}}
+                        titleStyle={{fontWeight: '700'}}
+                        buttonStyle={{
+                            backgroundColor: 'rgba(90, 154, 230, 1)',
+                            borderColor: 'transparent',
+                            borderWidth: 0,
+                            borderRadius: 30,
+                        }}
+                        containerStyle={{
+                            width: 150,
+                            marginHorizontal: 'auto',
+                            marginVertical: 10,
+                        }}
+                    />
                     {/* {isLoading && <ActivityIndicator size="large" color="#0000ff" />} */}
                 </View>
                 <StatusBar style="dark"/>

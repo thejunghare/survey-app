@@ -36,6 +36,8 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
     const [errorMsg, setErrorMsg] = useState(null);
     const [isEnabled, setIsEnabled] = useState<boolean>(false);
     const [isLightModeEnabled, setIsLightModeEnabled] = useState(false);
+    const [isPunchInDisabled, setIsPunchInDisabled] = useState(false);
+    const [isPunchOutDisabled, setIsPunchOutDisabled] = useState(false);
     const toggleLightModeSwitch = () => setIsLightModeEnabled(previousState => !previousState);
 
 
@@ -51,6 +53,8 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
 
     const handlePunchIn = async () => {
         if (!location) console.error('Location not available');
+
+        setIsPunchInDisabled(true);
 
         const formatDate = (date: Date) => {
             const options = {
@@ -96,12 +100,15 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
             console.log('Punched in successfully!');
         } catch (error) {
             console.error('Unable to punch in:', error);
+        } finally {
+            setIsPunchInDisabled(false);
         }
     };
 
     const handlePunchOut = async () => {
         if (!location) console.error('Location not available');
 
+        setIsPunchOutDisabled(true);
         const formatDate = (date: Date) => {
             const options = {
                 year: "numeric",
@@ -145,6 +152,8 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
             console.log('Punched out successfully!');
         } catch (error) {
             console.error('Unable to punch in:', error);
+        } finally {
+            setIsPunchOutDisabled(false);
         }
     }
 
@@ -208,6 +217,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                 <TouchableOpacity
                     className="border-b border-slate-200 flex flex-row items-center px-3"
                     onPress={handlePunchIn}
+                    disabled={isPunchInDisabled}
                 >
                     <Icon name="log-in" type='feather'/>
                     <Text className="p-5 font-semibold">Punch In</Text>
@@ -216,6 +226,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                     <TouchableOpacity
                         className="border-b border-slate-200 flex flex-row items-center px-3"
                         onPress={handlePunchOut}
+                        disabled={isPunchOutDisabled}
                     >
                         <Icon name="log-out" type='feather'/>
                         <Text className="p-5 font-semibold">Punch Out</Text>
@@ -293,7 +304,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                     onPress={handlePunchIn}
                 >
                     <Icon name="info" type='feather'/>
-                    <Text className="p-5 font-semibold">v.2.0.0</Text>
+                    <Text className="p-5 font-semibold">v.2.5.0</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>

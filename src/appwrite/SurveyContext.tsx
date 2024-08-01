@@ -31,7 +31,7 @@ interface SurveyData {
     isOwner: boolean;
     isRented: boolean;
     roomOwnerMobileNumber: string;
-    nameSource: string;
+    //nameSource: string;
 }
 
 interface updateVoterData {

@@ -2096,5 +2096,39 @@
         ]
       }
     ]
+  },
+  {
+    "id":3,
+    "name":"khopoli",
+    "wards":[
+      {
+        "id":1,
+        "name":"1",
+        "areas":[
+          {
+            "id":1,
+            "name":"Vasarangaon",
+            "buildings":[
+              {
+                "id":1,
+                "name":"Lowjeegaon Station Area"
+              },
+              {
+                "id":2,
+                "name":"Vasarangaon Shakha Side Area"
+              },
+              {
+                "id": 3,
+                "name":"Subhash Nagar Sai Baba Mandir"
+              },
+              {
+                "id": 4,
+                "name": "Shree Ganesh Mitra Mandal Subhas Nagar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

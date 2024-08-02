@@ -2051,7 +2051,7 @@
               },
               {
                 "id": 9,
-                "name":"S.S.2"
+                "name": "S.S.2"
               }
             ]
           },
@@ -2102,32 +2102,40 @@
     ]
   },
   {
-    "id":3,
-    "name":"khopoli",
-    "wards":[
+    "id": 3,
+    "name": "khopoli",
+    "wards": [
       {
-        "id":1,
-        "name":"1",
-        "areas":[
+        "id": 1,
+        "name": "1",
+        "areas": [
           {
-            "id":1,
-            "name":"Vasarangaon",
-            "buildings":[
+            "id": 1,
+            "name": "Vasarangaon",
+            "buildings": [
               {
-                "id":1,
-                "name":"Lowjeegaon Station Area"
+                "id": 1,
+                "name": "Lowjeegaon Station Area"
               },
               {
-                "id":2,
-                "name":"Vasarangaon Shakha Side Area"
+                "id": 2,
+                "name": "Vasarangaon Shakha Side Area"
               },
               {
                 "id": 3,
-                "name":"Subhash Nagar Sai Baba Mandir"
+                "name": "Subhash Nagar Sai Baba Mandir"
               },
               {
                 "id": 4,
                 "name": "Shree Ganesh Mitra Mandal Subhas Nagar"
+              },
+              {
+                "id": 5,
+                "name": "Matru Chhaya"
+              },
+              {
+                "id": 6,
+                "name": "Creative Homes"
               }
             ]
           }

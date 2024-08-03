@@ -2138,6 +2138,52 @@
                 "name": "Creative Homes"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Lawujeegaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Nirmal bhakti  society wing A"
+              },
+              {
+                "id": 2,
+                "name": "Nirmal Bhakti Society wing B"
+              },
+              {
+                "id": 3,
+                "name": "Nirmal Bhakti Society wing C"
+              },
+              {
+                "id": 4,
+                "name": "Nirmal Bhakti Society wing D"
+              },
+              {
+                "id": 5,
+                "name": "Nirmal Bhakti Society wing E"
+              },
+              {
+                "id": 6,
+                "name": "Nirmal Bhakti Society wing F"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "2",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Vasarangaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vasarangaon Shakha Samorch Cha Area"
+              }
+            ]
           }
         ]
       }

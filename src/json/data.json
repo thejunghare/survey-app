@@ -2192,6 +2192,20 @@
                 "name": "Tambadi Parisar"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Rathavde",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Rathavdegaon Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Saibaba Nagar Rathavde Gaon"
+              }
+            ]
           }
         ]
       }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {SafeAreaView, View, Text, ScrollView, Pressable} from 'react-native';
-import {Input, Button} from '@rneui/base';
+import {SafeAreaView, View, Text, ScrollView, Pressable, StyleSheet} from 'react-native';
+import {Input, Button, CheckBox} from '@rneui/base';
 import DateTimePicker from "@react-native-community/datetimepicker";
 import {useSurvey} from "../appwrite/SurveyContext";
 
@@ -24,7 +24,7 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
     const [familyHeadAge, setFamilyHeadAge] = useState("");
     const [familyHeadBirthdate, setFamilyHeadBirthdate] = useState("");
     const [applicantEducation, setApplicantEducation] = useState<string>("");
-    const [applicantNaitvePlace, setApplicantNativePlace] = useState<string>("");
+    const [applicantNativePlace, setApplicantNativePlace] = useState<string>("");
     const [applicantMobileNumber, setApplicantMobileNumber] = useState<string>("");
     const [applicantCaste, setApplicantCaste] = useState<string>("");
     const [applicantRemark, setApplicantRemark] = useState<string>("");
@@ -37,7 +37,11 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
     const [applicantRoomNumber, setApplicantRoomNumber] = useState<string>("");
     const [applicantEpicNumber, setApplicantEpicNumber] = useState<string>("");
     const [applicantBoothAddress, setApplicantBoothAddress] = useState<string>("");
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isRoomLocked, setIsRoomLocked] = useState<boolean>(false);
+    const [surveyDenied, setSurveyDenied] = useState<boolean>(false);
+    const [isOwner, setIsOwner] = useState<boolean>(false);
+    const [isRented, setIsRented] = useState<boolean>(false);
 
     const calculateAge = (birthdate) => {
         const birthDateObj = new Date(birthdate);
@@ -84,14 +88,18 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
 
         const created_at = formatDate(new Date());
         const updated_at = formatDate(new Date());
-        const documentId = 1;
+        const documentId = voter.$id;
 
         const updatedData = {
             education: applicantEducation,
-            native_place: voter.native_place,
-            mobile_number: voter.mobile_number,
-            caste: voter.caste,
-            remark: voter.remark,
+            native_place: applicantNativePlace,
+            mobile_number: applicantMobileNumber,
+            caste: applicantCaste,
+            remark: applicantRemark,
+            room_locked: isRoomLocked,
+            survey_denied: surveyDenied,
+            is_owner: isOwner,
+            is_rented: isRented,
             created_at,
             updated_at,
         };
@@ -139,6 +147,15 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
                     editable={false}
                 />
 
+                {/*house/room number*/}
+                <Input
+                    value={voter.house_number}
+                    onChangeText={setApplicantGender}
+                    label='House/Room Number *'
+                    placeholder="House/Room number"
+                    editable={false}
+                />
+
                 {/*Address*/}
                 <Input
                     value={voter.address}
@@ -166,6 +183,51 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
                     editable={false}
                 />
 
+                <View className={"flex flex-row items-center justify-evenly"}>
+                    {/* room locked */}
+                    <CheckBox
+                        title="Room Locked"
+                        checked={isRoomLocked}
+                        onPress={() => setIsRoomLocked(!isRoomLocked)}
+                        containerStyle={{
+                            width: '50%'
+                        }}
+                    />
+                    {/* survey denied */}
+                    <CheckBox
+                        title="Survey Denied"
+                        checked={surveyDenied}
+                        onPress={() => setSurveyDenied(!surveyDenied)}
+                        checkedColor="red"
+                        containerStyle={{
+                            width: '50%'
+                        }}
+                    />
+                </View>
+
+                <View className={"flex flex-row items-center justify-evenly mb-2"}>
+                    {/* room rented */}
+                    <CheckBox
+                        title="Room Rented"
+                        checked={isRented}
+                        onPress={() => setIsRented(!isRented)}
+                        checkedColor="orange"
+                        containerStyle={{
+                            width: '50%'
+                        }}
+                    />
+                    {/* room owner */}
+                    <CheckBox
+                        title="Room owner"
+                        checked={isOwner}
+                        onPress={() => setIsOwner(!isOwner)}
+                        checkedColor="green"
+                        containerStyle={{
+                            width: '50%'
+                        }}
+                    />
+                </View>
+
                 {/*education*/}
                 <Input
                     value={applicantEducation}
@@ -177,7 +239,7 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
 
                 {/*native place*/}
                 <Input
-                    value={applicantNaitvePlace}
+                    value={applicantNativePlace}
                     onChangeText={setApplicantNativePlace}
                     label='Native Place *'
                     placeholder="Native place"
@@ -190,7 +252,8 @@ const VoterDetailsEdit: React.FC<VoterDetailsEditProps> = ({voter}) => {
                     onChangeText={setApplicantMobileNumber}
                     label='Mobile Number *'
                     placeholder="Mobile number"
-
+                    keyboardType="number-pad"
+                    maxLength={10}
                 />
 
                 {/*caste*/}

@@ -1,22 +1,22 @@
 import React from 'react';
-import { View, StyleSheet, Text, Dimensions } from 'react-native';
-import { Picker } from "@react-native-picker/picker";
-import { RouteProp } from "@react-navigation/native";
-import { AppStackParamList } from "../routes/AppStack";
-import { FlashList } from "@shopify/flash-list";
-import { useSurvey } from "../appwrite/SurveyContext";
-import { Button, Icon } from "@rneui/base";
-import { toast } from '../appwrite/toast';
+import {View, StyleSheet, Text, Dimensions} from 'react-native';
+import {Picker} from "@react-native-picker/picker";
+import {RouteProp} from "@react-navigation/native";
+import {AppStackParamList} from "../routes/AppStack";
+import {FlashList} from "@shopify/flash-list";
+import {useSurvey} from "../appwrite/SurveyContext";
+import {Button, Icon} from "@rneui/base";
+import {toast} from '../appwrite/toast';
 
 type LockedRoomSurveyRouteProp = RouteProp<
     AppStackParamList,
     "LockedRoomSurvey"
 >;
 
-const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
-    const { userId } = route.params;
+const LockedRoomSurvey = ({route}: { route: LockedRoomSurveyRouteProp }) => {
+    const {userId} = route.params;
     const [employeeId, setEmployeeId] = React.useState(userId || "");
-    const { listLockedSurvey } = useSurvey();
+    const {listLockedSurvey} = useSurvey();
     const [division, setDivision] = React.useState<string>("");
     const [ward, setWard] = React.useState<string>("");
     const [area, setArea] = React.useState<string>("");
@@ -97,7 +97,7 @@ const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
     };
 
     return (
-        <View className='flex-1 p-2 '>
+        <View className='flex-1 p-2 bg-white'>
             {/* division picker */}
             <View className="flex flex-row items-center justify-evenly my-5">
                 <View style={styles.pickerContainer}>
@@ -107,7 +107,7 @@ const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
                         style={styles.picker}
                         mode="dropdown"
                     >
-                        <Picker.Item label="Division *" value="" />
+                        <Picker.Item label="Division *" value=""/>
                         {divisions.map((division) => (
                             <Picker.Item
                                 key={division.id}
@@ -126,9 +126,9 @@ const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
                         style={styles.picker}
                         mode="dropdown"
                     >
-                        <Picker.Item label="Ward *" value="" />
+                        <Picker.Item label="Ward *" value=""/>
                         {wards.map((ward) => (
-                            <Picker.Item key={ward.id} label={ward.name} value={ward.name} />
+                            <Picker.Item key={ward.id} label={ward.name} value={ward.name}/>
                         ))}
                     </Picker>
                 </View>
@@ -143,9 +143,9 @@ const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
                         style={styles.picker}
                         mode="dropdown"
                     >
-                        <Picker.Item label="Area *" value="" />
+                        <Picker.Item label="Area *" value=""/>
                         {areas.map((area) => (
-                            <Picker.Item key={area.id} label={area.name} value={area.name} />
+                            <Picker.Item key={area.id} label={area.name} value={area.name}/>
                         ))}
                     </Picker>
                 </View>
@@ -158,7 +158,7 @@ const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
                         style={styles.picker}
 
                     >
-                        <Picker.Item label="Building *" value="" />
+                        <Picker.Item label="Building *" value=""/>
                         {buildings.map((building) => (
                             <Picker.Item
                                 key={building.id}
@@ -173,24 +173,57 @@ const LockedRoomSurvey = ({ route }: { route: LockedRoomSurveyRouteProp }) => {
             <Button
                 type='solid'
                 radius={"lg"}
-                color="secondary"
                 onPress={fetchLockRoom}
-                buttonStyle={{
-                    width: '50%',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    marginTop: 12,
+                title="Search"
+                icon={{
+                    name: 'search',
+                    type: 'feather',
+                    size: 15,
+                    color: 'white',
                 }}
-                title='fetch'
+                iconRight
+                iconContainerStyle={{marginLeft: 10}}
+                titleStyle={{fontWeight: '700'}}
+                buttonStyle={{
+                    backgroundColor: 'rgba(199, 43, 98, 1)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    borderRadius: 30,
+                }}
+                containerStyle={{
+                    width: 200,
+                    marginHorizontal: 'auto',
+                    marginVertical: 10,
+                }}
             />
 
-            {/* TODO -> fetch flash list based on employee id */}
-            <View style={{ height: 500, width: Dimensions.get("screen").width }} className='mt-2'>
+            <View style={{height: 400}} className='m-2'>
                 <FlashList
                     data={lockedSurveyList}
-                    renderItem={({ item }) => <Text className='mx-2 py-3 bg-white border border-slate-200  rounded-xl'>Room No: {item.roomNumber}</Text>}
+                    renderItem={
+                        ({item}) =>
+                            <View
+                                className={'my-2 p-3 flex flex-row w-full items-center justify-start bg-gray-100 border-black-200 rounded-xl'}>
+                                <Icon
+                                    name='lock'
+                                    type='feather'
+                                    containerStyle={{
+                                        marginRight: 15,
+                                    }}
+                                />
+                                <Text className='text-base font-semibold '>
+
+                                    Room No: {item.roomNumber}
+                                </Text>
+                            </View>
+                    }
                     estimatedItemSize={200}
                 />
+            </View>
+
+            {/*count for unlocked and locked room count*/}
+            <View>
+
             </View>
         </View>
     );

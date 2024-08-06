@@ -2102,6 +2102,54 @@
             ]
           }
         ]
+      },
+      {
+        "id": 2,
+        "name": "Ghansoli",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Simplex",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shree Ganesh Krupa CHS E1"
+              },
+              {
+                "id": 2,
+                "name": "Shree Ganesh Krupa CHS E2"
+              },
+              {
+                "id": 3,
+                "name": "Shree Ganesh Krupa CHS E3"
+              },
+              {
+                "id": 4,
+                "name": "Shree Ganesh Krupa CHS E4"
+              },
+              {
+                "id": 5,
+                "name": "Shree Ganesh Krupa CHS E5"
+              },
+              {
+                "id": 6,
+                "name": "Shree Ganesh Krupa CHS E6"
+              },
+              {
+                "id": 7,
+                "name": "Shree Ganesh Krupa CHS E7"
+              },
+              {
+                "id": 8,
+                "name": "Shree Ganesh Krupa CHS E8"
+              },
+              {
+                "id": 9,
+                "name": "Shree Ganesh Krupa CHS E9"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

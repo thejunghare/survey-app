@@ -2356,7 +2356,7 @@
               {
                 "id": 26,
                 "name": "Shree Siddeshwar CHS C26"
-              },
+              }
             ]
           }
         ]
@@ -2466,6 +2466,52 @@
               {
                 "id": 2,
                 "name": "Saibaba Nagar Rathavde Gaon"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name":"Vihari Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vihari Gaon Parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "3",
+        "areas": [
+          {
+            "id":1,
+            "name": "Viharigaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vihari Buddhawada Parisar"
+              },
+              {
+                "id":2,
+                "name":"Laxmi Residency"
+              },
+              {
+                "id": 3,
+                "name": "Prathamesh Heights"
+              },
+              {
+                "id": 4,
+                "name":"Madhav Suhas Building"
+              },
+              {
+                "id": 5,
+                "name": "Star Heights"
+              },
+              {
+                "id":6,
+                "name": "River View"
               }
             ]
           }

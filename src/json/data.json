@@ -1,4 +1,4 @@
-7[
+[
   {
     "id": 1,
     "name": "Kalyan",
@@ -2282,7 +2282,7 @@
                 "name": "Shree Siddeshwar CHS C7"
               },
               {
-                "id":8,
+                "id": 8,
                 "name": "Shree Siddeshwar CHS C8"
               },
               {
@@ -2471,7 +2471,7 @@
           },
           {
             "id": 3,
-            "name":"Vihari Area",
+            "name": "Vihari Area",
             "buildings": [
               {
                 "id": 1,
@@ -2486,7 +2486,7 @@
         "name": "3",
         "areas": [
           {
-            "id":1,
+            "id": 1,
             "name": "Viharigaon",
             "buildings": [
               {
@@ -2494,8 +2494,8 @@
                 "name": "Vihari Buddhawada Parisar"
               },
               {
-                "id":2,
-                "name":"Laxmi Residency"
+                "id": 2,
+                "name": "Laxmi Residency"
               },
               {
                 "id": 3,
@@ -2503,14 +2503,14 @@
               },
               {
                 "id": 4,
-                "name":"Madhav Suhas Building"
+                "name": "Madhav Suhas Building"
               },
               {
                 "id": 5,
                 "name": "Star Heights"
               },
               {
-                "id":6,
+                "id": 6,
                 "name": "River View"
               }
             ]

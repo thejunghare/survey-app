@@ -2684,6 +2684,22 @@
               {
                 "id": 17,
                 "name": "Nikhant Valley Phase 1 Wing M"
+              },
+              {
+                "id": 18,
+                "name": "Nikhant Valley Indravati Building"
+              },
+              {
+                "id": 19,
+                "name": "Nikhant Valley Sharyu Building"
+              },
+              {
+                "id": 20,
+                "name": "Nikhant Valley Kalndi Building"
+              },
+              {
+                "id": 21,
+                "name": "Nikhant Valley Bhagyarthi Building"
               }
             ]
           }

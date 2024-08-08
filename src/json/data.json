@@ -2640,6 +2640,22 @@
               {
                 "id": 6,
                 "name": "River View"
+              },
+              {
+                "id": 7,
+                "name": "Sidharth Nagar"
+              },
+              {
+                "id": 8,
+                "name": "Vihari Thakurwadi"
+              },
+              {
+                "id": 9,
+                "name": "Krishan Valley Aditya"
+              },
+              {
+                "id": 10,
+                "name": "Krishan Valley Ajaya"
               }
             ]
           }

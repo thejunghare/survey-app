@@ -2656,6 +2656,34 @@
               {
                 "id": 10,
                 "name": "Krishan Valley Ajaya"
+              },
+              {
+                "id": 11,
+                "name": "Krishan Valley Aniruddha"
+              },
+              {
+                "id": 12,
+                "name": "Nikhant Valley Phase 1 Wing A"
+              },
+              {
+                "id": 12,
+                "name": "Nikhant Valley Phase 1 Wing B"
+              },
+              {
+                "id": 12,
+                "name": "Nikhant Valley Phase 1 Wing C"
+              },
+              {
+                "id": 12,
+                "name": "Nikhant Valley Phase 1 Wing D"
+              },
+              {
+                "id": 12,
+                "name": "Nikhant Valley Phase 1 Wing E"
+              },
+              {
+                "id": 12,
+                "name": "Nikhant Valley Phase 1 Wing M"
               }
             ]
           }

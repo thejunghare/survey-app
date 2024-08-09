@@ -2534,6 +2534,80 @@
                 "name": "Shree Sidheshwar B22"
               }
             ]
+          },
+          {
+            "id": 3,
+            "name": "Sector 4",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shivam CO-OP HS"
+              },
+              {
+                "id": 2,
+                "name": "Sachinam CO-OP HS"
+              },
+              {
+                "id": 3,
+                "name": "Indraprastha CO-OP HS"
+              },
+              {
+                "id": 4,
+                "name": "Om Sai Dham CO-OP HS"
+              },
+              {
+                "id": 5,
+                "name": "Ballaleshwer CO-OP HS"
+              },
+              {
+                "id": 6,
+                "name": "Sahyadri CO-OP HS"
+              },
+              {
+                "id": 7,
+                "name": "Prathmesh CO-OP HS"
+              },
+              {
+                "id": 8,
+                "name": "Ashtavinayak CO-OP HS"
+              },
+              {
+                "id": 9,
+                "name": "Sai Prasad SRA"
+              },
+              {
+                "id": 10,
+                "name": "Shivshakti SRA"
+              },
+              {
+                "id": 11,
+                "name": "Tulsi SRA"
+              },
+              {
+                "id": 12,
+                "name": "Siddheshwar SRA"
+              },
+              {
+                "id": 13,
+                "name": "Kai Anna Saheb Patil CO-OP HS"
+              },
+              {
+                "id": 14,
+                "name": "Abhaydan CO-OP HS"
+              },
+              {
+                "id": 15,
+                "name": "Sai Pooja SRA"
+              },
+              {
+                "id": 16,
+                "name": "Ashtabhuja SRA"
+              },
+              {
+                "id": 17,
+                "name": "Shri Gajanan SRA"
+              }
+            ]
           }
         ]
       }

@@ -2756,6 +2756,148 @@
               {
                 "id": 23,
                 "name": "Krishan Valley Addidev"
+              },
+              {
+                "id": 24,
+                "name": "Jainam Garden Riverside"
+              },
+              {
+                "id": 25,
+                "name": "Mohanwadi Parisar"
+              },
+              {
+                "id": 26,
+                "name": "Prakash Nagar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "4",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Laxmi Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Laxmi Nagar Banglo Area"
+              },
+              {
+                "id": 2,
+                "name": "Shree Samarth CHS D6"
+              },
+              {
+                "id": 3,
+                "name": "Satyam CHS D7"
+              },
+              {
+                "id": 4,
+                "name": "Shree Shrirang CHS C2"
+              },
+              {
+                "id": 5,
+                "name": "Dayawant CHS D8 Wing A"
+              },
+              {
+                "id": 6,
+                "name": "Ekdant CHS D8 Wing B"
+              },
+              {
+                "id": 7,
+                "name": "Arihant Garden Building No.D3"
+              },
+              {
+                "id": 8,
+                "name": "Kirati CHS Arihant Garden Buliding No.D4"
+              },
+              {
+                "id": 9,
+                "name": "Shree Laxmi Building No.C3"
+              },
+              {
+                "id": 10,
+                "name": "Arihant Residency Wing A"
+              },
+              {
+                "id": 11,
+                "name": "Arihant Residency Wing B"
+              },
+              {
+                "id": 12,
+                "name": "Arihant Buliding No.5"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Gagan Giri Nagar Khopoli",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shiv Prasad CHS A1"
+              },
+              {
+                "id": 2,
+                "name": "Avadhut CHS B type"
+              },
+              {
+                "id": 3,
+                "name": "Avdhut CHS D type"
+              },
+              {
+                "id": 4,
+                "name": "Amara Manjiri B4"
+              },
+              {
+                "id": 5,
+                "name": "Parth CHS B5"
+              },
+              {
+                "id": 6,
+                "name": "Manmandhir CHS B3"
+              },
+              {
+                "id": 7,
+                "name": "Manmandhir CHS B2"
+              },
+              {
+                "id": 8,
+                "name": "Manmandhir CHS B1"
+              },
+              {
+                "id": 9,
+                "name": "Shree Sai Deep CHS C1"
+              },
+              {
+                "id": 10,
+                "name": "Sharddha Apartment"
+              },
+              {
+                "id": 11,
+                "name": "Shri  Ballaleshwar CHS C5"
+              },
+              {
+                "id": 12,
+                "name": "Shivalay Building B-8A"
+              },
+              {
+                "id": 13,
+                "name": "Shree Ganesh CHS B8"
+              },
+              {
+                "id": 14,
+                "name": "Gagangri nagar Bulindig No.B7"
+              },
+              {
+                "id": 15,
+                "name": "Veereshwar CHS  A2-1"
+              },
+              {
+                "id": 16,
+                "name": "Veereshwar CHS A2-2"
               }
             ]
           }

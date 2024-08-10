@@ -63,6 +63,7 @@ interface SurveyData {
     roomOwnerMobileNumber: string;
     memberCount: string;
    // nameSource: string;
+    selectedColor: number;
 }
 
 interface Ward {
@@ -124,6 +125,12 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [isRoomLocked, setIsRoomLocked] = useState(false);
     const [surveyDenied, setSurveyDenied] = useState(false);
+
+// const [isGreen, setIsGreen] = useState<boolean>(false);
+ //const [isYellow, setIsYellow] = useState<boolean>(false);
+ //const [isRed, setIsRed] = useState<boolean>(false);
+    const [selectedColor, setSelectedColor] = useState(3);
+
     const [isOwner, setIsOwner] = useState(false);
     const [isRented, setIsRented] = useState(false);
     const [roomOwnerMobileNumber, setRoomOwnerMobileNumber] = useState("");
@@ -320,6 +327,10 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
             isOwner,
             isRented,
             roomOwnerMobileNumber,
+    //        isGreen,
+  //          isYellow,
+//            isRed,
+            selectedColor,
           //  nameSource,
             createdAt, // Include the formatted createdAt field
             familyhead: JSON.stringify(familyDataObject),
@@ -348,6 +359,10 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         setFamilyHeadAge("");
         setIsRoomLocked(false);
         setSurveyDenied(false);
+      //  setIsGreen(false);
+        //setIsYellow(false);
+        //setIsRed(false);
+        selectedColor(3);
         setIsOwner(false);
         setIsRented(false);
         setSurveyRemark("");
@@ -432,7 +447,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                     ) : search.length > 2 ? (
                         <Text className='text-center'>No results found</Text>
                     ) : (
-                        <Text className='text-center'>Please enter at least 3 characters to search</Text>
+                        <Text className='text-center font-semibold'>Please enter at least 3 characters to search</Text>
                     )}
                 </View>
 
@@ -597,7 +612,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         checked={isRoomLocked}
                         onPress={() => setIsRoomLocked(!isRoomLocked)}
                         containerStyle={{
-                            width: '50%'
+                            width: '43%',
+                             borderRadius: 12
                         }}
                     />
                     {/* survey denied */}
@@ -607,7 +623,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         onPress={() => setSurveyDenied(!surveyDenied)}
                         checkedColor="red"
                         containerStyle={{
-                            width: '50%'
+                            width: '43%',
+                             borderRadius: 12
                         }}
                     />
                 </View>
@@ -620,7 +637,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         onPress={() => setIsRented(!isRented)}
                         checkedColor="orange"
                         containerStyle={{
-                            width: '50%'
+                            width: '43%',
+                             borderRadius: 12
                         }}
                     />
                     {/* room owner */}
@@ -630,7 +648,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         onPress={() => setIsOwner(!isOwner)}
                         checkedColor="green"
                         containerStyle={{
-                            width: '50%'
+                            width: '43%',
+                             borderRadius: 12
                         }}
                     />
                 </View>
@@ -782,6 +801,57 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                             </Picker>
                         </View>
                     )}
+                </View>
+
+                {/*color option*/}
+                <View className={"flex flex-row items-center justify-evenly"}>
+                    {/* green */}
+                    <CheckBox
+                        title="Green"
+                        checked={selectedColor === 0}
+                        onPress={() => setSelectedColor(0)}
+                        checkedColor="green"
+                        containerStyle={{
+                            width: '30%',
+ borderRadius: 12
+                        }}
+checkedIcon="dot-circle-o"
+           uncheckedIcon="circle-o"
+                    />
+                    {/* yellow */}
+                    <CheckBox
+                        title="Yellow"
+                        
+                        checked={selectedColor === 1}
+                        onPress={() => setSelectedColor(1)}
+
+                        checkedColor="yellow"
+                        containerStyle={{
+                            width: '30%',
+                            backgroundColor: 'white',
+                            borderRadius: 12
+                        }}
+checkedIcon="dot-circle-o"
+           uncheckedIcon="circle-o"
+
+                    />
+                    {/* red */}
+                    <CheckBox
+                        title="Red"
+                        checked={selectedColor === 3}
+                        onPress={() => setSelectedColor(3)}
+
+
+                        
+                        checkedColor="red"
+                        containerStyle={{
+                            width: '30%',
+ borderRadius: 12
+                        }}
+ checkedIcon="dot-circle-o"
+           uncheckedIcon="circle-o"
+                    />
+ 
                 </View>
 
                 {/* survey remark */}

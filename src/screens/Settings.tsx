@@ -304,7 +304,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                     onPress={handlePunchIn}
                 >
                     <Icon name="info" type='feather'/>
-                    <Text className="p-5 font-semibold">v.2.5.0</Text>
+                    <Text className="p-5 font-semibold">v.2.7.0</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>

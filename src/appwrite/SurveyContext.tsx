@@ -32,6 +32,7 @@ interface SurveyData {
     isRented: boolean;
     roomOwnerMobileNumber: string;
     //nameSource: string;
+    selectedColor: number;
 }
 
 interface updateVoterData {

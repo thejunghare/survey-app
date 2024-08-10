@@ -2736,6 +2736,294 @@
                 "name": "Aadeshwar CHS"
               }
             ]
+          },
+          {
+            "id": 4,
+            "name": "Sector 5",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shivshankar CHS"
+              },
+              {
+                "id": 2,
+                "name": "Lokhanda Bajar CHS"
+              },
+              {
+                "id": 3,
+                "name": "Tirupati CHS"
+              },
+              {
+                "id": 4,
+                "name": "Ninai Devi CHS"
+              },
+              {
+                "id": 5,
+                "name": "Chaitanya CHS"
+              },
+              {
+                "id": 6,
+                "name": "Kamdhenu CHS"
+              },
+              {
+                "id": 7,
+                "name": "Shri Ram CHS"
+              },
+              {
+                "id": 8,
+                "name": "Sai Shraddha CHS"
+              },
+              {
+                "id": 9,
+                "name": "Gokul Dham CHS"
+              },
+              {
+                "id": 10,
+                "name": "Pancharatna CHS"
+              },
+              {
+                "id": 11,
+                "name": "Satyam CHS"
+              },
+              {
+                "id": 12,
+                "name": "Mahalxmi CHS"
+              },
+              {
+                "id": 13,
+                "name": "Sunrise CHS"
+              },
+              {
+                "id": 14,
+                "name": "Shramik CHS"
+              },
+              {
+                "id": 15,
+                "name": "Bhai Manmohan Kotval CHS"
+              },
+              {
+                "id": 16,
+                "name": "Godavari CHS"
+              },
+              {
+                "id": 17,
+                "name": "Swami Vivekananda CHS"
+              },
+              {
+                "id": 18,
+                "name": "Ambe Bhakti CHS"
+              },
+              {
+                "id": 19,
+                "name": "Chintamani CHS"
+              },
+              {
+                "id": 20,
+                "name": "Panchavati CHS"
+              },
+              {
+                "id": 21,
+                "name": "Shiv Krupa CHS"
+              },
+              {
+                "id": 22,
+                "name": "Om Gagangiri CHS"
+              },
+              {
+                "id": 23,
+                "name": "Saraswati CHS"
+              },
+              {
+                "id": 24,
+                "name": "Sahajivan CHS"
+              },
+              {
+                "id": 25,
+                "name": "Sai Ganesh CHS"
+              },
+              {
+                "id": 26,
+                "name": "Shivdarshan CHS"
+              },
+              {
+                "id": 27,
+                "name": "Ambe Bhoomi CHS"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Sector 1",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Ashtavinayak CHS"
+              },
+              {
+                "id": 2,
+                "name": "Anmol CHS"
+              },
+              {
+                "id": 3,
+                "name": "Shivtej CHS"
+              },
+              {
+                "id": 4,
+                "name": "Manmohan CHS"
+              },
+              {
+                "id": 5,
+                "name": "Annasaheb Patil CHS"
+              },
+              {
+                "id": 6,
+                "name": "Om Sai CHS"
+              },
+              {
+                "id": 7,
+                "name": "Sai Ram CHS"
+              },
+              {
+                "id": 8,
+                "name": "Sai Krupa CHS"
+              },
+              {
+                "id": 9,
+                "name": "Omkar CHS"
+              },
+              {
+                "id": 10,
+                "name": "Sai Shraddha Appartment"
+              },
+              {
+                "id": 11,
+                "name": "Vighnaharta CHS"
+              },
+              {
+                "id": 12,
+                "name": "Sector 1 Row House"
+              },
+              {
+                "id": 13,
+                "name": "Datta Krupa CHS"
+              },
+              {
+                "id": 14,
+                "name": "Ashtbhuja CHS"
+              },
+              {
+                "id": 15,
+                "name": "Panchaganga CHS"
+              },
+              {
+                "id": 16,
+                "name": "Dattaguru CHS"
+              },
+              {
+                "id": 17,
+                "name": "Koina CHS"
+              },
+              {
+                "id": 18,
+                "name": "Naik Ba CHS"
+              },
+              {
+                "id": 19,
+                "name": "Gulmohar CHS"
+              },
+              {
+                "id": 20,
+                "name": "Sai Pooja CHS"
+              },
+              {
+                "id": 21,
+                "name": "Ekta CHS"
+              },
+              {
+                "id": 22,
+                "name": "Ashapura Apartment"
+              },
+              {
+                "id": 23,
+                "name": "Sai Kiran Apartment"
+              },
+              {
+                "id": 24,
+                "name": "Sai Milan Apartment"
+              },
+              {
+                "id": 25,
+                "name": "Rameshwar CHS"
+              },
+              {
+                "id": 26,
+                "name": "Shivajirao Shendge CHS"
+              },
+              {
+                "id": 27,
+                "name": "Moreshwar CHS"
+              },
+              {
+                "id": 28,
+                "name": "Moreshwar CHS"
+              },
+              {
+                "id": 29,
+                "name": "Lakshmi CHS"
+              },
+              {
+                "id": 30,
+                "name": "Janani Devi CHS"
+              },
+              {
+                "id": 31,
+                "name": "Sant kripa CHS"
+              },
+              {
+                "id": 32,
+                "name": "Suyog CHS"
+              },
+              {
+                "id": 33,
+                "name": "Saptarshi CHS"
+              },
+              {
+                "id": 34,
+                "name": "Mamta Apartment"
+              },
+              {
+                "id": 35,
+                "name": "Shaguna Apartment"
+              },
+              {
+                "id": 36,
+                "name": "Dhanlaxmi Apartment"
+              },
+              {
+                "id": 37,
+                "name": "Mayuresh Apartment"
+              },
+              {
+                "id": 38,
+                "name": "Shree Ganesha Apartment"
+              },
+              {
+                "id": 39,
+                "name": "Sant Tukaram CHS"
+              },
+              {
+                "id": 40,
+                "name": "Sai Chhaya CHS"
+              },
+              {
+                "id": 41,
+                "name": "Omkar Apartment"
+              },
+              {
+                "id": 42,
+                "name": "Shilpika Apartment"
+              }
+            ]
           }
         ]
       }

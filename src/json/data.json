@@ -3024,6 +3024,28 @@
                 "name": "Shilpika Apartment"
               }
             ]
+          },
+          {
+            "id": 6,
+            "name": "Sector 9",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "AM Mathadi kamgar CHS Wing A"
+              },
+              {
+                "id": 2,
+                "name": "AM Mathadi kamgar CHS Wing B"
+              },
+              {
+                "id": 3,
+                "name": "AM Mathadi kamgar CHS Wing C"
+              },
+              {
+                "id": 4,
+                "name": "AM Mathadi kamgar CHS Wing D"
+              }
+            ]
           }
         ]
       }

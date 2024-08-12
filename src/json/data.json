@@ -3782,6 +3782,34 @@
               {
                 "id": 1,
                 "name": "Varchi Khopoli Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Aarti Apartment"
+              },
+              {
+                "id": 3,
+                "name": "Konduskar Apartment"
+              },
+              {
+                "id": 4,
+                "name": "Aarti Paradise"
+              },
+              {
+                "id": 5,
+                "name": "Sudarshan Paradise"
+              },
+              {
+                "id": 6,
+                "name": "Omkar Apartment"
+              },
+              {
+                "id": 7,
+                "name": "Madhav Residency Wing A"
+              },
+              {
+                "id": 8,
+                "name": "Madhav Residency Wing B"
               }
             ]
           },
@@ -3820,40 +3848,6 @@
               {
                 "id": 8,
                 "name": "Shakti CO-OP HS 8"
-              }
-            ]
-          },
-          {
-            "id": 5,
-            "name": "Varchi Khopoli",
-            "buildings": [
-              {
-                "id": 1,
-                "name": "Aarti Apartment"
-              },
-              {
-                "id": 2,
-                "name": "Konduskar Apartment"
-              },
-              {
-                "id": 3,
-                "name": "Aarti Paradise"
-              },
-              {
-                "id": 4,
-                "name": "Sudarshan Paradise"
-              },
-              {
-                "id": 5,
-                "name": "Omkar Apartment"
-              },
-              {
-                "id": 6,
-                "name": "Madhav Residency Wing A"
-              },
-              {
-                "id": 7,
-                "name": "Madhav Residency Wing B"
               }
             ]
           }

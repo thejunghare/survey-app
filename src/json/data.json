@@ -3031,19 +3031,365 @@
             "buildings": [
               {
                 "id": 1,
-                "name": "AM Mathadi kamgar CHS Wing A"
+                "name": "Gharanda Building F1"
               },
               {
                 "id": 2,
-                "name": "AM Mathadi kamgar CHS Wing B"
+                "name": "Gharanda Building F2"
               },
               {
                 "id": 3,
-                "name": "AM Mathadi kamgar CHS Wing C"
+                "name": "Gharanda Building F3"
               },
               {
                 "id": 4,
+                "name": "Gharanda Building F4"
+              },
+              {
+                "id": 5,
+                "name": "Gharanda Building F5"
+              },
+              {
+                "id": 6,
+                "name": "Gharanda Building F6"
+              },
+              {
+                "id": 7,
+                "name": "Gharanda Building F7"
+              },
+              {
+                "id": 8,
+                "name": "Gharanda Building F8"
+              },
+              {
+                "id": 9,
+                "name": "Gharanda Building F9"
+              },
+              {
+                "id": 10,
+                "name": "Gharanda Building F10"
+              },
+              {
+                "id": 11,
+                "name": "Gharanda Building F11"
+              },
+              {
+                "id": 12,
+                "name": "Gharanda Building F12"
+              },
+              {
+                "id": 13,
+                "name": "Gharanda Building F13"
+              },
+              {
+                "id": 14,
+                "name": "Gharanda Building F14"
+              },
+              {
+                "id": 15,
+                "name": "Gharanda Building F15"
+              },
+              {
+                "id": 16,
+                "name": "Gharanda Building F16"
+              },
+              {
+                "id": 17,
+                "name": "Gharanda Building F17"
+              },
+              {
+                "id": 18,
+                "name": "Gharanda Building F18"
+              },
+              {
+                "id": 19,
+                "name": "Gharanda Building F19"
+              },
+              {
+                "id": 20,
+                "name": "Gharanda Building F20"
+              },
+              {
+                "id": 21,
+                "name": "Gharanda Building F21"
+              },
+              {
+                "id": 22,
+                "name": "Gharanda Building F22"
+              },
+              {
+                "id": 23,
+                "name": "Gharanda Building F23"
+              },
+              {
+                "id": 24,
+                "name": "Aadarsh Building D1"
+              },
+              {
+                "id": 25,
+                "name": "Aadarsh Building D2"
+              },
+              {
+                "id": 26,
+                "name": "Aadarsh Building D3"
+              },
+              {
+                "id": 27,
+                "name": "Aadarsh Building D4"
+              },
+              {
+                "id": 28,
+                "name": "Aadarsh Building D5"
+              },
+              {
+                "id": 29,
+                "name": "Aadarsh Building D6"
+              },
+              {
+                "id": 30,
+                "name": "Aadarsh Building D7"
+              },
+              {
+                "id": 31,
+                "name": "Aadarsh Building D8"
+              },
+              {
+                "id": 32,
+                "name": "Aadarsh Building D9"
+              },
+              {
+                "id": 33,
+                "name": "Aadarsh Building D10"
+              },
+              {
+                "id": 34,
+                "name": "Aadarsh Building D11"
+              },
+              {
+                "id": 35,
+                "name": "Aadarsh Building D12"
+              },
+              {
+                "id": 36,
+                "name": "Aadarsh Building D13"
+              },
+              {
+                "id": 37,
+                "name": "Aadarsh Building D14"
+              },
+              {
+                "id": 38,
+                "name": "Aadarsh Building D15"
+              },
+              {
+                "id": 39,
+                "name": "Omkar CHS E-Type Wing E1"
+              },
+              {
+                "id": 40,
+                "name": "Omkar CHS E-Type Wing E2"
+              },
+              {
+                "id": 41,
+                "name": "Omkar CHS E-Type Wing E3"
+              },
+              {
+                "id": 42,
+                "name": "Omkar CHS E-Type Wing E4"
+              },
+              {
+                "id": 43,
+                "name": "Omkar CHS E-Type Wing E5"
+              },
+              {
+                "id": 44,
+                "name": "Omkar CHS E-Type Wing E6"
+              },
+              {
+                "id": 45,
+                "name": "Omkar CHS E-Type Wing E7"
+              },
+              {
+                "id": 46,
+                "name": "Omkar CHS E-Type Wing E8"
+              },
+              {
+                "id": 47,
+                "name": "Omkar CHS E-Type Wing E9"
+              },
+              {
+                "id": 48,
+                "name": "Omkar CHS E-Type Wing E10"
+              },
+              {
+                "id": 49,
+                "name": "Omkar CHS E-Type Wing E11"
+              },
+              {
+                "id": 50,
+                "name": "Omkar CHS E-Type Wing E12"
+              },
+              {
+                "id": 52,
+                "name": "Omkar CHS E-Type Wing E13"
+              },
+              {
+                "id": 52,
+                "name": "Omkar CHS E-Type Wing E14"
+              },
+              {
+                "id": 53,
+                "name": "Omkar CHS E-Type Wing E15"
+              },
+              {
+                "id": 54,
+                "name": "Omkar CHS E-Type Wing E16"
+              },
+              {
+                "id": 55,
+                "name": "Omkar CHS E-Type Wing E17"
+              },
+              {
+                "id": 56,
+                "name": "Shree Ganesh CHS Wing G1"
+              },
+              {
+                "id": 57,
+                "name": "Shree Ganesh CHS Wing G2"
+              },
+              {
+                "id": 58,
+                "name": "Shree Ganesh CHS Wing G3"
+              },
+              {
+                "id": 59,
+                "name": "Shree Ganesh CHS Wing G4"
+              },
+              {
+                "id": 60,
+                "name": "Shree Ganesh CHS Wing G5"
+              },
+              {
+                "id": 61,
+                "name": "Shree Ganesh CHS Wing G6"
+              },
+              {
+                "id": 62,
+                "name": "Shree Ganesh CHS Wing G7"
+              },
+              {
+                "id": 63,
+                "name": "Shree Ganesh CHS Wing G8"
+              },
+              {
+                "id": 64,
+                "name": "Shree Ganesh CHS Wing G9"
+              },
+              {
+                "id": 65,
+                "name": "Shree Ganesh CHS Wing G10"
+              },
+              {
+                "id": 66,
+                "name": "Shree Ganesh CHS Wing G11"
+              },
+              {
+                "id": 67,
+                "name": "Shree Ganesh CHS Wing G12"
+              },
+              {
+                "id": 68,
+                "name": "Shree Ganesh CHS Wing G13"
+              },
+              {
+                "id": 69,
+                "name": "Shree Ganesh CHS Wing G14"
+              },
+              {
+                "id": 70,
+                "name": "Shree Ganesh CHS Wing G15"
+              },
+              {
+                "id": 71,
+                "name": "Shree Ganesh CHS Wing G16"
+              },
+              {
+                "id": 72,
+                "name": "Shree Ganesh CHS Wing G17"
+              },
+              {
+                "id": 73,
+                "name": "Shree Ganesh CHS Wing G18"
+              },
+              {
+                "id": 74,
+                "name": "Shree Ganesh CHS Wing G19"
+              },
+              {
+                "id": 75,
+                "name": "Shree Ganesh CHS Wing G20"
+              },
+              {
+                "id": 76,
+                "name": "Shree Ganesh CHS Wing G21"
+              },
+              {
+                "id": 77,
+                "name": "Shree Ganesh CHS Wing G22"
+              },
+              {
+                "id": 78,
+                "name": "Shree Ganesh CHS Wing G23"
+              },
+              {
+                "id": 79,
+                "name": "Shree Ganesh CHS Wing G23"
+              },
+              {
+                "id": 80,
+                "name": "Shree Ganesh CHS Wing G24"
+              },
+              {
+                "id": 81,
+                "name": "Shree Ganesh CHS Wing G25"
+              },
+              {
+                "id": 82,
+                "name": "AM Mathadi kamgar CHS Wing A"
+              },
+              {
+                "id": 83,
+                "name": "AM Mathadi kamgar CHS Wing B"
+              },
+              {
+                "id": 84,
+                "name": "AM Mathadi kamgar CHS Wing C"
+              },
+              {
+                "id": 85,
                 "name": "AM Mathadi kamgar CHS Wing D"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "Sector 6",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Lambodar CHS"
+              },
+              {
+                "id": 2,
+                "name": "Riddhi Siddhi CHS"
+              },
+              {
+                "id": 3,
+                "name": "Yashwant Jyotirling CHS"
+              },
+              {
+                "id": 4,
+                "name": "Kumudini Kotwal CHS"
               }
             ]
           }
@@ -3426,6 +3772,54 @@
               {
                 "id": 16,
                 "name": "Veereshwar CHS A2-2"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Varchi Khopoli",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Varchi Khopoli Parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Shakti Society",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shakti CO-OP HS 1"
+              },
+              {
+                "id": 2,
+                "name": "Shakti CO-OP HS 2"
+              },
+              {
+                "id": 3,
+                "name": "Shakti CO-OP HS 3"
+              },
+              {
+                "id": 4,
+                "name": "Shakti CO-OP HS 4"
+              },
+              {
+                "id": 5,
+                "name": "Shakti CO-OP HS 5"
+              },
+              {
+                "id": 6,
+                "name": "Shakti CO-OP HS 6"
+              },
+              {
+                "id": 7,
+                "name": "Shakti CO-OP HS 7"
+              },
+              {
+                "id": 8,
+                "name": "Shakti CO-OP HS 8"
               }
             ]
           }

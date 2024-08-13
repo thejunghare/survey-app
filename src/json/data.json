@@ -3810,6 +3810,18 @@
               {
                 "id": 8,
                 "name": "Madhav Residency Wing B"
+              },
+              {
+                "id": 9,
+                "name": "Pabal Wada Wing A"
+              },
+              {
+                "id": 10,
+                "name": "Pabal Wada Wing B"
+              },
+              {
+                "id": 11,
+                "name": "Pabal Wada Wing C"
               }
             ]
           },
@@ -3848,6 +3860,28 @@
               {
                 "id": 8,
                 "name": "Shakti CO-OP HS 8"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Bellavue",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Bellavue Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Bellavue Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Bellavue Wing C"
+              },
+              {
+                "id": 4,
+                "name": "Bellavue Wing D"
               }
             ]
           }

@@ -4022,7 +4022,60 @@
           {
             "id": 1,
             "name": "Old Mumbai Pune Highway(Shastri Nagar)",
-            "buildings": []
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Krushana Nagar Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Shastri Nagar Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Ish Nivas"
+              },
+              {
+                "id": 4,
+                "name": "Mosin Majil"
+              },
+              {
+                "id": 5,
+                "name": "Siddhika Mension"
+              },
+              {
+                "id": 6,
+                "name": "Yeogeshvar Hight"
+              },
+              {
+                "id": 7,
+                "name": "Gajanan Krupa"
+              },
+              {
+                "id": 8,
+                "name": "Dawood Manjil"
+              },
+              {
+                "id": 9,
+                "name": "Vaibhav Heritage"
+              },
+              {
+                "id": 10,
+                "name": "Sudyanil Apartment"
+              },
+              {
+                "id": 11,
+                "name": "Shevanti Building"
+              },
+              {
+                "id": 12,
+                "name": "Desire Apartment"
+              },
+              {
+                "id": 13,
+                "name": "Patankar Chauk Parisar"
+              }
+            ]
           }
         ]
       }

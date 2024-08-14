@@ -3886,6 +3886,54 @@
             ]
           }
         ]
+      },
+      {
+        "id": 1,
+        "name": "5",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Varchi Khopoli",
+            "building": [
+              {
+                "id": 1,
+                "name": "Varchi Khopoli Bajara Peth Road Area"
+              },
+              {
+                "id": 2,
+                "name": "Shree Datta Krupa Society Wing A"
+              },
+              {
+                "id": 3,
+                "name": "Shree Datta Krupa Society Wing A"
+              },
+              {
+                "id": 4,
+                "name": "Shree Ganesh Krupa CHS"
+              },
+              {
+                "id": 5,
+                "name": "Shree Darshan sahkari"
+              },
+              {
+                "id": 6,
+                "name": "Shree Kaipatru"
+              },
+              {
+                "id": 7,
+                "name": "Madhu Kusum CHS"
+              },
+              {
+                "id": 8,
+                "name": "Shree Durgesh"
+              },
+              {
+                "id": 9,
+                "name": "Shree Vyanktesh Sahakari"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

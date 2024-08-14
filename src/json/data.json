@@ -4076,6 +4076,72 @@
                 "name": "Patankar Chauk Parisar"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Kranti Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Kranti Nagar Left Side"
+              },
+              {
+                "id": 2,
+                "name": "Karnti Nagar Right Side"
+              },
+              {
+                "id": 3,
+                "name": "Laxmi Nivas"
+              },
+              {
+                "id": 4,
+                "name": "Aman Apartment A+B Wing"
+              },
+              {
+                "id": 5,
+                "name": "Yogeshvar Apartment"
+              },
+              {
+                "id": 6,
+                "name": "Giriraj CHS"
+              },
+              {
+                "id": 7,
+                "name": "Kabir Apartment"
+              },
+              {
+                "id": 8,
+                "name": "Lokesh Building"
+              },
+              {
+                "id": 9,
+                "name": "Varun Pushp"
+              },
+              {
+                "id": 10,
+                "name": "Basera Apartment"
+              },
+              {
+                "id": 11,
+                "name": "Savli Apartment"
+              },
+              {
+                "id": 12,
+                "name": "Parivartn"
+              },
+              {
+                "id": 13,
+                "name": "Krushana Sadan"
+              },
+              {
+                "id": 14,
+                "name": "Vlue Moon"
+              },
+              {
+                "id": 15,
+                "name": "Shastri Nagar Mahavir area"
+              }
+            ]
           }
         ]
       }

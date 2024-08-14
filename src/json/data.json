@@ -3970,6 +3970,48 @@
                 "name": "Bhagyshree cha"
               }
             ]
+          },
+          {
+            "id": 3,
+            "name": "Bhanvaj Bauddha Wada",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Bhanvaj Bauudhava Erya Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Khalcha Bauddha Wada"
+              },
+              {
+                "id": 3,
+                "name": "Varcha Bauddha Wada"
+              },
+              {
+                "id": 4,
+                "name": "Latifa Manji"
+              },
+              {
+                "id": 5,
+                "name": "Paratibha Complex"
+              },
+              {
+                "id": 6,
+                "name": "Madhav ashirvad"
+              },
+              {
+                "id": 7,
+                "name": "R.K tower"
+              },
+              {
+                "id": 8,
+                "name": "Dream Home Apartment"
+              },
+              {
+                "id": 9,
+                "name": "Vaibhav Kanchan"
+              }
+            ]
           }
         ]
       }

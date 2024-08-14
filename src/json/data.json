@@ -3894,7 +3894,7 @@
           {
             "id": 1,
             "name": "Varchi Khopoli",
-            "building": [
+            "buildings": [
               {
                 "id": 1,
                 "name": "Varchi Khopoli Bajara Peth Road Area"
@@ -3930,6 +3930,44 @@
               {
                 "id": 9,
                 "name": "Shree Vyanktesh Sahakari"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Bhaji Mandai Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Somjai Wadi Bhaji Mandai Side"
+              },
+              {
+                "id": 2,
+                "name": "Somjai Wadi Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Shantikuj"
+              },
+              {
+                "id": 4,
+                "name": "Saburi Plaza"
+              },
+              {
+                "id": 5,
+                "name": "Rajendra Nivas"
+              },
+              {
+                "id": 6,
+                "name": "Parijat A+B Wing"
+              },
+              {
+                "id": 7,
+                "name": "Shamiya Building"
+              },
+              {
+                "id": 8,
+                "name": "Bhagyshree cha"
               }
             ]
           }

@@ -4144,6 +4144,84 @@
             ]
           }
         ]
+      },
+      {
+        "id": 7,
+        "name": "6",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Khalchi Khopoli",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Bajar Peth Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Khalchi khopoli Left Side Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Khalchi khopoli Right Side Parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "12",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Veena Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Veena Nagar Left Side Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Veena Nagar Right Side Parisar"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Katrang",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Katrang Area Parisar"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Ashiyana Village",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Ashiyana Village Left Side"
+              },
+              {
+                "id": 2,
+                "name": "Ashiyana Village Right Side"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Vaibhav Nagari",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vaibhav Nagari Parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -4512,6 +4512,88 @@
                 "name": "Datta Mandir Mogalwadi Parisar"
               }
             ]
+          },
+          {
+            "id": 5,
+            "name": "Chinmay Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Chinmay Nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Sagar CHS"
+              },
+              {
+                "id": 3,
+                "name": "Crescent Platinum"
+              },
+              {
+                "id": 4,
+                "name": "Mukund Chinmay CHS"
+              },
+              {
+                "id": 5,
+                "name": "Shri Krishna CHS"
+              },
+              {
+                "id": 6,
+                "name": "Kristen Ruby CHS"
+              },
+              {
+                "id": 7,
+                "name": "Shri Ganesh CHS number 1"
+              },
+              {
+                "id": 8,
+                "name": "Shree Ganesh CHS number 2"
+              },
+              {
+                "id": 9,
+                "name": "Malti Heritage"
+              },
+              {
+                "id": 10,
+                "name": "Shree Nivas CHS"
+              },
+              {
+                "id": 11,
+                "name": "Swati Apartment"
+              },
+              {
+                "id": 12,
+                "name": "Crestal Emerland"
+              },
+              {
+                "id": 13,
+                "name": "Yoga Yog CHS"
+              },
+              {
+                "id": 14,
+                "name": "Crescent Hill"
+              },
+              {
+                "id": 15,
+                "name": "Om Residency"
+              },
+              {
+                "id": 16,
+                "name": "Sai shradha Wing A"
+              },
+              {
+                "id": 17,
+                "name": "Sai Shradha Wing B"
+              },
+              {
+                "id": 18,
+                "name": "Prathamesh Residency"
+              },
+              {
+                "id": 19,
+                "name": "Vaibhav Srushti"
+              }
+            ]
           }
         ]
       }

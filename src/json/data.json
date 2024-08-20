@@ -4268,6 +4268,252 @@
             ]
           }
         ]
+      },
+      {
+        "id": 9,
+        "name": "13",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Katrang",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Katrang Area Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Aashiyana Village Building No.1"
+              },
+              {
+                "id": 3,
+                "name": "Aashiyana Village Building No.2"
+              },
+              {
+                "id": 4,
+                "name": "Aashiyana Village Building No.3"
+              },
+              {
+                "id": 5,
+                "name": "Aashiyana Village Building No.4"
+              },
+              {
+                "id": 6,
+                "name": "Aashiyana Village Building No.5"
+              },
+              {
+                "id": 7,
+                "name": "Aashiyana Village Building No.6"
+              },
+              {
+                "id": 8,
+                "name": "Aashiyana Village Building No.7"
+              },
+              {
+                "id": 9,
+                "name": "Aashiyana Village Building No.8"
+              },
+              {
+                "id": 10,
+                "name": "Aashiyana Village Building No.9"
+              },
+              {
+                "id": 11,
+                "name": "Aashiyana Village Building No.10"
+              },
+              {
+                "id": 12,
+                "name": "Aashiyana Village Building No.11"
+              },
+              {
+                "id": 13,
+                "name": "Aashiyana Village Building No.12"
+              },
+              {
+                "id": 14,
+                "name": "Aashiyana Village Building No.13"
+              },
+              {
+                "id": 15,
+                "name": "Dreamland Building No.1"
+              },
+              {
+                "id": 16,
+                "name": "Dreamland Building No.2"
+              },
+              {
+                "id": 17,
+                "name": "Dreamland Building No.3"
+              },
+              {
+                "id": 18,
+                "name": "Dreamland Building No.4"
+              },
+              {
+                "id": 19,
+                "name": "Dreamland Building No.5"
+              },
+              {
+                "id": 20,
+                "name": "Shri Krishna Apartment No.1"
+              },
+              {
+                "id": 21,
+                "name": "Shri Krishna Apartment No.2"
+              },
+              {
+                "id": 22,
+                "name": "Vaibhav Hill"
+              },
+              {
+                "id": 23,
+                "name": "Mukund Hill"
+              },
+              {
+                "id": 24,
+                "name": "Hari Darshan CHS"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "D.P Road",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Samarth Arcade"
+              },
+              {
+                "id": 2,
+                "name": "Vedant CHS"
+              },
+              {
+                "id": 3,
+                "name": "Gauri Mauli CHS"
+              },
+              {
+                "id": 4,
+                "name": "Yashodha Shrushti CHS"
+              },
+              {
+                "id": 5,
+                "name": "Madhuban CHS Wing A"
+              },
+              {
+                "id": 6,
+                "name": "Madhuban CHS Wing B"
+              },
+              {
+                "id": 7,
+                "name": "Shri Krishna Residency No.1"
+              },
+              {
+                "id": 8,
+                "name": "Jesal Green Building No.B1"
+              },
+              {
+                "id": 9,
+                "name": "Jesal Green Building No.B2"
+              },
+              {
+                "id": 10,
+                "name": "Jesal Green Building No.B3"
+              },
+              {
+                "id": 11,
+                "name": "Jesal Green Building No.B4"
+              },
+              {
+                "id": 12,
+                "name": "Jesal Green Building No.B5"
+              },
+              {
+                "id": 13,
+                "name": "Jesal Green Building No.B6"
+              },
+              {
+                "id": 14,
+                "name": "Jesal Green Building No.B7"
+              },
+              {
+                "id": 15,
+                "name": "Jesal Green Building No.B8"
+              },
+              {
+                "id": 16,
+                "name": "Jesal Green Building No.B9"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Katarang Mughal Wadi Road",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vrindavan Nagar"
+              },
+              {
+                "id": 2,
+                "name": "Vaibhav Park Number 1"
+              },
+              {
+                "id": 3,
+                "name": "Vaibhav Park Number 2"
+              },
+              {
+                "id": 4,
+                "name": "Saptasur Heights"
+              },
+              {
+                "id": 5,
+                "name": "Chandan Garden"
+              },
+              {
+                "id": 6,
+                "name": "Pearl IV CHS"
+              },
+              {
+                "id": 7,
+                "name": "Pearl Residency"
+              },
+              {
+                "id": 8,
+                "name": "Crescen Diamond"
+              },
+              {
+                "id": 9,
+                "name": "Sneha Shree CHS"
+              },
+              {
+                "id": 10,
+                "name": "Aashiyana Garden"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Mogalwadi",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mogalwadi Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Amrut CHS"
+              },
+              {
+                "id": 3,
+                "name": "Suyog CHS"
+              },
+              {
+                "id": 4,
+                "name": "Datta Mandir Mogalwadi Parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -4220,6 +4220,52 @@
                 "name": "Vaibhav Nagari Parisar"
               }
             ]
+          },
+          {
+            "id": 5,
+            "name": "Chhatrapati Sambhaji Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Chhatrapati Sambhaji Nagar Lane No.1"
+              },
+              {
+                "id": 2,
+                "name": "Vaibhav Samriddhi Lane No.1"
+              },
+              {
+                "id": 3,
+                "name": "Vaishnav Bhakti Lane No.1"
+              },
+              {
+                "id": 4,
+                "name": "Lakshman Nivas Lane No.1"
+              },
+              {
+                "id": 5,
+                "name": "Jagatap Niwas Lane No.1"
+              },
+              {
+                "id": 6,
+                "name": "Om Sai Sadan Lane No.1"
+              },
+              {
+                "id": 7,
+                "name": "Shri Krupa Lane No.1"
+              },
+              {
+                "id": 8,
+                "name": "Navlai Lane Lane No.1"
+              },
+              {
+                "id": 9,
+                "name": "Srinivas Lane No.1"
+              },
+              {
+                "id": 10,
+                "name": "Chhatrapati Sambhaji Nagar Lane No.2"
+              }
+            ]
           }
         ]
       }

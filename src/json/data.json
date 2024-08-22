@@ -3392,6 +3392,24 @@
                 "name": "Kumudini Kotwal CHS"
               }
             ]
+          },
+          {
+            "id": 8,
+            "name": "Ghansoli Gaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Ghansoli Area Part 1"
+              },
+              {
+                "id": 1,
+                "name": "Ghansoli Area Part 2"
+              },
+              {
+                "id": 1,
+                "name": "Ghansoli Area Part 3"
+              }
+            ]
           }
         ]
       }
@@ -4510,6 +4528,74 @@
               {
                 "id": 4,
                 "name": "Datta Mandir Mogalwadi Parisar"
+              },
+              {
+                "id": 5,
+                "name": "Mogalwadi Area Parisar"
+              },
+              {
+                "id": 6,
+                "name": "Mauli Nagar parisar"
+              },
+              {
+                "id": 7,
+                "name": "Shree CHS"
+              },
+              {
+                "id": 8,
+                "name": "Shreeman CHS"
+              },
+              {
+                "id": 9,
+                "name": "Shreerang CHS"
+              },
+              {
+                "id": 10,
+                "name": "Madhav Deep CHS"
+              },
+              {
+                "id": 11,
+                "name": "Triveni Sangam CHS"
+              },
+              {
+                "id": 12,
+                "name": "Madina Manzil CHS"
+              },
+              {
+                "id": 13,
+                "name": "Keshav kunj CHS"
+              },
+              {
+                "id": 14,
+                "name": "Shree Sheila CHS"
+              },
+              {
+                "id": 15,
+                "name": "Jahan CHS"
+              },
+              {
+                "id": 16,
+                "name": "Akash Apartment"
+              },
+              {
+                "id": 17,
+                "name": "Shree Rushikesh CHS"
+              },
+              {
+                "id": 18,
+                "name": "Shree Anand CHS"
+              },
+              {
+                "id": 19,
+                "name": "Shree Datt CHS"
+              },
+              {
+                "id": 20,
+                "name": "Padmanam building No.1"
+              },
+              {
+                "id": 21,
+                "name": "Padmanam building No.2"
               }
             ]
           },
@@ -4592,6 +4678,124 @@
               {
                 "id": 19,
                 "name": "Vaibhav Srushti"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "Bhanvaj",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Guru Saptrashri CHS"
+              },
+              {
+                "id": 2,
+                "name": "Madhav Drishti CHS"
+              },
+              {
+                "id": 3,
+                "name": "Mukund Villa CHS"
+              },
+              {
+                "id": 4,
+                "name": "Indraprastha CHS"
+              },
+              {
+                "id": 5,
+                "name": "Mukund Deep CHS"
+              },
+              {
+                "id": 6,
+                "name": "Yashwanti CHS"
+              },
+              {
+                "id": 7,
+                "name": "Shree Ganesh CHS"
+              },
+              {
+                "id": 8,
+                "name": "Gurukul CHS"
+              },
+              {
+                "id": 9,
+                "name": "Bhanvaj Balwadi Parisar"
+              },
+              {
+                "id": 10,
+                "name": "Shree Safalya CHS"
+              },
+              {
+                "id": 11,
+                "name": "Seeta Nagar Buliding No.1A"
+              },
+              {
+                "id": 12,
+                "name": "Seeta Nagar Buliding No.1A"
+              },
+              {
+                "id": 13,
+                "name": "Seeta Nagar Buliding No.1B"
+              },
+              {
+                "id": 14,
+                "name": "Seeta Nagar Buliding No.2A"
+              },
+              {
+                "id": 15,
+                "name": "Seeta Nagar Buliding No.2B"
+              },
+              {
+                "id": 16,
+                "name": "Seeta Nagar Buliding No.3A"
+              },
+              {
+                "id": 17,
+                "name": "Seeta Nagar Buliding No.3B"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "shri Samarth Krupanagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shri Darshan building A,B"
+              },
+              {
+                "id": 2,
+                "name": "Shri Swami Samarth kripa Building Number.1 & 2"
+              },
+              {
+                "id": 3,
+                "name": "Shree Swami Samarth kripa Building Number.3A, 3B"
+              },
+              {
+                "id": 4,
+                "name": "Swami Samarth kripa Building No.4A to E"
+              },
+              {
+                "id": 5,
+                "name": "Shri Swami Samarth Nagar Parisar"
+              },
+              {
+                "id": 6,
+                "name": "Usha Nagar Building 1 to 7"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "Mughal Wadi Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Christian River CHS"
+              },
+              {
+                "id": 2,
+                "name": "Aashiyana Garden CHS"
               }
             ]
           }

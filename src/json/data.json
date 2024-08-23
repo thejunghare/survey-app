@@ -5154,6 +5154,80 @@
                 "name": "Vardhaman Nagar Parisar"
               }
             ]
+          },
+          {
+            "id": 8,
+            "name": "Mogalwadi",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mogalwadi Area Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Mauli Nagar Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Shree CHS"
+              },
+              {
+                "id": 4,
+                "name": "Shreeman CHS"
+              },
+              {
+                "id": 5,
+                "name": "Shreerang CHS"
+              },
+              {
+                "id": 6,
+                "name": "Madhav Deep CHS"
+              },
+              {
+                "id": 7,
+                "name": "Triveni Sangam CHS"
+              },
+              {
+                "id": 8,
+                "name": "Madina Manzil CHS"
+              },
+              {
+                "id": 9,
+                "name": "Keshav kunj CHS"
+              },
+              {
+                "id": 10,
+                "name": "Shree Sheila CHS"
+              },
+              {
+                "id": 11,
+                "name": "Jahan CHS"
+              },
+              {
+                "id": 12,
+                "name": "Akash Apartment"
+              },
+              {
+                "id": 13,
+                "name": "Shree Rushikesh CHS"
+              },
+              {
+                "id": 14,
+                "name": "Shree Anand CHS"
+              },
+              {
+                "id": 15,
+                "name": "Shree Datt CHS"
+              },
+              {
+                "id": 16,
+                "name": "Padmanam building No.1"
+              },
+              {
+                "id": 17,
+                "name": "Padmanam building No.2"
+              }
+            ]
           }
         ]
       }

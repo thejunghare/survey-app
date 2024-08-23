@@ -5024,6 +5024,68 @@
                 "name": "Meher Building"
               }
             ]
+          },
+          {
+            "id": 7,
+            "name": "Vardhman Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vardhaman Nagar Building No.1"
+              },
+              {
+                "id": 2,
+                "name": "Vardhaman Nagar Building No.2"
+              },
+              {
+                "id": 3,
+                "name": "Vardhaman Nagar Building No.3"
+              },
+              {
+                "id": 4,
+                "name": "Vardhaman Nagar Building No.4"
+              },
+              {
+                "id": 5,
+                "name": "Vardhaman Nagar Building No.5"
+              },
+              {
+                "id": 6,
+                "name": "Vardhaman Nagar Building No.6"
+              },
+              {
+                "id": 7,
+                "name": "Vardhaman Nagar Building No.7"
+              },
+              {
+                "id": 8,
+                "name": "Vardhaman Nagar Building No.8"
+              },
+              {
+                "id": 9,
+                "name": "Vardhaman Nagar Building No.9"
+              },
+              {
+                "id": 10,
+                "name": "Vardhaman Nagar Building No.10"
+              },
+              {
+                "id": 11,
+                "name": "Vardhaman Nagar Building No.11"
+              },
+              {
+                "id": 12,
+                "name": "Vardhaman Nagar Building No.12"
+              },
+              {
+                "id": 13,
+                "name": "Vardhaman Nagar Building No.13"
+              },
+              {
+                "id": 14,
+                "name": "Vardhaman Nagar Parisar"
+              }
+            ]
           }
         ]
       }

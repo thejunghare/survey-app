@@ -4960,6 +4960,70 @@
                 "name": "Gulnar Apt"
               }
             ]
+          },
+          {
+            "id": 5,
+            "name": "sahakar Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sahakar Nagar Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Madina Manzil"
+              },
+              {
+                "id": 3,
+                "name": "Gazi Manzil"
+              },
+              {
+                "id": 4,
+                "name": "Kamla Residency wing A"
+              },
+              {
+                "id": 5,
+                "name": "Kamla Residency wing B"
+              },
+              {
+                "id": 6,
+                "name": "Kamla Residency wing C"
+              },
+              {
+                "id": 1,
+                "name": "Kamla Residency wing D"
+              },
+              {
+                "id": 7,
+                "name": "Kamla Residency wing E"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "Patankar Chowk",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Patankar Chowk Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Vaibhav kasturi Building"
+              },
+              {
+                "id": 3,
+                "name": "Aashiyana Building"
+              },
+              {
+                "id": 4,
+                "name": "Mannat Building"
+              },
+              {
+                "id": 5,
+                "name": "Meher Building"
+              }
+            ]
           }
         ]
       }

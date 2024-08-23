@@ -4900,6 +4900,66 @@
                 "name": "Bhanvaj Balwadi Parisar"
               }
             ]
+          },
+          {
+            "id": 3,
+            "name": "Mukund Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Jai Ganesh CHS 1"
+              },
+              {
+                "id": 2,
+                "name": "Jai Ganesh CHS 2"
+              },
+              {
+                "id": 3,
+                "name": "Jai Ganesh CHS 3"
+              },
+              {
+                "id": 4,
+                "name": "Jai Ganesh CHS 4"
+              },
+              {
+                "id": 5,
+                "name": "Mukund Nagar Parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Ganesh Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mukund Swanand Building"
+              },
+              {
+                "id": 2,
+                "name": "Ganesh Nagar Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Ashmal Apt"
+              },
+              {
+                "id": 4,
+                "name": "Saniya Manjil"
+              },
+              {
+                "id": 5,
+                "name": "Darshana 1"
+              },
+              {
+                "id": 6,
+                "name": "Darshana 2"
+              },
+              {
+                "id": 7,
+                "name": "Gulnar Apt"
+              }
+            ]
           }
         ]
       }

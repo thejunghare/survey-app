@@ -4860,6 +4860,48 @@
             ]
           }
         ]
+      },
+      {
+        "id": 10,
+        "name": "14",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Kajuwadi",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "kajuwadi Area Parisar"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Bhanvaj",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Aditya Building"
+              },
+              {
+                "id": 2,
+                "name": "Bhanvaj Road Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Ramji Residency A,B,C"
+              },
+              {
+                "id": 4,
+                "name": "Bhanvaj Gav Parisar"
+              },
+              {
+                "id": 5,
+                "name": "Bhanvaj Balwadi Parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

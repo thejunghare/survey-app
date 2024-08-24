@@ -5230,6 +5230,150 @@
             ]
           }
         ]
+      },
+      {
+        "id": 11,
+        "name": "8",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Shri Ram Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Madhuban Society"
+              },
+              {
+                "id": 2,
+                "name": "Shri Ram Nagar Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Varad Vinayak CHS"
+              },
+              {
+                "id": 4,
+                "name": "Balaji Complex Building No.1"
+              },
+              {
+                "id": 5,
+                "name": "Balaji Complex Building No.2"
+              },
+              {
+                "id": 6,
+                "name": "Anvi Heritage"
+              },
+              {
+                "id": 7,
+                "name": "Varad Vinayak Aangan CHS"
+              },
+              {
+                "id": 8,
+                "name": "Varad Vinayak Aastha Wing A"
+              },
+              {
+                "id": 9,
+                "name": "Varad Vinayak Astha Wing B"
+              },
+              {
+                "id": 10,
+                "name": "Sai Sharddha Apartment"
+              },
+              {
+                "id": 11,
+                "name": "Omkar Sadan"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Chinchavali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": " Chinchavli Area Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Ayansh Residency"
+              },
+              {
+                "id": 3,
+                "name": "Shobha Residency"
+              },
+              {
+                "id": 4,
+                "name": "Urban Vista 1 A,B"
+              },
+              {
+                "id": 5,
+                "name": "Urban Vista 2 A,B"
+              },
+              {
+                "id": 6,
+                "name": "Lina Residency "
+              },
+              {
+                "id": 7,
+                "name": "Data Apartment"
+              },
+              {
+                "id": 8,
+                "name": "Balaji Complex Building No.3"
+              },
+              {
+                "id": 9,
+                "name": "Balaji Complex Building No.1"
+              },
+              {
+                "id": 10,
+                "name": "Balaji Complex Building No.4"
+              },
+              {
+                "id": 11,
+                "name": "Balaji Complex Building No.5"
+              },
+              {
+                "id": 12,
+                "name": "Balaji Complex Building No.6"
+              },
+              {
+                "id": 13,
+                "name": "VM Residency"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Lahuji Station Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Lahuji Station Samori Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Saburi Park"
+              },
+              {
+                "id": 3,
+                "name": "RK Residency"
+              },
+              {
+                "id": 4,
+                "name": "Swara Society"
+              },
+              {
+                "id": 5,
+                "name": "The Habitat"
+              },
+              {
+                "id": 6,
+                "name": "Lena Heritage"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

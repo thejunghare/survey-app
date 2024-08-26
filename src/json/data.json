@@ -5372,6 +5372,56 @@
                 "name": "Lena Heritage"
               }
             ]
+          },
+          {
+            "id": 4,
+            "name": "Saraswati Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Saraswati Nagar Parisar"
+              },
+              {
+                "id": 2,
+                "name": "kalpak Heels 2"
+              },
+              {
+                "id": 3,
+                "name": "Srisailam Wing A, B"
+              },
+              {
+                "id": 4,
+                "name": "Kalpak Heels 1"
+              },
+              {
+                "id": 5,
+                "name": "Shree Mahalakshmi"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Shedivali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Shedivali Area Parisar Part 1"
+              },
+              {
+                "id": 2,
+                "name": "Shedivali Area Parisar Part 2"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "Hall Budruk Area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Haal Budruk Area Parisar"
+              }
+            ]
           }
         ]
       }

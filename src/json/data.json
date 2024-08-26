@@ -3412,6 +3412,138 @@
             ]
           }
         ]
+      },
+      {
+        "id": 3,
+        "name": "Airoli",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Sector 4",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Row House Type"
+              },
+              {
+                "id": 2,
+                "name": "Abhinav Gharmalak Sangh Q Vibhag"
+              },
+              {
+                "id": 3,
+                "name": "R Group Owners Association"
+              },
+              {
+                "id": 4,
+                "name": "R Group Row House"
+              },
+              {
+                "id": 5,
+                "name": "Nakshatra Ass."
+              },
+              {
+                "id": 6,
+                "name": "F Group Owners Ass."
+              },
+              {
+                "id": 7,
+                "name": "E Vibhag Owners Ass."
+              },
+              {
+                "id": 8,
+                "name": "Jay Hind Owners Ass. J vibhag"
+              },
+              {
+                "id": 9,
+                "name": "Suvidha Owners Ass. K vibhag"
+              },
+              {
+                "id": 10,
+                "name": "T Vibhag Owners Ass."
+              },
+              {
+                "id": 11,
+                "name": "S Type Owners Ass."
+              },
+              {
+                "id": 12,
+                "name": "Pragati owners Ass. H type"
+              },
+              {
+                "id": 13,
+                "name": "Siddi vinayak owners Ass. G type"
+              },
+              {
+                "id": 14,
+                "name": "Shree siddi vinayak owners Ass. N type"
+              },
+              {
+                "id": 15,
+                "name": "M Type Owners Ass."
+              },
+              {
+                "id": 16,
+                "name": "P Type Owners Ass."
+              },
+              {
+                "id": 17,
+                "name": "U Type Owners Ass. sai baba mandir"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Sector 5",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Ast. Darshan apt. owner ass."
+              },
+              {
+                "id": 2,
+                "name": "Police mitra apt. owner ass."
+              },
+              {
+                "id": 3,
+                "name": "Jay javan apt. owner ass."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sector 3",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "J type owner ass."
+              },
+              {
+                "id": 2,
+                "name": "G vibhag owners ass."
+              },
+              {
+                "id": 3,
+                "name": "E vibhag owners ass."
+              },
+              {
+                "id": 4,
+                "name": "F vibhag owners ass."
+              },
+              {
+                "id": 5,
+                "name": "A vibhag owners ass."
+              },
+              {
+                "id": 6,
+                "name": "Sukha Shanti B vibhag owners ass."
+              },
+              {
+                "id": 7,
+                "name": "B vibhag owners ass."
+              }
+            ]
+          }
+        ]
       }
     ]
   },

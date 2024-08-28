@@ -4292,6 +4292,36 @@
                 "name": "Shastri Nagar Mahavir area"
               }
             ]
+          },
+          {
+            "id": 3,
+            "name": "Shanti Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sai Ganesh Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Sai Ganesh Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Sai Apt. Wing A"
+              },
+              {
+                "id": 4,
+                "name": "Sai Apt. Wing B"
+              },
+              {
+                "id": 5,
+                "name": "Sabale Sai Puram Complex"
+              },
+              {
+                "id": 6,
+                "name": "Sabale Sai Riddi Siddi"
+              }
+            ]
           }
         ]
       },
@@ -5552,6 +5582,124 @@
               {
                 "id": 1,
                 "name": "Haal Budruk Area Parisar"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "Mount view",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mount view residency E1"
+              },
+              {
+                "id": 2,
+                "name": "Mount view residency E2"
+              },
+              {
+                "id": 3,
+                "name": "Mount view residency D1"
+              },
+              {
+                "id": 4,
+                "name": "Mount view residency D2"
+              },
+              {
+                "id": 5,
+                "name": "Mount view residency D3"
+              },
+              {
+                "id": 6,
+                "name": "Mount view residency A1"
+              },
+              {
+                "id": 7,
+                "name": "Mount view residency A2"
+              },
+              {
+                "id": 8,
+                "name": "Mount view residency A3"
+              },
+              {
+                "id": 9,
+                "name": "Mount view residency F1"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "Well wisher",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Well wisher society building no.1"
+              },
+              {
+                "id": 2,
+                "name": "Well wisher society building no.2"
+              },
+              {
+                "id": 3,
+                "name": "Well wisher society building no.3"
+              },
+              {
+                "id": 4,
+                "name": "Well wisher society building no.4"
+              },
+              {
+                "id": 5,
+                "name": "Well wisher society building no.5"
+              },
+              {
+                "id": 6,
+                "name": "Well wisher society building no.6"
+              },
+              {
+                "id": 7,
+                "name": "Well wisher society building no.7"
+              },
+              {
+                "id": 8,
+                "name": "Well wisher society building no.8"
+              },
+              {
+                "id": 9,
+                "name": "Well wisher society building no.9"
+              },
+              {
+                "id": 10,
+                "name": "Well wisher society building no.10"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "7",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Mulgaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mulgaon Parisar Part 1"
+              },
+              {
+                "id": 2,
+                "name": "Mulgaon Parisar Part 2"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Samta Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Samata Nagar Parisar"
               }
             ]
           }

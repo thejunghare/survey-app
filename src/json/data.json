@@ -5672,6 +5672,20 @@
                 "name": "Well wisher society building no.10"
               }
             ]
+          },
+          {
+            "id": 9,
+            "name": "Pune Mumbai Highway",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mahada Colony"
+              },
+              {
+                "id": 2,
+                "name": "Hal Budhurk Area"
+              }
+            ]
           }
         ]
       },
@@ -5700,6 +5714,252 @@
               {
                 "id": 1,
                 "name": "Samata Nagar Parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "9",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Milangaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Milangaon area parisar"
+              },
+              {
+                "id": 2,
+                "name": "Thakurwadi parisar"
+              },
+              {
+                "id": 3,
+                "name": "Dhangarwada parisar"
+              },
+              {
+                "id": 4,
+                "name": "Katakar wadi parisar"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Pen road",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sajgaon Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Takaigaon Parisar"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Patel Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Patel Nagar Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Daccan Residency"
+              },
+              {
+                "id": 3,
+                "name": "Royal Plaza"
+              },
+              {
+                "id": 4,
+                "name": "Alina City Plaza"
+              },
+              {
+                "id": 5,
+                "name": "Jama Masjid Parisar"
+              },
+              {
+                "id": 6,
+                "name": "Rivera estate SRA"
+              },
+              {
+                "id": 7,
+                "name": "Shirgaon Parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "10",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Umarji Patel Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Umarji Patel Nagar Parisar 1"
+              },
+              {
+                "id": 2,
+                "name": "Umarji Patel Nagar Parisar 2"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Samarth Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Samarth Nagar Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Star Plaza Building"
+              },
+              {
+                "id": 3,
+                "name": "Arihant Heights"
+              },
+              {
+                "id": 4,
+                "name": "AK heritage"
+              },
+              {
+                "id": 5,
+                "name": "Arihant Center 1"
+              },
+              {
+                "id": 6,
+                "name": "Arihant Center 2"
+              },
+              {
+                "id": 7,
+                "name": "Arihant Darshan Wing A"
+              },
+              {
+                "id": 8,
+                "name": "Arihant Darshan Wing B"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Yashwant Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Yashwant nagar parisar 1"
+              },
+              {
+                "id": 2,
+                "name": "Yashwant nagar parisar 2"
+              },
+              {
+                "id": 3,
+                "name": "Shree ganesh apt."
+              },
+              {
+                "id": 4,
+                "name": "Shankar Mandir Vasahat Parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "D.C Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Arihant Hill Building A"
+              },
+              {
+                "id": 2,
+                "name": "Arihant Hill Building B"
+              },
+              {
+                "id": 3,
+                "name": "Arihant Hill Building C"
+              },
+              {
+                "id": 4,
+                "name": "Jiyansh Building"
+              },
+              {
+                "id": 5,
+                "name": "Dwarka Apt Wing A"
+              },
+              {
+                "id": 6,
+                "name": "Dwarka Apt Wing B"
+              },
+              {
+                "id": 7,
+                "name": "Dwarka Apt Wing C"
+              },
+              {
+                "id": 8,
+                "name": "Sambhaji Nagar Parisar DC Nagar"
+              },
+              {
+                "id": 9,
+                "name": "Lakshmi Apt. 1"
+              },
+              {
+                "id": 10,
+                "name": "Lakshmi Apt. 2"
+              },
+              {
+                "id": 11,
+                "name": "Golden Hill 1"
+              },
+              {
+                "id": 12,
+                "name": "Golden Hill 2"
+              },
+              {
+                "id": 13,
+                "name": "Golden Hill 3"
+              },
+              {
+                "id": 14,
+                "name": "Madhina Manzil Building 1"
+              },
+              {
+                "id": 15,
+                "name": "Madhina Manzil Building 2"
+              },
+              {
+                "id": 16,
+                "name": "Madhina Manzil Building 3"
+              },
+              {
+                "id": 17,
+                "name": "Madhina Manzil Building 4"
+              },
+              {
+                "id": 18,
+                "name": "Madhina Manzil Building 5"
+              },
+              {
+                "id": 19,
+                "name": "Arihant Parisar"
+              },
+              {
+                "id": 19,
+                "name": "Lakshmi Avenue"
+              },
+              {
+                "id": 20,
+                "name": "Vision Residency"
               }
             ]
           }

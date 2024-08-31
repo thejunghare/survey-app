@@ -5792,6 +5792,68 @@
                 "name": "Shirgaon Parisar"
               }
             ]
+          },
+          {
+            "id": 4,
+            "name": "Takai Gaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vidhi Nidhi Apartment A1"
+              },
+              {
+                "id": 2,
+                "name": "Vidhi Nidhi Apartment A2"
+              },
+              {
+                "id": 3,
+                "name": "Sagar Samruddhi Phase 1"
+              },
+              {
+                "id": 4,
+                "name": "Sagar Samruddhi Phase 2"
+              },
+              {
+                "id": 5,
+                "name": "Shree Recidency"
+              },
+              {
+                "id": 6,
+                "name": "Neo Recidency A"
+              },
+              {
+                "id": 7,
+                "name": "Neo Recidency B"
+              },
+              {
+                "id": 8,
+                "name": "Neo Recidency C"
+              },
+              {
+                "id": 9,
+                "name": "Neo Recidency D"
+              },
+              {
+                "id": 10,
+                "name": "Neo Recidency E"
+              },
+              {
+                "id": 11,
+                "name": "Hanuman Mandir Parisar Takai Gaon"
+              },
+              {
+                "id": 12,
+                "name": "Takai Gaon Area Parisar"
+              },
+              {
+                "id": 13,
+                "name": "Dheku Gaon Parisar"
+              },
+              {
+                "id": 14,
+                "name": "Sarsan Phata"
+              }
+            ]
           }
         ]
       },

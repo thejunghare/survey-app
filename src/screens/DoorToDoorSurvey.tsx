@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
     SafeAreaView,
     Pressable,
@@ -13,17 +13,17 @@ import {
     KeyboardType,
     TouchableOpacity,
 } from "react-native";
-import {Button, Input, Icon, CheckBox, SearchBar} from "@rneui/base";
-import {useSurvey} from "../appwrite/SurveyContext";
-import {RouteProp} from "@react-navigation/native";
-import {AppStackParamList} from "../routes/AppStack";
+import { Button, Input, Icon, CheckBox, SearchBar } from "@rneui/base";
+import { useSurvey } from "../appwrite/SurveyContext";
+import { RouteProp } from "@react-navigation/native";
+import { AppStackParamList } from "../routes/AppStack";
 import DateTimePicker from "@react-native-community/datetimepicker";
-import {Picker} from "@react-native-picker/picker";
-import {StatusBar} from "expo-status-bar";
-import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import { Picker } from "@react-native-picker/picker";
+import { StatusBar } from "expo-status-bar";
+import RadioGroup, { RadioButtonProps } from 'react-native-radio-buttons-group';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import * as Clipboard from 'expo-clipboard';
-import {toast} from "../appwrite/toast";
+import { toast } from "../appwrite/toast";
 
 type DoorToDoorSurveyRouteProp = RouteProp<
     AppStackParamList,
@@ -62,8 +62,8 @@ interface SurveyData {
     isRented: boolean;
     roomOwnerMobileNumber: string;
     memberCount: string;
-   // nameSource: string;
-    selectedColor: number;
+    // nameSource: string;
+    //selectedColor: number;
 }
 
 interface Ward {
@@ -89,9 +89,9 @@ interface Building {
     name: string;
 }
 
-const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
-    const {add, fetchVoterList} = useSurvey();
-    const {userId} = route.params;
+const DoorToDoorSurvey = ({ route }: { route: DoorToDoorSurveyRouteProp }) => {
+    const { add, fetchVoterList } = useSurvey();
+    const { userId } = route.params;
     const [search, setSearch] = useState("");
     const [employeeId, setEmployeeId] = useState(userId || "");
     const [division, setDivision] = useState("");
@@ -126,10 +126,10 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     const [isRoomLocked, setIsRoomLocked] = useState(false);
     const [surveyDenied, setSurveyDenied] = useState(false);
 
-// const [isGreen, setIsGreen] = useState<boolean>(false);
- //const [isYellow, setIsYellow] = useState<boolean>(false);
- //const [isRed, setIsRed] = useState<boolean>(false);
-    const [selectedColor, setSelectedColor] = useState(3);
+    // const [isGreen, setIsGreen] = useState<boolean>(false);
+    //const [isYellow, setIsYellow] = useState<boolean>(false);
+    //const [isRed, setIsRed] = useState<boolean>(false);
+    //const [selectedColor, setSelectedColor] = useState(3);
 
     const [isOwner, setIsOwner] = useState(false);
     const [isRented, setIsRented] = useState(false);
@@ -257,7 +257,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
 
     const handleUpdateMember = (index, key, value) => {
         const updatedMembers = members.map((member, i) =>
-            i === index ? {...member, [key]: value} : member
+            i === index ? { ...member, [key]: value } : member
         );
         setMembers(updatedMembers);
     };
@@ -327,11 +327,11 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
             isOwner,
             isRented,
             roomOwnerMobileNumber,
-    //        isGreen,
-  //          isYellow,
-//            isRed,
-            selectedColor,
-          //  nameSource,
+            //        isGreen,
+            //          isYellow,
+            //            isRed,
+            //     selectedColor,
+            //  nameSource,
             createdAt, // Include the formatted createdAt field
             familyhead: JSON.stringify(familyDataObject),
             members: JSON.stringify(members),
@@ -359,10 +359,10 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         setFamilyHeadAge("");
         setIsRoomLocked(false);
         setSurveyDenied(false);
-      //  setIsGreen(false);
+        //  setIsGreen(false);
         //setIsYellow(false);
         //setIsRed(false);
-        selectedColor(3);
+        // selectedColor(3);
         setIsOwner(false);
         setIsRented(false);
         setSurveyRemark("");
@@ -378,7 +378,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         toast('copied');
     };
 
-// Fetch initial data
+    // Fetch initial data
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -397,7 +397,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
         fetchData();
     }, []);
 
-// Fetch search results
+    // Fetch search results
     useEffect(() => {
         const fetchResults = async () => {
             if (search.length > 2) {
@@ -412,7 +412,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
     }, [search]);
 
     if (loading) {
-        return <ActivityIndicator size="large" color="#0000ff"/>;
+        return <ActivityIndicator size="large" color="#0000ff" />;
     }
 
     return (
@@ -458,42 +458,42 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>First name: {selectedVoter.first_name}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.first_name)}/>
+                                onPress={() => handleCopy(selectedVoter.first_name)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Last name: {selectedVoter.last_name}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.last_name)}/>
+                                onPress={() => handleCopy(selectedVoter.last_name)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Age: {selectedVoter.age}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.age)}/>
+                                onPress={() => handleCopy(selectedVoter.age)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Gender: {selectedVoter.gender}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.gender)}/>
+                                onPress={() => handleCopy(selectedVoter.gender)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Address: {selectedVoter.address}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.address)}/>
+                                onPress={() => handleCopy(selectedVoter.address)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>House/Room number: {selectedVoter.house_number}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.house_number)}/>
+                                onPress={() => handleCopy(selectedVoter.house_number)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Epic number: {selectedVoter.epic_number}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.epic_number)}/>
+                                onPress={() => handleCopy(selectedVoter.epic_number)} />
                         </View>
                         <View className={'flex flex-row items-center'}>
                             <Text className='mt-4'>Booth address: {selectedVoter.booth_address}</Text>
                             <Icon name='clipboard' size={16} type={'feather'}
-                                  onPress={() => handleCopy(selectedVoter.booth_address)}/>
+                                onPress={() => handleCopy(selectedVoter.booth_address)} />
                         </View>
                     </View>
                 )}
@@ -525,7 +525,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                             style={styles.picker}
                             mode="dropdown"
                         >
-                            <Picker.Item label="Division *" value=""/>
+                            <Picker.Item label="Division *" value="" />
                             {divisions.map((division) => (
                                 <Picker.Item
                                     key={division.id}
@@ -544,9 +544,9 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                             style={styles.picker}
                             mode="dropdown"
                         >
-                            <Picker.Item label="Ward *" value=""/>
+                            <Picker.Item label="Ward *" value="" />
                             {wards.map((ward) => (
-                                <Picker.Item key={ward.id} label={ward.name} value={ward.name}/>
+                                <Picker.Item key={ward.id} label={ward.name} value={ward.name} />
                             ))}
                         </Picker>
                     </View>
@@ -561,9 +561,9 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                             style={styles.picker}
                             mode="dropdown"
                         >
-                            <Picker.Item label="Area *" value=""/>
+                            <Picker.Item label="Area *" value="" />
                             {areas.map((area) => (
-                                <Picker.Item key={area.id} label={area.name} value={area.name}/>
+                                <Picker.Item key={area.id} label={area.name} value={area.name} />
                             ))}
                         </Picker>
                     </View>
@@ -576,7 +576,7 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                             style={styles.picker}
 
                         >
-                            <Picker.Item label="Building *" value=""/>
+                            <Picker.Item label="Building *" value="" />
                             {buildings.map((building) => (
                                 <Picker.Item
                                     key={building.id}
@@ -613,7 +613,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         onPress={() => setIsRoomLocked(!isRoomLocked)}
                         containerStyle={{
                             width: '43%',
-                             borderRadius: 12
+
+                            borderRadius: 12
                         }}
                     />
                     {/* survey denied */}
@@ -624,7 +625,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         checkedColor="red"
                         containerStyle={{
                             width: '43%',
-                             borderRadius: 12
+
+                            borderRadius: 12
                         }}
                     />
                 </View>
@@ -638,7 +640,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         checkedColor="orange"
                         containerStyle={{
                             width: '43%',
-                             borderRadius: 12
+
+                            borderRadius: 12
                         }}
                     />
                     {/* room owner */}
@@ -649,7 +652,8 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         checkedColor="green"
                         containerStyle={{
                             width: '43%',
-                             borderRadius: 12
+
+                            borderRadius: 12
                         }}
                     />
                 </View>
@@ -756,16 +760,16 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                 />
 
                 {/* voter picker */}
-                <View style={{width: "100%"}}>
+                <View style={{ width: "100%" }}>
                     <View style={styles.pickerContainer} className="mb-2">
                         <Picker
                             enabled={!isRoomLocked}
                             selectedValue={voter}
                             onValueChange={(itemValue) => setVoter(itemValue)}
                         >
-                            <Picker.Item label="Are you a voter" value=""/>
-                            <Picker.Item label="Yes" value="yes"/>
-                            <Picker.Item label="No" value="no"/>
+                            <Picker.Item label="Are you a voter" value="" />
+                            <Picker.Item label="Yes" value="yes" />
+                            <Picker.Item label="No" value="no" />
                         </Picker>
                     </View>
                     {voter === "yes" && (
@@ -796,16 +800,16 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                                     label="Do you want to register as a new voter?"
                                     value=""
                                 />
-                                <Picker.Item label="Yes" value="yes"/>
-                                <Picker.Item label="No" value="no"/>
+                                <Picker.Item label="Yes" value="yes" />
+                                <Picker.Item label="No" value="no" />
                             </Picker>
                         </View>
                     )}
                 </View>
 
                 {/*color option*/}
-                <View className={"flex flex-row items-center justify-evenly"}>
-                    {/* green */}
+                {/*  <View className={"flex flex-row items-center justify-evenly"}>
+                   
                     <CheckBox
                         title="Green"
                         checked={selectedColor === 0}
@@ -813,15 +817,15 @@ const DoorToDoorSurvey = ({route}: { route: DoorToDoorSurveyRouteProp }) => {
                         checkedColor="green"
                         containerStyle={{
                             width: '30%',
- borderRadius: 12
+                            borderRadius: 12
                         }}
-checkedIcon="dot-circle-o"
-           uncheckedIcon="circle-o"
+                        checkedIcon="dot-circle-o"
+                        uncheckedIcon="circle-o"
                     />
-                    {/* yellow */}
+                  
                     <CheckBox
                         title="Yellow"
-                        
+
                         checked={selectedColor === 1}
                         onPress={() => setSelectedColor(1)}
 
@@ -831,28 +835,28 @@ checkedIcon="dot-circle-o"
                             backgroundColor: 'white',
                             borderRadius: 12
                         }}
-checkedIcon="dot-circle-o"
-           uncheckedIcon="circle-o"
+                        checkedIcon="dot-circle-o"
+                        uncheckedIcon="circle-o"
 
                     />
-                    {/* red */}
+                    
                     <CheckBox
                         title="Red"
                         checked={selectedColor === 3}
                         onPress={() => setSelectedColor(3)}
 
 
-                        
+
                         checkedColor="red"
                         containerStyle={{
                             width: '30%',
- borderRadius: 12
+                            borderRadius: 12
                         }}
- checkedIcon="dot-circle-o"
-           uncheckedIcon="circle-o"
+                        checkedIcon="dot-circle-o"
+                        uncheckedIcon="circle-o"
                     />
- 
-                </View>
+
+                </View>*/}
 
                 {/* survey remark */}
                 <Input
@@ -919,7 +923,7 @@ checkedIcon="dot-circle-o"
                                 placeholder={`Member ${index + 1} Education`}
                                 label='Education'
                             />
-                            <View style={{width: "100%"}}>
+                            <View style={{ width: "100%" }}>
                                 <View style={styles.pickerContainer} className="mb-2">
                                     <Picker
                                         enabled={!isRoomLocked}
@@ -928,9 +932,9 @@ checkedIcon="dot-circle-o"
                                             handleUpdateMember(index, "voter", itemValue)
                                         }
                                     >
-                                        <Picker.Item label="Are you a voter" value=""/>
-                                        <Picker.Item label="Yes" value="yes"/>
-                                        <Picker.Item label="No" value="no"/>
+                                        <Picker.Item label="Are you a voter" value="" />
+                                        <Picker.Item label="Yes" value="yes" />
+                                        <Picker.Item label="No" value="no" />
                                     </Picker>
                                 </View>
                                 {member.voter === "yes" && (
@@ -971,8 +975,8 @@ checkedIcon="dot-circle-o"
                                                 label="Do you want to register as a new voter?"
                                                 value=""
                                             />
-                                            <Picker.Item label="Yes" value="yes"/>
-                                            <Picker.Item label="No" value="no"/>
+                                            <Picker.Item label="Yes" value="yes" />
+                                            <Picker.Item label="No" value="no" />
                                         </Picker>
                                     </View>
                                 )}
@@ -1004,8 +1008,8 @@ checkedIcon="dot-circle-o"
                             color: 'white',
                         }}
                         iconRight
-                        iconContainerStyle={{marginLeft: 10}}
-                        titleStyle={{fontWeight: '700'}}
+                        iconContainerStyle={{ marginLeft: 10 }}
+                        titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
                             backgroundColor: 'rgba(199, 43, 98, 1)',
                             borderColor: 'transparent',
@@ -1032,8 +1036,8 @@ checkedIcon="dot-circle-o"
                             color: 'white',
                         }}
                         iconRight
-                        iconContainerStyle={{marginLeft: 10}}
-                        titleStyle={{fontWeight: '700'}}
+                        iconContainerStyle={{ marginLeft: 10 }}
+                        titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
                             backgroundColor: 'rgba(90, 154, 230, 1)',
                             borderColor: 'transparent',
@@ -1048,7 +1052,7 @@ checkedIcon="dot-circle-o"
                     />
                     {/* {isLoading && <ActivityIndicator size="large" color="#0000ff" />} */}
                 </View>
-                <StatusBar style="dark"/>
+                <StatusBar style="dark" />
             </ScrollView>
         </SafeAreaView>
     );

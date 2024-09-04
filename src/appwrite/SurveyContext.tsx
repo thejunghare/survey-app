@@ -1,4 +1,4 @@
-import {ID, Permission, Role, Query} from "react-native-appwrite";
+import { ID, Permission, Role, Query } from "react-native-appwrite";
 import {
     createContext,
     useContext,
@@ -6,11 +6,11 @@ import {
     useState,
     ReactNode,
 } from "react";
-import {databases} from "./service";
-import {toast} from "./toast";
+import { databases } from "./service";
+import { toast } from "./toast";
 
 export const SURVEY_DATABASE_ID = "66502c6e0015d7be8526";
-export const SURVEY_COLLECTION_ID = "6650391e00030acc335b";
+export const SURVEY_COLLECTION_ID = "8"; //6650391e00030acc335b
 
 interface SurveyData {
     employeeId: string;
@@ -98,7 +98,7 @@ interface AttendanceData {
     type: string;
 }
 
-export function SurveyProvider({children}: SurveyProviderProps) {
+export function SurveyProvider({ children }: SurveyProviderProps) {
     const [surveys, setSurveys] = useState<SurveyData[]>([]);
 
     async function punchIn(punchInData: AttendanceData) {

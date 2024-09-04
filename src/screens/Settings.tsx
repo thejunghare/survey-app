@@ -1,11 +1,11 @@
-import React, {useContext, useState, useEffect, useCallback} from "react";
-import {View, TouchableOpacity, Text, Switch, ScrollView} from "react-native";
-import {AppwriteContext} from "../appwrite/UserContext";
-import {Icon} from "@rneui/themed";
-import {toast} from "../appwrite/toast";
-import {useSurvey} from "../appwrite/SurveyContext";
-import {RouteProp} from "@react-navigation/native";
-import {AppStackParamList} from "../routes/AppStack";
+import React, { useContext, useState, useEffect, useCallback } from "react";
+import { View, TouchableOpacity, Text, Switch, ScrollView } from "react-native";
+import { AppwriteContext } from "../appwrite/UserContext";
+import { Icon } from "@rneui/themed";
+import { toast } from "../appwrite/toast";
+import { useSurvey } from "../appwrite/SurveyContext";
+import { RouteProp } from "@react-navigation/native";
+import { AppStackParamList } from "../routes/AppStack";
 import * as Location from 'expo-location';
 
 type SettingsRouteProp = RouteProp<
@@ -27,11 +27,11 @@ interface AttendanceData {
 }
 
 
-const Settings = ({route}: { route: SettingsRouteProp }) => {
-    const {appwrite, setIsLoggedIn} = useContext(AppwriteContext);
+const Settings = ({ route }: { route: SettingsRouteProp }) => {
+    const { appwrite, setIsLoggedIn } = useContext(AppwriteContext);
     const [userData, setUserData] = useState<UserObj>();
     const [loading, setLoading] = useState<boolean>(true);
-    const {punchIn, punchOut} = useSurvey();
+    const { punchIn, punchOut } = useSurvey();
     const [location, setLocation] = useState<LocationObject | null>(null);
     const [errorMsg, setErrorMsg] = useState(null);
     const [isEnabled, setIsEnabled] = useState<boolean>(false);
@@ -177,7 +177,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
 
     const toggleSwitch = async () => {
         if (!isEnabled) {
-            let {status} = await Location.requestForegroundPermissionsAsync();
+            let { status } = await Location.requestForegroundPermissionsAsync();
             if (status === 'granted') {
                 setIsEnabled(true);
                 let location = await Location.getCurrentPositionAsync({});
@@ -196,7 +196,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
         fetchUserData();
 
         (async () => {
-            let {status} = await Location.requestForegroundPermissionsAsync();
+            let { status } = await Location.requestForegroundPermissionsAsync();
             if (status === 'granted') {
                 setIsEnabled(true);
                 let location = await Location.getCurrentPositionAsync({});
@@ -219,7 +219,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                     onPress={handlePunchIn}
                     disabled={isPunchInDisabled}
                 >
-                    <Icon name="log-in" type='feather'/>
+                    <Icon name="log-in" type='feather' />
                     <Text className="p-5 font-semibold">Punch In</Text>
                 </TouchableOpacity>
                 <View className="border-slate-400 flex flex-row items-center">
@@ -228,7 +228,7 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                         onPress={handlePunchOut}
                         disabled={isPunchOutDisabled}
                     >
-                        <Icon name="log-out" type='feather'/>
+                        <Icon name="log-out" type='feather' />
                         <Text className="p-5 font-semibold">Punch Out</Text>
                     </TouchableOpacity>
                 </View>
@@ -242,12 +242,12 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
 
                 >
                     <View className={'flex flex-row items-center'}>
-                        <Icon name="map-pin" type='feather'/>
+                        <Icon name="map-pin" type='feather' />
                         <Text className="p-5 font-semibold">Location</Text>
                     </View>
 
                     <Switch
-                        trackColor={{false: '#767577', true: '#81b0ff'}}
+                        trackColor={{ false: '#767577', true: '#81b0ff' }}
                         thumbColor={isEnabled ? '#1D4ED8' : '#f4f3f4'}
                         onValueChange={toggleSwitch}
                         value={isEnabled}
@@ -262,17 +262,17 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                     className="border-b border-slate-200  flex flex-row items-center px-3"
                     onPress={handleLogout}
                 >
-                    <Icon name="log-out" type='feather'/>
+                    <Icon name="log-out" type='feather' />
                     <Text className="p-5 font-semibold">Logout</Text>
                 </TouchableOpacity>
                 <View className="border-b border-slate-200 flex flex-row items-center justify-between px-3">
                     <View className={'flex flex-row items-center'}>
-                        <Icon name="moon" type='feather'/>
+                        <Icon name="moon" type='feather' />
                         <Text className="p-5 font-semibold">Dark Mode</Text>
                     </View>
 
                     <Switch
-                        trackColor={{false: '#767577', true: '#81b0ff'}}
+                        trackColor={{ false: '#767577', true: '#81b0ff' }}
                         thumbColor={isEnabled ? '#1D4ED8' : '#f4f3f4'}
 
                         disabled={true}
@@ -280,13 +280,13 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                 </View>
                 <View className="border-slate-400 flex flex-row items-center justify-between px-3">
                     <View className={'flex flex-row items-center'}>
-                        <Icon name="sun" type='feather'/>
+                        <Icon name="sun" type='feather' />
                         <Text className="p-5 font-semibold">Light Mode</Text>
                     </View>
 
                     <View>
                         <Switch
-                            trackColor={{false: '#767577', true: '#81b0ff'}}
+                            trackColor={{ false: '#767577', true: '#81b0ff' }}
                             thumbColor={isLightModeEnabled ? '#1D4ED8' : '#f4f3f4'}
                             onValueChange={toggleLightModeSwitch}
                             value={isLightModeEnabled}
@@ -303,8 +303,8 @@ const Settings = ({route}: { route: SettingsRouteProp }) => {
                     className="border-b border-slate-200 flex flex-row items-center px-3"
                     onPress={handlePunchIn}
                 >
-                    <Icon name="info" type='feather'/>
-                    <Text className="p-5 font-semibold">v.2.7.0</Text>
+                    <Icon name="info" type='feather' />
+                    <Text className="p-5 font-semibold">v.2.7.1</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>

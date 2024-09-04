@@ -4346,6 +4346,52 @@
                 "name": "Khalchi khopoli Right Side Parisar"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Neral",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sugekar Ali"
+              },
+              {
+                "id": 2,
+                "name": "Shiv Krupa Building"
+              },
+              {
+                "id": 3,
+                "name": "Tepali Pariar"
+              },
+              {
+                "id": 4,
+                "name": "Paluksar Sankul"
+              },
+              {
+                "id": 5,
+                "name": "Bhitad Ali"
+              },
+              {
+                "id": 6,
+                "name": "Hethkar Ali"
+              },
+              {
+                "id": 7,
+                "name": "Suman Complex"
+              },
+              {
+                "id": 8,
+                "name": "Shaurya Arcade"
+              },
+              {
+                "id": 9,
+                "name": "Bhraman Ali"
+              },
+              {
+                "id": 10,
+                "name": "Shiv Ganaga Apt."
+              }
+            ]
           }
         ]
       },

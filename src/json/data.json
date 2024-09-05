@@ -6174,6 +6174,114 @@
             ]
           }
         ]
+      },
+      {
+        "id": 2,
+        "name": "2",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Mohachiwadi",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mohachiwadi Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Mohachi katarwadi Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Shaninagar"
+              },
+              {
+                "id": 4,
+                "name": "Payrmark Ganesh Nagar"
+              },
+              {
+                "id": 5,
+                "name": "Payrmark Parisar 1"
+              },
+              {
+                "id": 6,
+                "name": "Payrmark Parisar 2"
+              },
+              {
+                "id": 7,
+                "name": "Payrmark katkarwadi Parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "3",
+        "areas": [
+          {
+            "id": 1,
+            "name": "khanda",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "khanda Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Laman Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Stion Ali"
+              },
+              {
+                "id": 4,
+                "name": "Walamik Nagar Parisar"
+              },
+              {
+                "id": 5,
+                "name": "Samrat Nagar Parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "4",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Matho Shree Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Pada Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Niraman Nagari Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Matho Shree Nagar"
+              },
+              {
+                "id": 4,
+                "name": "Ganga Nagar Parisar"
+              },
+              {
+                "id": 5,
+                "name": "Sai Krupa Society"
+              },
+              {
+                "id": 6,
+                "name": "Rathod Ali New Society"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

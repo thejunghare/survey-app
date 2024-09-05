@@ -6282,6 +6282,46 @@
             ]
           }
         ]
+      },
+      {
+        "id": 5,
+        "name": "5",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Rajendra Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Rajendra Nagar Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Kumbhar Ali Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Bhrambhan Ali Parisar"
+              },
+              {
+                "id": 4,
+                "name": "Bombil Ali Parisar"
+              },
+              {
+                "id": 5,
+                "name": "Barkhat Nagar Parisar"
+              },
+              {
+                "id": 6,
+                "name": "Walmikwadi Parisar"
+              },
+              {
+                "id": 6,
+                "name": "Bajar Bheth Juni Parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

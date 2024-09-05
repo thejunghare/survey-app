@@ -6114,5 +6114,67 @@
         ]
       }
     ]
+  },
+  {
+    "id": 4,
+    "name": "Neral",
+    "wards": [
+      {
+        "id": 1,
+        "name": "1",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Ambewadi",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Andhawadi Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Phanaswadi Parisar"
+              },
+              {
+                "id": 3,
+                "name": "Ambewadi Parisar"
+              },
+              {
+                "id": 4,
+                "name": "New Ambewadi Parisar"
+              },
+              {
+                "id": 5,
+                "name": "Dhakecha Maal Parisar"
+              },
+              {
+                "id": 6,
+                "name": "Dashwadi Parisar"
+              },
+              {
+                "id": 7,
+                "name": "Tapalwadi Parisar"
+              },
+              {
+                "id": 8,
+                "name": "Jummapatiwadi Parisar"
+              },
+              {
+                "id": 9,
+                "name": "Dhangar Tapa Parisar"
+              },
+              {
+                "id": 10,
+                "name": "Komal Wadi Parisar"
+              },
+              {
+                "id": 11,
+                "name": "Chinch Ali"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -6280,6 +6280,16 @@
                 "name": "Rathod Ali New Society"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Neral Gav",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Neral Gav"
+              }
+            ]
           }
         ]
       },
@@ -6318,6 +6328,48 @@
               {
                 "id": 6,
                 "name": "Bajar Bheth Juni Parisar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Karjat",
+    "wards": [
+      {
+        "id": 1,
+        "name": "1",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Swapn Nagri",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Swapn Nagri Society Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Swapn Nagri Society Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Swapn Nagri Society Wing C"
+              },
+              {
+                "id": 4,
+                "name": "Swapn Nagri Society Wing D"
+              },
+              {
+                "id": 5,
+                "name": "Swapn Nagri Society Wing E"
+              },
+              {
+                "id": 6,
+                "name": "Swapn Nagri Mudre Khurd Area"
               }
             ]
           }

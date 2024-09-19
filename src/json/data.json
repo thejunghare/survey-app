@@ -6372,6 +6372,236 @@
                 "name": "Swapn Nagri Mudre Khurd Area"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Gulmohar Rest House",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mudre Khurd Parisar 1 (Gulmohar area)"
+              },
+              {
+                "id": 2,
+                "name": "Trishul Apt"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Gurunagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vrindavan Garden Complex Wing C"
+              },
+              {
+                "id": 2,
+                "name": "Vrindavan Garden Complex Wing D"
+              },
+              {
+                "id": 3,
+                "name": "Vrindavan Garden Complex Wing E"
+              },
+              {
+                "id": 4,
+                "name": "Vrindavan Garden Complex Wing F"
+              },
+              {
+                "id": 5,
+                "name": "Vrindavan Garden Complex Wing G"
+              },
+              {
+                "id": 6,
+                "name": "Vrindavan Garden Complex Wing H"
+              },
+              {
+                "id": 7,
+                "name": "Vrindavan Garden Complex Wing I"
+              },
+              {
+                "id": 8,
+                "name": "Tulips wing A"
+              },
+              {
+                "id": 9,
+                "name": "Tulips wing B"
+              },
+              {
+                "id": 10,
+                "name": "Guru krupa CHS"
+              },
+              {
+                "id": 11,
+                "name": "Gajanan heights"
+              },
+              {
+                "id": 12,
+                "name": "Vakratund CHS"
+              },
+              {
+                "id": 13,
+                "name": "Shree Ganesh Krupa CHS"
+              },
+              {
+                "id": 14,
+                "name": "Sadguru krupa CHS"
+              },
+              {
+                "id": 15,
+                "name": "Shree Ganesh Apt"
+              },
+              {
+                "id": 16,
+                "name": "Orchid Residency"
+              },
+              {
+                "id": 17,
+                "name": "Guru Nagar Parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Nana Mastar Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sheetej Apt"
+              },
+              {
+                "id": 2,
+                "name": "Sadicha Apt"
+              },
+              {
+                "id": 3,
+                "name": "Buildwell Plaza"
+              },
+              {
+                "id": 4,
+                "name": "New Vighnaharta CHS"
+              },
+              {
+                "id": 5,
+                "name": "shree Vinayaki krupa"
+              },
+              {
+                "id": 6,
+                "name": "Shree Tej CHS"
+              },
+              {
+                "id": 7,
+                "name": "Savitri Heights"
+              },
+              {
+                "id": 8,
+                "name": "Guru Prasad Apt"
+              },
+              {
+                "id": 9,
+                "name": "Shree Sai Nivas Apt"
+              },
+              {
+                "id": 10,
+                "name": "Awas CHS"
+              },
+              {
+                "id": 11,
+                "name": "Nana Mastar Parisar(kaman to ganesh mandir)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": 5,
+        "areas": [
+          {
+            "id": 1,
+            "name": "Nana Mastar Nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Sai Ganesh Wing A"
+              },
+              {
+                "id": 2,
+                "name": "Sai Ganesh Wing B"
+              },
+              {
+                "id": 3,
+                "name": "Sai Ganesh Wing C"
+              },
+              {
+                "id": 4,
+                "name": "Sai Ganesh Wing D"
+              },
+              {
+                "id": 5,
+                "name": "Sai Ganesh Wing E"
+              },
+              {
+                "id": 6,
+                "name": "Gajanan Shrusti CHS"
+              },
+              {
+                "id": 7,
+                "name": "Shree Ganesh Residency"
+              },
+              {
+                "id": 8,
+                "name": "Shiv Apt"
+              },
+              {
+                "id": 9,
+                "name": "Akshat Elegance"
+              },
+              {
+                "id": 10,
+                "name": "Atharv Residency"
+              },
+              {
+                "id": 11,
+                "name": "Vijay kunj CHS"
+              },
+              {
+                "id": 12,
+                "name": "Vijay Galaxy"
+              },
+              {
+                "id": 13,
+                "name": "Shree Gajanan Chaya"
+              },
+              {
+                "id": 14,
+                "name": "Vijay Horizon"
+              },
+              {
+                "id": 15,
+                "name": "Lotus Arcade"
+              },
+              {
+                "id": 16,
+                "name": "Lotus Enclave"
+              },
+              {
+                "id": 17,
+                "name": "Sai Leela CHS"
+              },
+              {
+                "id": 18,
+                "name": "Vasant Apt"
+              },
+              {
+                "id": 19,
+                "name": "Sarthak Homes"
+              },
+              {
+                "id": 20,
+                "name": "Nana Mastar Nagar Parisar(ganesh Mandhir area)"
+              }
+            ]
           }
         ]
       }

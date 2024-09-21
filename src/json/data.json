@@ -6602,6 +6602,198 @@
                 "name": "Nana Mastar Nagar Parisar(ganesh Mandhir area)"
               }
             ]
+          },
+          {
+            "id": 2,
+            "name": "Mudre Budhrukh",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mudre Budhrukh Parisar"
+              },
+              {
+                "id": 2,
+                "name": "Nirmiti Apt"
+              },
+              {
+                "id": 3,
+                "name": "Vastu Avenue wing A"
+              },
+              {
+                "id": 4,
+                "name": "Vastu Avenue wing B"
+              },
+              {
+                "id": 5,
+                "name": "Vastu Avenue wing C"
+              },
+              {
+                "id": 6,
+                "name": "Sumit Angan"
+              },
+              {
+                "id": 7,
+                "name": "Mohini Sadan CHS wing A"
+              },
+              {
+                "id": 8,
+                "name": "Mohini Sadan CHS wing B"
+              },
+              {
+                "id": 9,
+                "name": "Shree Nath CHS"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Revinue Colony",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Revinue colony parisar"
+              },
+              {
+                "id": 2,
+                "name": "Regency palace"
+              },
+              {
+                "id": 3,
+                "name": "Shree Sai Safalya CHS"
+              },
+              {
+                "id": 4,
+                "name": "Parijat Apt"
+              },
+              {
+                "id": 5,
+                "name": "Raj kamal CHS"
+              },
+              {
+                "id": 6,
+                "name": "Haridawar CHS"
+              },
+              {
+                "id": 7,
+                "name": "Nishigandha CHS"
+              },
+              {
+                "id": 8,
+                "name": "Sumitra apt."
+              },
+              {
+                "id": 9,
+                "name": "Mohini kunj apt."
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Marvel kshipra",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Marvel kshipra residency wing A"
+              },
+              {
+                "id": 2,
+                "name": "Marvel kshipra residency wing B"
+              },
+              {
+                "id": 3,
+                "name": "Marvel kshipra residency wing C"
+              },
+              {
+                "id": 4,
+                "name": "Marvel kshipra residency wing D"
+              },
+              {
+                "id": 5,
+                "name": "Marvel kshipra residency wing E"
+              },
+              {
+                "id": 6,
+                "name": "Marvel kshipra residency wing F"
+              },
+              {
+                "id": 7,
+                "name": "Marvel kshipra residency wing G"
+              },
+              {
+                "id": 8,
+                "name": "Marvel kshipra residency wing H"
+              },
+              {
+                "id": 9,
+                "name": "Marvel kshipra residency wing I"
+              },
+              {
+                "id": 10,
+                "name": "Virdhavan complex wing A"
+              },
+              {
+                "id": 11,
+                "name": "Virdhavan complex wing B"
+              },
+              {
+                "id": 12,
+                "name": "Virdhavan complex wing C"
+              },
+              {
+                "id": 13,
+                "name": "Virdhavan complex wing D"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Neminath residency",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Neminath residency wing A"
+              },
+              {
+                "id": 2,
+                "name": "Neminath residency wing B"
+              },
+              {
+                "id": 3,
+                "name": "Neminath residency wing C"
+              },
+              {
+                "id": 4,
+                "name": "Neminath residency wing D"
+              },
+              {
+                "id": 5,
+                "name": "Neminath residency wing E"
+              },
+              {
+                "id": 6,
+                "name": "Neminath residency wing F"
+              },
+              {
+                "id": 7,
+                "name": "Neminath residency wing G"
+              },
+              {
+                "id": 8,
+                "name": "Neminath heights"
+              },
+              {
+                "id": 9,
+                "name": "Shiv om complex"
+              },
+              {
+                "id": 10,
+                "name": "Vardhvinayk CHS"
+              },
+              {
+                "id": 11,
+                "name": "Shivani residency"
+              }
+            ]
           }
         ]
       }

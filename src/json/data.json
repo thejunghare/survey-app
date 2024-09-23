@@ -6940,6 +6940,128 @@
             ]
           }
         ]
+      },
+      {
+        "id": 4,
+        "name": "6",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Bhisegaon",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Katkarwadi parisar"
+              },
+              {
+                "id": 2,
+                "name": "Satuaai nagar bhisegaon"
+              },
+              {
+                "id": 3,
+                "name": "Shree sai gajana nagar bhisegaon"
+              },
+              {
+                "id": 4,
+                "name": "Bhisegaon parisar"
+              },
+              {
+                "id": 5,
+                "name": "Sai sadan chs"
+              },
+              {
+                "id": 6,
+                "name": "Voice apt."
+              },
+              {
+                "id": 7,
+                "name": "Suyog apt."
+              },
+              {
+                "id": 8,
+                "name": "Pal tower"
+              },
+              {
+                "id": 9,
+                "name": "Affinity gardens"
+              },
+              {
+                "id": 10,
+                "name": "Arihant aloki"
+              },
+              {
+                "id": 11,
+                "name": "Vasant vihar chs"
+              },
+              {
+                "id": 12,
+                "name": "Varshavan chs"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Juna st stand",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Rajlaxmi township building no.1"
+              },
+              {
+                "id": 2,
+                "name": "Rajlaxmi township building no.2"
+              },
+              {
+                "id": 3,
+                "name": "Rajlaxmi township building no.3"
+              },
+              {
+                "id": 4,
+                "name": "Rajlaxmi township building no.4"
+              },
+              {
+                "id": 5,
+                "name": "Rajlaxmi apt."
+              },
+              {
+                "id": 6,
+                "name": "Juna st stand parisar"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Station road",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Radhey galaxy"
+              },
+              {
+                "id": 2,
+                "name": "Station road parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Station side",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Karanti nagar"
+              },
+              {
+                "id": 2,
+                "name": "Fatima nagar"
+              },
+              {
+                "id": 3,
+                "name": "Siddhivinayak residency"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

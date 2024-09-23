@@ -6796,6 +6796,150 @@
             ]
           }
         ]
+      },
+      {
+        "id": 3,
+        "name": "7",
+        "areas": [
+          {
+            "id": 1,
+            "name": "H.P gas",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Rashtrapati Jyotiba Phule CHS"
+              },
+              {
+                "id": 2,
+                "name": "Archies apt."
+              },
+              {
+                "id": 3,
+                "name": "Ametha chs"
+              },
+              {
+                "id": 4,
+                "name": "Parimala chs"
+              },
+              {
+                "id": 5,
+                "name": "Yashodatta chs"
+              },
+              {
+                "id": 6,
+                "name": "BUddha nagar parisar"
+              },
+              {
+                "id": 7,
+                "name": "Hp gas to buddha nagar parisar"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Vitthal nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Vittal nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Siddhivinayak plaza"
+              },
+              {
+                "id": 3,
+                "name": "Durwalkur chs"
+              },
+              {
+                "id": 4,
+                "name": "shiva krupa apt"
+              },
+              {
+                "id": 5,
+                "name": "Mayura apt."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Ambedkar chowk",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Amira Nagari"
+              },
+              {
+                "id": 2,
+                "name": "Nikhli chs"
+              },
+              {
+                "id": 3,
+                "name": "Lila kunj chs"
+              },
+              {
+                "id": 4,
+                "name": "Sidd kala chs"
+              },
+              {
+                "id": 5,
+                "name": "Arun chs"
+              },
+              {
+                "id": 6,
+                "name": "Ambedkar chowk parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Patil Ali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Patil ali parisar"
+              },
+              {
+                "id": 2,
+                "name": "Kadam wada parisar"
+              },
+              {
+                "id": 3,
+                "name": "Divya palaza"
+              },
+              {
+                "id": 4,
+                "name": "Tags Laxmi building"
+              },
+              {
+                "id": 5,
+                "name": "Nimbeshwar landmark"
+              },
+              {
+                "id": 6,
+                "name": "Muktai chs"
+              },
+              {
+                "id": 7,
+                "name": "Jay malhar complex"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Sai nagar kahtik ali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Khatik ali parisar"
+              },
+              {
+                "id": 2,
+                "name": "Sai nagar parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

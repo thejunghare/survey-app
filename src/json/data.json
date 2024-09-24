@@ -6938,6 +6938,26 @@
                 "name": "Sai nagar parisar"
               }
             ]
+          },
+          {
+            "id": 6,
+            "name": "Abhinav school",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Abhinav school area parisar"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "Mahada colony",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Mahada parisar colony"
+              }
+            ]
           }
         ]
       },
@@ -7058,6 +7078,116 @@
               {
                 "id": 3,
                 "name": "Siddhivinayak residency"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "8",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Kotwal nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "kotwal nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Shree apt."
+              },
+              {
+                "id": 3,
+                "name": "Sumit apt."
+              },
+              {
+                "id": 4,
+                "name": "Darpan apt."
+              },
+              {
+                "id": 5,
+                "name": "Raghuvandana apt."
+              },
+              {
+                "id": 6,
+                "name": "Lotus apt."
+              },
+              {
+                "id": 7,
+                "name": "Indralok apt."
+              },
+              {
+                "id": 8,
+                "name": "Indraprastha apt."
+              },
+              {
+                "id": 9,
+                "name": "Shree Siddhivinayak apt."
+              },
+              {
+                "id": 10,
+                "name": "Shree sai apt."
+              },
+              {
+                "id": 11,
+                "name": "Bahar apt."
+              },
+              {
+                "id": 12,
+                "name": "Vimal apt."
+              },
+              {
+                "id": 13,
+                "name": "Om shri bhagyoday apt."
+              },
+              {
+                "id": 14,
+                "name": "Om shri arunoday apt."
+              },
+              {
+                "id": 15,
+                "name": "Shri ganesh apt."
+              },
+              {
+                "id": 16,
+                "name": "Vihanga apt."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Kotwal nagar junna office area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Kotwal nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Vishal apt."
+              },
+              {
+                "id": 3,
+                "name": "Vasat paradise"
+              },
+              {
+                "id": 4,
+                "name": "Anandhi heights"
+              },
+              {
+                "id": 5,
+                "name": "Shri ganesh apt."
+              },
+              {
+                "id": 6,
+                "name": "Om vrindavan apt."
+              },
+              {
+                "id": 7,
+                "name": "Om dharmodaya apt."
               }
             ]
           }

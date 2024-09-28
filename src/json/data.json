@@ -7192,6 +7192,100 @@
             ]
           }
         ]
+      },
+      {
+        "id": 6,
+        "name": "9",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Juna st stand area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Udham nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Shree sai ganesh complex"
+              },
+              {
+                "id": 3,
+                "name": "Sai garden"
+              },
+              {
+                "id": 4,
+                "name": "Mi"
+              },
+              {
+                "id": 5,
+                "name": "Shiv sai residency"
+              },
+              {
+                "id": 6,
+                "name": "Mangal murti darshan"
+              },
+              {
+                "id": 7,
+                "name": "Shree datta complex"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Gundge road",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Gajanan apt."
+              },
+              {
+                "id": 2,
+                "name": "Shree gajanan darshan chs"
+              },
+              {
+                "id": 3,
+                "name": "Shree gajanan krupa chs"
+              },
+              {
+                "id": 4,
+                "name": "Vijay apt."
+              },
+              {
+                "id": 5,
+                "name": "Gajanan park phase 2"
+              },
+              {
+                "id": 6,
+                "name": "Gajanan park phase 1"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Panchashil nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Panchashil nagar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Gundegoan",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Gundegoan area parisar"
+              },
+              {
+                "id": 2,
+                "name": "Gundegoan vishw nagar parisar thakurwadi gundegoan area parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -7286,6 +7286,188 @@
             ]
           }
         ]
+      },
+      {
+        "id": 7,
+        "name": "2",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Sahkar nagar",
+            "buildngs": [
+              {
+                "id": 1,
+                "name": "Sahkar nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Suyog nagar"
+              },
+              {
+                "id": 3,
+                "name": "Sevalal nagar(ekta nagar)"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Chh. Shivaji Maharaj nagar",
+            "buildngs": [
+              {
+                "id": 1,
+                "name": "Chh. Shivaji Maharaj nagar parisar"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sanjay nagar",
+            "buildngs": [
+              {
+                "id": 1,
+                "name": "Sanjay nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Poojan palacia no.1"
+              },
+              {
+                "id": 3,
+                "name": "Poojan palacia no.2"
+              },
+              {
+                "id": 4,
+                "name": "Midas villa apt."
+              },
+              {
+                "id": 5,
+                "name": "Uni mount auruma"
+              },
+              {
+                "id": 6,
+                "name": "Vridavan park"
+              },
+              {
+                "id": 7,
+                "name": "Shree balaji krupa chs"
+              },
+              {
+                "id": 8,
+                "name": "Ballaleshwar chs"
+              },
+              {
+                "id": 9,
+                "name": "Govind malhar chs"
+              },
+              {
+                "id": 10,
+                "name": "Siddhivinayak chs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "3",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Brahman Ali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Brahman Ali parisar"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Kokan ali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Kokan ali parisar"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Indira nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Indira nagar parisar"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Patil ali",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Patil ali"
+              },
+              {
+                "id": 2,
+                "name": "Chh. Shivaji Maharaj nagar parisar"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Baudh nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Baudh nagar parisar"
+              },
+              {
+                "id": 2,
+                "name": "Sonar ali parisar"
+              },
+              {
+                "id": 3,
+                "name": "Gaurav ali parisar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "4",
+        "areas": [
+          {
+            "id": 1,
+            "name": "Akurle area",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Akurle area parisar"
+              },
+              {
+                "id": 2,
+                "name": "Bamcha mala parisar"
+              },
+              {
+                "id": 3,
+                "name": "Shiv shrusti apt."
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Indira nagar",
+            "buildings": [
+              {
+                "id": 1,
+                "name": "Indira nagar parisar"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

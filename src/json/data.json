@@ -7294,7 +7294,7 @@
           {
             "id": 1,
             "name": "Sahkar nagar",
-            "buildngs": [
+            "buildings": [
               {
                 "id": 1,
                 "name": "Sahkar nagar parisar"
@@ -7312,7 +7312,7 @@
           {
             "id": 2,
             "name": "Chh. Shivaji Maharaj nagar",
-            "buildngs": [
+            "buildings": [
               {
                 "id": 1,
                 "name": "Chh. Shivaji Maharaj nagar parisar"
@@ -7322,7 +7322,7 @@
           {
             "id": 3,
             "name": "Sanjay nagar",
-            "buildngs": [
+            "buildings": [
               {
                 "id": 1,
                 "name": "Sanjay nagar parisar"

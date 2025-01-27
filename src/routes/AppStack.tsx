@@ -1,20 +1,32 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Dashboard from "../screens/Dashboard";
 import DoorToDoorSurvey from "../screens/DoorToDoorSurvey";
 import LockedRoomSurvey from "../screens/LockedRoomSurvey";
 import EditSurvey from "../screens/EditSurvey";
 import VoterSearch from "../screens/VoterSearch";
 import VoterDetails from "../screens/VoterDetails";
-import VoterDetailsView from "../screens/VoterDetailsView";
-import VoterDetailsEdit from "../screens/VoterDetailsEdit";
+import VoterDetailsView from '../screens/VoterDetailsView';
+import VoterDetailsEdit from '../screens/VoterDetailsEdit';
 import ProfileScreen from "../screens/ProfileScreen";
 import Settings from "../screens/Settings";
-import { Icon } from "@rneui/themed";
+import { Icon } from '@rneui/themed';
 
-const Stack = createNativeStackNavigator();
+export type AppStackParamList = {
+  Dashboard: undefined;
+  "Survey form": { userId: string };
+  "Voter Search": { userId: string };
+  "Voter Details": { voter: any }; // Ensure the voter parameter is defined here
+  "New Dashboard": undefined;
+  Profile: undefined;
+  Settings: undefined;
+  "Edit Survey": undefined;
+  "Locked Room": { userId: string };
+};
+
+const Stack = createNativeStackNavigator<AppStackParamList>();
 const Tab = createBottomTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
 
@@ -73,13 +85,15 @@ const SettingsStack = () => {
   );
 };
 
+
+
 export const AppStack = () => {
   return (
     <Tab.Navigator
       screenOptions={{
         tabBarHideOnKeyboard: true,
         tabBarLabelStyle: {
-          fontWeight: "900",
+          fontWeight: 900,
           fontSize: 11,
           padding: 10,
           letterSpacing: 0.5,
@@ -96,7 +110,7 @@ export const AppStack = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <Icon name="home" color={color} size={size} type="feather" />
+            <Icon name="home" color={color} size={size} type='feather' />
           ),
         }}
       />
@@ -105,7 +119,7 @@ export const AppStack = () => {
         component={ProfileStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="user" color={color} size={size} type="feather" />
+            <Icon name="user" color={color} size={size} type='feather' />
           ),
         }}
       />
@@ -114,7 +128,7 @@ export const AppStack = () => {
         component={SettingsStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="settings" color={color} size={size} type="feather" />
+            <Icon name="settings" color={color} size={size} type='feather' />
           ),
         }}
       />

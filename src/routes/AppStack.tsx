@@ -13,6 +13,7 @@ import VoterDetailsEdit from '../screens/VoterDetailsEdit';
 import ProfileScreen from "../screens/ProfileScreen";
 import Settings from "../screens/Settings";
 import { Icon } from '@rneui/themed';
+import SearchScreen from "../screens/SearchScreen";
 
 export type AppStackParamList = {
   Dashboard: undefined;
@@ -24,6 +25,7 @@ export type AppStackParamList = {
   Settings: undefined;
   "Edit Survey": undefined;
   "Locked Room": { userId: string };
+  "Search Screen": undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -47,6 +49,7 @@ const DashboardStack = () => {
       <Stack.Screen name="Locked Room" component={LockedRoomSurvey} />
       <Stack.Screen name="Edit Survey" component={EditSurvey} />
       <Stack.Screen name="Voter Details" component={VoterDetails} />
+      <Stack.Screen name="Search Screen" component={SearchScreen} />
     </Stack.Navigator>
   );
 };

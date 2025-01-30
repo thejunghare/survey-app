@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect, useCallback} from "react";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 import {
     View,
     Text,
@@ -8,18 +8,18 @@ import {
     RefreshControl,
     ScrollView,
 } from "react-native";
-import {Avatar, Icon} from "@rneui/themed";
-import {SafeAreaView} from "react-native-safe-area-context";
-import {AntDesign} from "@expo/vector-icons";
-import {AppwriteContext} from "../appwrite/UserContext";
-import {useNavigation} from "@react-navigation/native";
-import {toast} from "../appwrite/toast";
-import {NativeStackNavigationProp} from "@react-navigation/native-stack";
-import {AppStackParamList} from "../routes/AppStack";
-import {useSurvey} from "../appwrite/SurveyContext";
-import {StatusBar} from "expo-status-bar";
-import {databases} from "../appwrite/service";
-import {Query} from "appwrite";
+import { Avatar, Icon } from "@rneui/themed";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { AntDesign } from "@expo/vector-icons";
+import { AppwriteContext } from "../appwrite/UserContext";
+import { useNavigation } from "@react-navigation/native";
+import { toast } from "../appwrite/toast";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { AppStackParamList } from "../routes/AppStack";
+import { useSurvey } from "../appwrite/SurveyContext";
+import { StatusBar } from "expo-status-bar";
+import { databases } from "../appwrite/service";
+import { Query } from "appwrite";
 
 type DashboardScreenNavigationProp = NativeStackNavigationProp<
     AppStackParamList,
@@ -33,12 +33,12 @@ type UserObj = {
 };
 
 const Dashboard = () => {
-    const {appwrite, setIsLoggedIn} = useContext(AppwriteContext);
+    const { appwrite, setIsLoggedIn } = useContext(AppwriteContext);
     const navigation = useNavigation();
     const [userData, setUserData] = useState<UserObj>();
-    const {countDocument} = useSurvey();
-    const {roomLockedDocumentCount} = useSurvey();
-    const {surveyDeniedDocumentCount} = useSurvey();
+    const { countDocument } = useSurvey();
+    const { roomLockedDocumentCount } = useSurvey();
+    const { surveyDeniedDocumentCount } = useSurvey();
     const [surveyCount, setSurveyCount] = useState<number>(0);
     const [LockedRoomSurveyCount, setLockedRoomSurveyCount] = useState<number>(0);
     const [deniedSurveyCount, setDeniedSurveyCount] = useState<number>(0);
@@ -206,7 +206,7 @@ const Dashboard = () => {
     }, [fetchUserData, fetchSurveyCount]);
 
     if (loading) {
-        return <ActivityIndicator size="large" color="#0000ff"/>;
+        return <ActivityIndicator size="large" color="#0000ff" />;
     }
 
     const getInitials = (name: string) => {
@@ -218,7 +218,7 @@ const Dashboard = () => {
     return (
         <ScrollView
             refreshControl={
-                <RefreshControl refreshing={refreshing} onRefresh={onRefresh}/>
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
             }
         >
             <View className="flex-1">
@@ -249,8 +249,8 @@ const Dashboard = () => {
                 <View
                     className="items-center justify-around bg-gray-50 m-3 bg-white border border-slate-200 rounded-xl">
                     <Image
-                        source={{uri: clientImageUri}}
-                        style={{height: 250}}
+                        source={{ uri: clientImageUri }}
+                        style={{ height: 250 }}
                         className="w-full"
                     />
 
@@ -291,7 +291,7 @@ const Dashboard = () => {
                     <TouchableOpacity
                         className={'border-b border-slate-200 '}
                         onPress={() => {
-                            navigation.navigate("Survey form", {userId: userData.id});
+                            navigation.navigate("Survey form", { userId: userData.id });
                         }}
                     >
                         <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly ">
@@ -307,9 +307,9 @@ const Dashboard = () => {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                      className={'border-b border-slate-200 '}
+                        className={'border-b border-slate-200 '}
                         onPress={() => {
-                            navigation.navigate("Locked Room", {userId: userData.id});
+                            navigation.navigate("Locked Room", { userId: userData.id });
                         }}
                     >
                         <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
@@ -325,7 +325,7 @@ const Dashboard = () => {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-
+                        className="border-b border-slate-200"
                     >
                         <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
                             {/* <AntDesign name="edit" size={24} color="blue" className="w-1/4" /> */}
@@ -339,9 +339,28 @@ const Dashboard = () => {
                             </Text>
                         </View>
                     </TouchableOpacity>
+                    {/* search */}
+
+                    <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate("Search Screen");
+                        }}
+                    >
+                        <View className="h-10 m-2 w-full flex flex-row items-center justify-evenly">
+                            {/* <AntDesign name="edit" size={24} color="blue" className="w-1/4" /> */}
+                            <Icon
+                                name='search'
+                                type='feather'
+                                color='#517fa4'
+                            />
+                            <Text className="text-base font-semibold w-10/12">
+                                Search Voter
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
             </View>
-            <StatusBar style="dark"/>
+            <StatusBar style="dark" />
         </ScrollView>
     );
 };

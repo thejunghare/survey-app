@@ -1,19 +1,20 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import Dashboard from "../screens/Dashboard";
 import DoorToDoorSurvey from "../screens/DoorToDoorSurvey";
 import LockedRoomSurvey from "../screens/LockedRoomSurvey";
 import EditSurvey from "../screens/EditSurvey";
 import VoterSearch from "../screens/VoterSearch";
 import VoterDetails from "../screens/VoterDetails";
-import VoterDetailsView from '../screens/VoterDetailsView';
-import VoterDetailsEdit from '../screens/VoterDetailsEdit';
+import VoterDetailsView from "../screens/VoterDetailsView";
+import VoterDetailsEdit from "../screens/VoterDetailsEdit";
 import ProfileScreen from "../screens/ProfileScreen";
 import Settings from "../screens/Settings";
-import { Icon } from '@rneui/themed';
+import { Icon } from "@rneui/themed";
 import SearchScreen from "../screens/SearchScreen";
+import SelectSearch from "../screens/SelectSearch";
 
 export type AppStackParamList = {
   Dashboard: undefined;
@@ -26,6 +27,7 @@ export type AppStackParamList = {
   "Edit Survey": undefined;
   "Locked Room": { userId: string };
   "Search Screen": undefined;
+  "Select Search Option": undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -50,6 +52,7 @@ const DashboardStack = () => {
       <Stack.Screen name="Edit Survey" component={EditSurvey} />
       <Stack.Screen name="Voter Details" component={VoterDetails} />
       <Stack.Screen name="Search Screen" component={SearchScreen} />
+      <Stack.Screen name="Select Search Option" component={SelectSearch} />
     </Stack.Navigator>
   );
 };
@@ -88,8 +91,6 @@ const SettingsStack = () => {
   );
 };
 
-
-
 export const AppStack = () => {
   return (
     <Tab.Navigator
@@ -113,7 +114,7 @@ export const AppStack = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <Icon name="home" color={color} size={size} type='feather' />
+            <Icon name="home" color={color} size={size} type="feather" />
           ),
         }}
       />
@@ -122,7 +123,7 @@ export const AppStack = () => {
         component={ProfileStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="user" color={color} size={size} type='feather' />
+            <Icon name="user" color={color} size={size} type="feather" />
           ),
         }}
       />
@@ -131,7 +132,7 @@ export const AppStack = () => {
         component={SettingsStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="settings" color={color} size={size} type='feather' />
+            <Icon name="settings" color={color} size={size} type="feather" />
           ),
         }}
       />

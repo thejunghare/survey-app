@@ -1,9 +1,13 @@
-// name, mobile, lastname, booth, age
-
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList
+} from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { AppStackParamList } from "../routes/AppStack";
 import { Icon } from "@rneui/themed";
+import styled from "styled-components/native";
 
 type SelectSearchProps = NativeStackNavigationProp<
   AppStackParamList,
@@ -29,17 +33,21 @@ const Item: React.FC<ItemProps> = ({ id, title, icon, nav, navigation }) => {
   };
 
   return (
-    <TouchableOpacity
-      className="w-full flex flex-row items-center justify-around"
-      onPress={handlePress} // Trigger navigation on press
-    >
-      <Icon name={icon} type="feather" color="#517fa4" className="w-1/5" />
-      <Text className="bg-white p-4 shadow-md m-2 rounded-lg w-4/5">
-        {title}
-      </Text>
-    </TouchableOpacity>
+    <View className={'flex flex-col w-1/2'}>
+      <TouchableOpacity
+        className="w-full flex flex-row items-center justify-around"
+        onPress={handlePress} // Trigger navigation on press
+      >
+        <Icon name={icon} type="feather" color="#517fa4" className="w-1/5 bg-white rounded p-2" />
+        <Text className="bg-white p-4 shadow-md m-2 rounded-lg w-4/5">
+          {title}
+        </Text>
+      </TouchableOpacity>
+    </View>
   );
 };
+
+
 
 const SelectSearch = ({ navigation }: SelectSearchProps) => {
   const LABEL = [

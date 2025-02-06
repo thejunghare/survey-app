@@ -1,8 +1,16 @@
 import { useState, useMemo, useEffect } from "react";
-import { View, FlatList, Text, ActivityIndicator } from "react-native";
+import {
+  View,
+  FlatList,
+  Text,
+  ActivityIndicator,
+  TouchableOpacity,
+} from "react-native";
 import { SearchBar, Button } from "@rneui/themed";
 import { databases } from "../appwrite/service";
 import { Query } from "appwrite";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { useNavigation } from "@react-navigation/native";
 
 type Member = {
   id: string;
@@ -10,17 +18,21 @@ type Member = {
   phone_number: string;
 };
 
-const MemberItem: React.FC<Member> = ({
+const MemberItem: React.FC<Member & { onPress: () => void }> = ({
   applicant_first_name,
   phone_number,
+  onPress,
 }) => (
-  <View className="bg-white p-4 shadow-md m-2 rounded">
-    <Text className="font-bold">Full Name: {applicant_first_name}</Text>
-    <Text>Phone: {phone_number}</Text>
-  </View>
+  <TouchableOpacity onPress={onPress}>
+    <View className="bg-white p-4 shadow-md m-2 rounded">
+      <Text className="font-bold">Full Name: {applicant_first_name}</Text>
+      <Text>Phone: {phone_number}</Text>
+    </View>
+  </TouchableOpacity>
 );
 
 const SearchScreen = () => {
+  const navigation = useNavigation();
   const [search, setSearch] = useState<string>("");
   const [activeButtons, setActiveButtons] = useState<boolean[]>([
     true,
@@ -146,7 +158,12 @@ const SearchScreen = () => {
       {/* flat list of search result and preloaded people fname, lname, mname, bhooth */}
       <FlatList
         data={filteredMembers}
-        renderItem={({ item }) => <MemberItem {...item} />}
+        renderItem={({ item }) => (
+          <MemberItem
+            {...item}
+            onPress={() => navigation.navigate("Details", { id: item.id })}
+          />
+        )}
         keyExtractor={(item) => item.id}
         contentContainerStyle={{ padding: 10 }}
       />

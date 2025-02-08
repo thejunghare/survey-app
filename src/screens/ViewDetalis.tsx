@@ -3,6 +3,7 @@ import { View, Text, ActivityIndicator } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { databases } from "../appwrite/service";
 import { Query } from "appwrite";
+import { Button, Icon } from "@rneui/themed";
 
 const ViewDetails = () => {
   const route = useRoute();
@@ -20,7 +21,7 @@ const ViewDetails = () => {
         const result = await databases.listDocuments(
           DATABASEID,
           MEMBERCOLLECTIONID,
-          [Query.equal("$id", id)],
+          [Query.equal("$id", id)]
         );
 
         if (result?.documents.length > 0) {
@@ -53,9 +54,93 @@ const ViewDetails = () => {
 
   return (
     <View>
-      <Text>Full Name: {member?.applicant_first_name}</Text>
-      <Text>Phone: {member?.phone_number}</Text>
-      <Text>ID: {member?.$id}</Text>
+      <View className="flex flex-row justify-around p-2">
+        <Button title="Text Message" type={"outline"} size="md" radius={"lg"}>
+          <Icon name="message-square" color="black" type="feather" />
+        </Button>
+
+        <Button title="Whatsapp" type={"outline"} size="md" radius={"lg"}>
+          <Icon name="message-circle" color="black" type="feather" />
+        </Button>
+
+        <Button title="Bluetooth" type={"outline"} size="md" radius={"lg"}>
+          <Icon name="bluetooth" color="black" type="feather" />
+        </Button>
+
+        <Button title="Print" type={"outline"} size="md" radius={"lg"}>
+          <Icon name="printer" color="black" type="feather" />
+        </Button>
+
+        <Button title="call" type={"outline"} size="md" radius={"lg"}>
+          <Icon name="phone" color="black" type="feather" />
+        </Button>
+
+        <Button title="Whatsapp" type={"outline"} size="md" radius={"lg"}>
+          <Icon name="save" color="black" type="feather" />
+        </Button>
+      </View>
+
+      <View className="flex flex-row justify-around p-2">
+        <Button type={"solid"} size="lg" radius={"lg"}>
+          Survey
+          <Icon name="book" color="white" type="feather" />
+        </Button>
+        <Button type={"solid"} size="lg" radius={"lg"}>
+          Color
+          <Icon name="chevron-up" color="white" type="feather" />
+        </Button>
+        <Button type={"solid"} size="lg" radius={"lg"}>
+          Save
+          <Icon name="save" color="white" type="feather" />
+        </Button>
+      </View>
+
+      <Text className="border-b border-slate-200 p-2">
+        Ac NO: {member?.ac_no}
+      </Text>
+      <Text className="border-b border-slate-200 p-2">
+        Part No: {member?.part_no}
+      </Text>
+      <Text className="border-b border-slate-200 p-2">
+        SlNoin: {member?.slnoin_part}
+      </Text>
+
+      <Text className="border-b border-slate-200 p-2">
+        English First Name: {member?.applicant_first_name}
+      </Text>
+      <Text className="border-b border-slate-200 p-2">
+        Marathi First Name: {member?.applicant_first_name_l1}
+      </Text>
+
+      <Text className="border-b border-slate-200 p-2">
+        English Last Name: {member?.applicant_last_name}
+      </Text>
+      <Text className="border-b border-slate-200 p-2">
+        Marathi Last Name: {member?.applicant_last_name_l1}
+      </Text>
+
+      <Text className="border-b border-slate-200 p-2">
+        Card Number: {member?.epic_number}
+      </Text>
+
+      <Text className="border-b border-slate-200 p-2">Age: {member?.age}</Text>
+      <Text className="border-b border-slate-200 p-2">
+        Gender: {member?.gender}
+      </Text>
+
+      <Text className="border-b border-slate-200 p-2">
+        Voter address: {member?.v_address}
+      </Text>
+      <Text className="border-b border-slate-200 p-2">
+        Voter address(marathi): {member?.v_address_l1}
+      </Text>
+
+      <Text className="border-b border-slate-200 p-2">
+        Booth address(marathi): {member?.booth_address}
+      </Text>
+      <Text className="border-b border-slate-200 p-2">
+        Booth address(marathi): {member?.booth_address_l1}
+      </Text>
     </View>
   );
 };

@@ -1,13 +1,7 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  FlatList
-} from "react-native";
+import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { AppStackParamList } from "../routes/AppStack";
 import { Icon } from "@rneui/themed";
-import styled from "styled-components/native";
 
 type SelectSearchProps = NativeStackNavigationProp<
   AppStackParamList,
@@ -33,57 +27,38 @@ const Item: React.FC<ItemProps> = ({ id, title, icon, nav, navigation }) => {
   };
 
   return (
-    <View className={'flex flex-col w-1/2'}>
+    <View className="flex flex-col border-b border-slate-300 bg-white rounded-lg shadow-md my-2">
       <TouchableOpacity
-        className="w-full flex flex-row items-center justify-around"
-        onPress={handlePress} // Trigger navigation on press
+        className="w-full flex flex-row items-center p-4 space-x-4 active:scale-95 transition-transform duration-150"
+        onPress={handlePress}
       >
-        <Icon name={icon} type="feather" color="#517fa4" className="w-1/5 bg-white rounded p-2" />
-        <Text className="bg-white p-4 shadow-md m-2 rounded-lg w-4/5">
+        <View className="bg-blue-100 p-3 rounded-full">
+          <Icon name={icon} type="feather" color="#1E40AF" size={24} />
+        </View>
+        <Text className="text-lg font-semibold text-gray-800 flex-1">
           {title}
         </Text>
+        <Icon name="chevron-right" type="feather" color="#64748B" size={20} />
       </TouchableOpacity>
     </View>
   );
 };
 
-
-
-const SelectSearch = ({ navigation }: SelectSearchProps) => {
+const SelectSearch = ({ navigation }: { navigation: SelectSearchProps }) => {
   const LABEL = [
-    {
-      id: 1,
-      title: "First Name",
-      icon: "user",
-      nav: "Search Screen",
-    },
-    {
-      id: 2,
-      title: "Last Name",
-      icon: "users",
-      nav: "Search Screen",
-    },
-    {
-      id: 3,
-      title: "Mobile Number",
-      icon: "phone",
-      nav: "Search Screen",
-    },
-    {
-      id: 4,
-      title: "Booth",
-      icon: "home",
-      nav: "Search Screen",
-    },
+    { id: 1, title: "First Name", icon: "user", nav: "Search Screen" },
+    { id: 2, title: "Last Name", icon: "users", nav: "Search Screen" },
+    { id: 3, title: "Mobile Number", icon: "phone", nav: "Search Screen" },
+    { id: 4, title: "Booth", icon: "home", nav: "Search Screen" },
   ];
 
   return (
-    <View>
+    <View className="flex-1 bg-white p-2">
       <FlatList
         data={LABEL}
         renderItem={({ item }) => <Item {...item} navigation={navigation} />}
         keyExtractor={(item) => item.id.toString()}
-        contentContainerStyle={{ padding: 10 }}
+        contentContainerStyle={{ paddingBottom: 20 }}
       />
     </View>
   );

@@ -32,8 +32,8 @@ const Item: React.FC<ItemProps> = ({ id, title, icon, nav, navigation }) => {
         className="w-full flex flex-row items-center p-4 space-x-4 active:scale-95 transition-transform duration-150"
         onPress={handlePress}
       >
-        <View className="bg-blue-100 p-3 rounded-full">
-          <Icon name={icon} type="feather" color="#1E40AF" size={24} />
+        <View className=" p-3 rounded-full">
+          <Icon name={icon} type="feather" color="#E07A5F" size={24} />
         </View>
         <Text className="text-lg font-semibold text-gray-800 flex-1">
           {title}

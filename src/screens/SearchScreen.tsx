@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import {useState, useEffect} from "react";
 import {
   View,
   FlatList,
@@ -6,19 +6,25 @@ import {
   ActivityIndicator,
   TouchableOpacity,
 } from "react-native";
-import { SearchBar, Button, Avatar } from "@rneui/themed";
-import { databases } from "../appwrite/service";
-import { Query } from "appwrite";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { useNavigation } from "@react-navigation/native";
+import {SearchBar, Button, Avatar} from "@rneui/themed";
+import {databases} from "../appwrite/service";
+import {Query} from "appwrite";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
+import {useNavigation} from "@react-navigation/native";
 import styled from "styled-components/native";
+
+// Define colors
+const saffron = "#FF9933";
+const shadowColor = "#D48F17"; // Slightly darker shade for shadow effects
 
 const BoldText = styled.Text`
   font-weight: bold;
+  color: ${saffron};
 `;
 
 const NormalText = styled.Text`
   font-weight: normal;
+  color: #333;
 `;
 
 type Member = {
@@ -30,42 +36,32 @@ type Member = {
 };
 
 const MemberItem: React.FC<Member & { onPress: () => void }> = ({
-  applicant_first_name,
-  v_address,
-  phone_number,
-  epic_number,
-  onPress,
-}) => (
+                                                                  applicant_first_name,
+                                                                  v_address,
+                                                                  phone_number,
+                                                                  epic_number,
+                                                                  onPress,
+                                                                }) => (
   <TouchableOpacity onPress={onPress}>
-    <View className="w-full flex flex-row items-center justify-around p-4 border-b border-slate-200">
-      <View className="w">
-        <Avatar
-          size={32}
-          rounded
-          title="Rd"
-          containerStyle={{ backgroundColor: "blue" }}
-        />
-      </View>
-      <View className="w-3/4">
-        <BoldText>
-          Name:
-          <NormalText> {applicant_first_name}</NormalText>
-        </BoldText>
-
-        <BoldText>
-          Address:
-          <NormalText>{v_address}</NormalText>
-        </BoldText>
-
-        <BoldText>
-          Mobile:
-          <NormalText>{phone_number}</NormalText>
-        </BoldText>
-
-        <BoldText>
-          Card number:
-          <NormalText>{epic_number}</NormalText>
-        </BoldText>
+    <View
+      style={{
+        backgroundColor: "#fff",
+        padding: 12,
+        flexDirection: "row",
+        alignItems: "center",
+      }}
+    >
+      <Avatar
+        size={40}
+        rounded
+        title={applicant_first_name.charAt(0)}
+        containerStyle={{backgroundColor: saffron}}
+      />
+      <View style={{marginLeft: 12, flex: 1}}>
+        <BoldText>Name: <NormalText>{applicant_first_name}</NormalText></BoldText>
+        <BoldText>Address: <NormalText>{v_address}</NormalText></BoldText>
+        <BoldText>Mobile: <NormalText>{phone_number}</NormalText></BoldText>
+        <BoldText>Card Number: <NormalText>{epic_number}</NormalText></BoldText>
       </View>
     </View>
   </TouchableOpacity>
@@ -74,12 +70,6 @@ const MemberItem: React.FC<Member & { onPress: () => void }> = ({
 const SearchScreen = () => {
   const navigation = useNavigation();
   const [search, setSearch] = useState<string>("");
-  const [activeButtons, setActiveButtons] = useState<boolean[]>([
-    true,
-    false,
-    false,
-    false,
-  ]);
   const [members, setMembers] = useState<Member[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -108,17 +98,15 @@ const SearchScreen = () => {
         setLoading(true);
         const queries = [];
 
-        // ➡️ Use server-side search with indexes
         if (debouncedSearch.trim()) {
           queries.push(
             Query.or([
               Query.search("applicant_first_name", debouncedSearch),
               Query.search("phone_number", debouncedSearch),
-            ])
+            ]),
           );
         }
 
-        // ➡️ Add pagination parameters
         const limit = 10;
         const offset = (currentPage - 1) * limit;
 
@@ -130,7 +118,7 @@ const SearchScreen = () => {
             Query.limit(limit),
             Query.offset(offset),
             Query.orderDesc("$createdAt"),
-          ]
+          ],
         );
 
         if (result?.documents) {
@@ -141,9 +129,8 @@ const SearchScreen = () => {
               v_address: doc.v_address || "N/A",
               phone_number: doc.phone_number || "N/A",
               epic_number: doc.epic_number || "N/A",
-            }))
+            })),
           );
-          // ➡️ Set pagination totals
           setTotalPages(Math.ceil(result.total / limit));
         }
       } catch (error) {
@@ -159,110 +146,76 @@ const SearchScreen = () => {
 
   if (loading) {
     return (
-      <View className="flex-1 justify-center items-center">
-        <ActivityIndicator size="large" color="#0000ff" />
-        <Text>Loading members...</Text>
+      <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+        <ActivityIndicator size="large" color={saffron}/>
+        <Text style={{color: saffron}}>Loading members...</Text>
       </View>
     );
   }
 
   if (error) {
     return (
-      <View className="flex-1 justify-center items-center">
-        <Text className="text-red-500 font-bold">{error}</Text>
+      <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+        <Text style={{color: "red", fontWeight: "bold"}}>{error}</Text>
       </View>
     );
   }
 
-  const filteredMembers = search.trim()
-    ? members.filter((member) => {
-        const lowerCaseSearch = search.toLowerCase();
-        const lowerCaseName = member.applicant_first_name
-          ?.toLowerCase()
-          .includes(lowerCaseSearch);
-        const lowerCasePhone = member.phone_number
-          ?.toLowerCase()
-          .includes(lowerCaseSearch);
-        return lowerCaseName || lowerCasePhone;
-      })
-    : members;
-
-  const handleActiveButton = (index: number) => {
-    const newActiveButtons = activeButtons.map((_, i) => i === index);
-    setActiveButtons(newActiveButtons);
-  };
-
-  const buttonType = activeButtons[0] ? "solid" : "outline";
-
   return (
-    <View>
-      {/* search bar and filters */}
+    <View style={{flex: 1, backgroundColor: "#FFF", paddingHorizontal: 10}}>
+      {/* Search bar */}
       <SearchBar
         placeholder="Search by name or phone..."
         onChangeText={setSearch}
         value={search}
+        lightTheme
+        round
+        containerStyle={{
+          backgroundColor: "transparent",
+          borderBottomWidth: 0,
+          borderTopWidth: 0,
+        }}
+        inputContainerStyle={{
+          backgroundColor: "#FFF",
+          borderRadius: 10,
+          shadowColor: shadowColor,
+          shadowOffset: {width: 0, height: 3},
+          shadowOpacity: 0.2,
+          shadowRadius: 4,
+          elevation: 4,
+        }}
       />
 
-      {/* ➡️ Add pagination controls */}
-      <View className="flex flex-row justify-between items-center p-4">
+      {/* Pagination Controls */}
+      <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 10}}>
         <Button
           title="Previous"
           onPress={() => setCurrentPage((p) => Math.max(1, p - 1))}
           disabled={currentPage === 1}
+          buttonStyle={{backgroundColor: saffron}}
         />
-        <Text>
+        <Text style={{color: "#333", fontWeight: "bold"}}>
           Page {currentPage} of {totalPages}
         </Text>
         <Button
           title="Next"
           onPress={() => setCurrentPage((p) => p + 1)}
           disabled={currentPage === totalPages}
+          buttonStyle={{backgroundColor: saffron}}
         />
       </View>
 
-      {/* reset & search button */}
-      {/* <View className="w-full flex flex-row items-center justify-between p-2">
-        <Button
-          title="First Name"
-          onPress={() => handleActiveButton(0)}
-          size="md"
-          radius={"sm"}
-          type={buttonType}
-        />
-        <Button
-          title="Last Name"
-          onPress={() => handleActiveButton(1)}
-          type={buttonType}
-          size="md"
-          radius={"sm"}
-        />
-        <Button
-          title="Middle Name"
-          onPress={() => handleActiveButton(2)}
-          type={buttonType}
-          size="md"
-          radius={"sm"}
-        />
-        <Button
-          title="Bhooth"
-          onPress={() => handleActiveButton(3)}
-          type={buttonType}
-          size="md"
-          radius={"sm"}
-        />
-      </View> */}
-
-      {/* flat list of search result and preloaded people fname, lname, mname, bhooth */}
+      {/* Members List */}
       <FlatList
         data={members}
-        renderItem={({ item }) => (
+        renderItem={({item}) => (
           <MemberItem
             {...item}
-            onPress={() => navigation.navigate("Details", { id: item.id })}
+            onPress={() => navigation.navigate("Details", {id: item.id})}
           />
         )}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={{ padding: 10 }}
+        contentContainerStyle={{paddingBottom: 20}}
       />
     </View>
   );

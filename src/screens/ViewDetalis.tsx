@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, Text, ActivityIndicator, ScrollView } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { databases } from "../appwrite/service";
 import { Query } from "appwrite";
 import { Button, Icon } from "@rneui/themed";
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { Picker } from '@react-native-picker/picker';
 
 const ViewDetails = () => {
   const route = useRoute();
@@ -11,6 +13,7 @@ const ViewDetails = () => {
   const [member, setMember] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [selectedLanguage, setSelectedLanguage] = useState();
 
   const DATABASEID = "66502c6e0015d7be8526";
   const MEMBERCOLLECTIONID = "6797ac980023a75b2c98";
@@ -21,7 +24,7 @@ const ViewDetails = () => {
         const result = await databases.listDocuments(
           DATABASEID,
           MEMBERCOLLECTIONID,
-          [Query.equal("$id", id)]
+          [Query.equal("$id", id)],
         );
 
         if (result?.documents.length > 0) {
@@ -53,95 +56,206 @@ const ViewDetails = () => {
   }
 
   return (
-    <View>
-      <View className="flex flex-row justify-around p-2">
-        <Button title="Text Message" type={"outline"} size="md" radius={"lg"}>
-          <Icon name="message-square" color="black" type="feather" />
-        </Button>
+    <SafeAreaProvider>
+      <SafeAreaView>
+        <ScrollView>
+          <View className="p-2">
+            {/* Action Buttons Row */}
+            <View className="flex flex-row justify-around mb-6">
+              <Button
+                type="outline"
+                size="md"
+                radius="lg"
+                buttonStyle={{
+                  borderColor: "#FF9933",
+                  paddingHorizontal: 12,
+                  backgroundColor: "#FFF3E0",
+                }}
+              >
+                <Icon name="message-square" color="#FF9933" type="feather" />
+                <Text className="text-[#FF9933] ml-2">Text</Text>
+              </Button>
 
-        <Button title="Whatsapp" type={"outline"} size="md" radius={"lg"}>
-          <Icon name="message-circle" color="black" type="feather" />
-        </Button>
+              <Button
+                type="outline"
+                size="md"
+                radius="lg"
+                buttonStyle={{
+                  borderColor: "#FF9933",
+                  paddingHorizontal: 12,
+                  backgroundColor: "#FFF3E0",
+                }}
+              >
+                <Icon name="message-circle" color="#FF9933" type="feather" />
+                <Text className="text-[#FF9933] ml-2">WhatsApp</Text>
+              </Button>
 
-        <Button title="Bluetooth" type={"outline"} size="md" radius={"lg"}>
-          <Icon name="bluetooth" color="black" type="feather" />
-        </Button>
+              <Button
+                type="outline"
+                size="md"
+                radius="lg"
+                buttonStyle={{
+                  borderColor: "#FF9933",
+                  paddingHorizontal: 12,
+                  backgroundColor: "#FFF3E0",
+                }}
+              >
+                <Icon name="bluetooth" color="#FF9933" type="feather" />
+                <Text className="text-[#FF9933] ml-2">Bluetooth</Text>
+              </Button>
 
-        <Button title="Print" type={"outline"} size="md" radius={"lg"}>
-          <Icon name="printer" color="black" type="feather" />
-        </Button>
+              <Button
+                type="outline"
+                size="md"
+                radius="lg"
+                buttonStyle={{
+                  borderColor: "#FF9933",
+                  paddingHorizontal: 12,
+                  backgroundColor: "#FFF3E0",
+                }}
+              >
+                <Icon name="printer" color="#FF9933" type="feather" />
+                <Text className="text-[#FF9933] ml-2">Print</Text>
+              </Button>
+            </View>
 
-        <Button title="call" type={"outline"} size="md" radius={"lg"}>
-          <Icon name="phone" color="black" type="feather" />
-        </Button>
+            {/* Primary Actions Row */}
+            <View className="flex flex-row justify-around mb-8">
+              <Button
+                type="solid"
+                size="lg"
+                radius="lg"
+                color={'secondary'}
+              >
+                <Icon name="book" color="white" type="feather" />
+                <Text className="text-white ml-2">Survey</Text>
+              </Button>
 
-        <Button title="Whatsapp" type={"outline"} size="md" radius={"lg"}>
-          <Icon name="save" color="black" type="feather" />
-        </Button>
-      </View>
+              <View style={{ padding: 10 }} className="flex flex-row">
+                {/* Label for the Picker */}
+                <Text style={{ fontSize: 16, fontWeight: 'bold', marginBottom: 5 }}>
+              Color:
+                </Text>
 
-      <View className="flex flex-row justify-around p-2">
-        <Button type={"solid"} size="lg" radius={"lg"}>
-          Survey
-          <Icon name="book" color="white" type="feather" />
-        </Button>
-        <Button type={"solid"} size="lg" radius={"lg"}>
-          Color
-          <Icon name="chevron-up" color="white" type="feather" />
-        </Button>
-        <Button type={"solid"} size="lg" radius={"lg"}>
-          Save
-          <Icon name="save" color="white" type="feather" />
-        </Button>
-      </View>
+                <Picker
+                  selectedValue={selectedLanguage}
+                  onValueChange={(itemValue) => setSelectedLanguage(itemValue)}
+                  mode="dropdown"
+                  style={{ height: 50, width: '100%' }}
+                >
+                  <Picker.Item label="Java" value="java" />
+                  <Picker.Item label="JavaScript" value="js" />
+                </Picker>
+              </View>
 
-      <Text className="border-b border-slate-200 p-2">
-        Ac NO: {member?.ac_no}
-      </Text>
-      <Text className="border-b border-slate-200 p-2">
-        Part No: {member?.part_no}
-      </Text>
-      <Text className="border-b border-slate-200 p-2">
-        SlNoin: {member?.slnoin_part}
-      </Text>
+              <Button
+                type="solid"
+                size="lg"
+                radius="lg"
+                  color={'secondary'}
+              >
+                <Icon name="save" color="white" type="feather" />
+                <Text className="text-white ml-2">Save</Text>
+              </Button>
+            </View>
 
-      <Text className="border-b border-slate-200 p-2">
-        English First Name: {member?.applicant_first_name}
-      </Text>
-      <Text className="border-b border-slate-200 p-2">
-        Marathi First Name: {member?.applicant_first_name_l1}
-      </Text>
+            {/* Member Details Section */}
+            <View className="p-6">
+              <Text className="text-xl font-bold text-[#FF9933] mb-4">
+                Voter Details
+              </Text>
 
-      <Text className="border-b border-slate-200 p-2">
-        English Last Name: {member?.applicant_last_name}
-      </Text>
-      <Text className="border-b border-slate-200 p-2">
-        Marathi Last Name: {member?.applicant_last_name_l1}
-      </Text>
+              {/* Personal Info */}
+              <View className="mb-6">
+                <Text className="text-[#FF9933] font-semibold mb-2">
+                  Personal Info
+                </Text>
+                <View className="space-y-2">
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">AC No:</Text> {member?.ac_no}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Part No:</Text>{" "}
+                    {member?.part_no}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">SlNo in Part:</Text>{" "}
+                    {member?.slnoin_part}
+                  </Text>
+                </View>
+              </View>
 
-      <Text className="border-b border-slate-200 p-2">
-        Card Number: {member?.epic_number}
-      </Text>
+              {/* Name Section */}
+              <View className="mb-6">
+                <Text className="text-[#FF9933] font-semibold mb-2">Name</Text>
+                <View className="space-y-2">
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">First Name:</Text>{" "}
+                    {member?.applicant_first_name}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">मतदाराचे पहिले नाव:</Text>{" "}
+                    {member?.applicant_first_name_l1}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Last Name:</Text>{" "}
+                    {member?.applicant_last_name}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">मतदार आडनाव:</Text>{" "}
+                    {member?.applicant_last_name_l1}
+                  </Text>
+                </View>
+              </View>
 
-      <Text className="border-b border-slate-200 p-2">Age: {member?.age}</Text>
-      <Text className="border-b border-slate-200 p-2">
-        Gender: {member?.gender}
-      </Text>
+              {/* Other Details */}
+              <View className="mb-6">
+                <Text className="text-[#FF9933] font-semibold mb-2">
+                  Other Details
+                </Text>
+                <View className="space-y-2">
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Card Number:</Text>{" "}
+                    {member?.epic_number}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Age:</Text> {member?.age}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Gender:</Text> {member?.gender}
+                  </Text>
+                </View>
+              </View>
 
-      <Text className="border-b border-slate-200 p-2">
-        Voter address: {member?.v_address}
-      </Text>
-      <Text className="border-b border-slate-200 p-2">
-        Voter address(marathi): {member?.v_address_l1}
-      </Text>
-
-      <Text className="border-b border-slate-200 p-2">
-        Booth address(marathi): {member?.booth_address}
-      </Text>
-      <Text className="border-b border-slate-200 p-2">
-        Booth address(marathi): {member?.booth_address_l1}
-      </Text>
-    </View>
+              {/* Address Section */}
+              <View className="mb-6">
+                <Text className="text-[#FF9933] font-semibold mb-2">
+                  Address
+                </Text>
+                <View className="space-y-2">
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Voter Address:</Text>{" "}
+                    {member?.v_address}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">मतदाराचा पत्ता:</Text>{" "}
+                    {member?.v_address_l1}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">Booth Address:</Text>{" "}
+                    {member?.booth_address}
+                  </Text>
+                  <Text className="text-gray-700">
+                    <Text className="font-bold">मतदार केंद्राचा पत्ता:</Text>{" "}
+                    {member?.booth_address_l1}
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 

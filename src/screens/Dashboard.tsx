@@ -226,7 +226,7 @@ const Dashboard = () => {
     >
       <View className="flex-1">
         {/* avatar with employee name and id */}
-        <View className="p-3 flex flex-row items-center justify-start bg-blue-700 h-30">
+        <View className="p-3 flex flex-row items-center justify-start bg-orange-500 h-30">
           <Avatar
             size={50}
             rounded
@@ -286,7 +286,7 @@ const Dashboard = () => {
 
         {/* form navigation container */}
         <Text className="text-xs font-bold px-5 ">Survey Options</Text>
-        <View className="flex items-start justify-center bg-white border border-slate-200 m-4 rounded-xl">
+        <View className="flex flex-row flex-wrap justify-around bg-white border border-slate-200 m-4 rounded-xl p-2">
           <TouchableOpacity
             className={"border-b border-slate-200 "}
             onPress={() => {
